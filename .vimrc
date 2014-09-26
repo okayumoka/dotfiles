@@ -286,6 +286,12 @@ NeoBundle 'jpalardy/vim-slime'      " ??
 NeoBundle 'Townk/vim-autoclose'     " カッコやダブルコーテーションを自動で閉じる
 NeoBundle 'kien/ctrlp.vim.git'      " コマンドラインでのファイル補完
 "NeoBundle 'scrooloose/syntastic'   " シンタックスのチェック（重たくなるようなのでとりあえず解除）
+NeoBundle 'scrooloose/nerdtree'
+" Twitter
+NeoBundle 'basyura/TweetVim.git'
+"NeoBundle 'basyura/twibill.vim'
+"NeoBundle 'yomi322/unite-tweetvim.git'
+"NeoBundle 'tyru/open-browser.vim'
 " カラースキーマ系
 NeoBundle 'altercation/vim-colors-solarized'    " solarized カラーテーマ
 NeoBundle 'tomasr/molokai'
