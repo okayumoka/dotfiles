@@ -88,14 +88,6 @@ set showmode        "現在のモードを表示
 set guioptions-=T   " ツールバーを削除
 ":winpos 500 0      " ウインドウの表示位置（左上の座標）
  
-" カラー設定
-syntax enable   "シンタックスハイライト
-syntax on       "シンタックスハイライト
-set background=dark
-"colorscheme desert
-"colorscheme MyColors
-"colorscheme solarized
- 
 " 特殊文字(SpecialKey)の見える化
 set list
 set listchars=tab:.\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
@@ -276,9 +268,9 @@ if has('vim_starting')
 endif
 " originalrepos on github
 NeoBundle 'Shougo/neobundle.vim'    " プラグイン管理
-NeoBundle 'Shougo/vimproc'          " 非同期処理のため
+"NeoBundle 'Shougo/vimproc'          " 非同期処理のため
 NeoBundle 'VimClojure'              " vimにおけるクロージャの開発環境
-NeoBundle 'Shougo/vimshell'         " vimからシェルを起動する
+"NeoBundle 'Shougo/vimshell'         " vimからシェルを起動する
 NeoBundle 'Shougo/unite.vim'        " vim上で使用出来る統合ユーザーインターフェース
 NeoBundle 'Shougo/neocomplcache'    " 補完
 NeoBundle 'Shougo/neosnippet'       " スニペット
@@ -286,6 +278,8 @@ NeoBundle 'jpalardy/vim-slime'      " ??
 NeoBundle 'Townk/vim-autoclose'     " カッコやダブルコーテーションを自動で閉じる
 NeoBundle 'kien/ctrlp.vim.git'      " コマンドラインでのファイル補完
 "NeoBundle 'scrooloose/syntastic'   " シンタックスのチェック（重たくなるようなのでとりあえず解除）
+NeoBundle 'xolox/vim-lua-ftplugin.git'
+NeoBundle 'xolox/vim-misc.git'
 " カラースキーマ系
 NeoBundle 'altercation/vim-colors-solarized'    " solarized カラーテーマ
 NeoBundle 'tomasr/molokai'
@@ -293,6 +287,10 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'jonathanfilip/vim-lucius'
 NeoBundle 'jpo/vim-railscasts-theme'
+
+syntax enable   "シンタックスハイライト
+syntax on       "シンタックスハイライト
+set background=dark
 colorscheme solarized
  
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
@@ -300,3 +298,6 @@ colorscheme solarized
 filetype plugin indent on     " required!
 filetype indent on
 syntax on
+
+
+
