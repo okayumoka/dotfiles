@@ -87,7 +87,8 @@ set guioptions-=T   " ツールバーを削除
 
 " 特殊文字(SpecialKey)の見える化
 set list
-set listchars=tab:.\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
+" set listchars=tab:\|\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
+set listchars=tab:\|\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
 "highlight SpecialKey term=underline ctermfg=darkgray guifg=darkgray
 
 " 全角スペースのハイライト表示
@@ -236,7 +237,8 @@ NeoBundle 'Shougo/vimproc'          " 非同期処理のため
 NeoBundle 'VimClojure'              " vimにおけるクロージャの開発環境
 NeoBundle 'Shougo/vimshell'         " vimからシェルを起動する
 NeoBundle 'Shougo/unite.vim'        " vim上で使用出来る統合ユーザーインターフェース
-NeoBundle 'Shougo/neocomplcache'    " 補完
+"NeoBundle 'Shougo/neocomplcache'    " 補完
+NeoBundle 'Shougo/neocomplete'      " 補完
 NeoBundle 'Shougo/neosnippet'       " スニペット
 NeoBundle 'jpalardy/vim-slime'      " ??
 NeoBundle 'Townk/vim-autoclose'     " カッコやダブルコーテーションを自動で閉じる
@@ -245,6 +247,8 @@ NeoBundle 'kien/ctrlp.vim.git'      " コマンドラインでのファイル補
 NeoBundle 'xolox/vim-lua-ftplugin.git'
 NeoBundle 'xolox/vim-misc.git'
 NeoBundle "scrooloose/nerdtree"
+NeoBundle "tyru/caw.vim.git"        " コメントアウト
+NeoBundle 'nathanaelkane/vim-indent-guides'
 " カラースキーマ系
 NeoBundle 'altercation/vim-colors-solarized'    " solarized カラーテーマ
 NeoBundle 'tomasr/molokai'
@@ -257,8 +261,7 @@ syntax enable   "シンタックスハイライト
 syntax on       "シンタックスハイライト
 set background=dark
 colorscheme solarized
-
-""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+let g:solarized_visibility="low"
 
 "--------------------------------------------------------
 " neocomplete
@@ -269,21 +272,31 @@ syntax on
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_ignore_case = 1
 let g:neocomplete#enable_smart_case = 1
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 if !exists('g:neocomplete#keyword_patterns')
   let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns._ = '\h\w*'
+"if !exists('g:neocomplete#force_omni_input_patterns')
+"  let g:neocomplete#force_omni_input_patterns = {}
+"endif
+"let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
+"--------------------------------------------------------
+" indent guides
+"--------------------------------------------------------
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_guide_size=1
 
 "--------------------------------------------------------
 " ショートカット
 "--------------------------------------------------------
-cnoremap nt NERDTree
-cnoremap vs VimShell
+nmap <C-k><C-c> <Plug>(caw:i:toggle)
+nmap <C-k><C-u> <Plug>(caw:i:toggle)
+vmap <C-k><C-c> <Plug>(caw:i:toggle)
+vmap <C-k><C-u> <Plug>(caw:i:toggle)
 
 " マッピングに関するmemo
 " noreがつくものとつかないものの違い（mapとnoremapとか）
