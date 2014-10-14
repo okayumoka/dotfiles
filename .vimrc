@@ -21,7 +21,10 @@ set ambiwidth=double            " □とか○の文字があってもカーソ�
 set backspace=indent,eol,start  "BSでなんでも消せるようにする
 set formatoptions+=mM           "整形オプションにマルチバイト系を追加
 set nowrap          " 折り返さない
+set nobackup        " バックアップファイルを作成しない
+autocmd FileType text setlocal textwidth=0
 "set showtabline=2   " タブのラベルを常に表示する
+set noundofile      " UNDOファイルを作らない
 
 filetype indent on  " ファイルタイプによるインデントを行う
 filetype plugin on  " ファイルタイプによるプラグインを使う
@@ -207,7 +210,7 @@ inoremap <C-l> <Right>
 "--------------------------------------------------------
 set ffs=unix,dos,mac   " 改行文字
 set encoding=utf-8     " デフォルトエンコーディング
-set fileencodings=iso-2022-jp,cp932,euc-jp,utf-8,utf-32
+set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp,utf-32
 
 "--------------------------------------------------------
 " 折り畳み
@@ -232,11 +235,12 @@ if has('vim_starting')
 endif
 " originalrepos on github
 NeoBundle 'Shougo/neobundle.vim'    " プラグイン管理
-NeoBundle 'Shougo/vimproc'          " 非同期処理のため
+"NeoBundle 'Shougo/vimproc'          " 非同期処理のため
 NeoBundle 'VimClojure'              " vimにおけるクロージャの開発環境
 NeoBundle 'Shougo/vimshell'         " vimからシェルを起動する
 NeoBundle 'Shougo/unite.vim'        " vim上で使用出来る統合ユーザーインターフェース
-NeoBundle 'Shougo/neocomplcache'    " 補完
+"NeoBundle 'Shougo/neocomplcache'    " 補完
+NeoBundle 'Shougo/neocomplete'      " 補完
 NeoBundle 'Shougo/neosnippet'       " スニペット
 NeoBundle 'jpalardy/vim-slime'      " ??
 NeoBundle 'Townk/vim-autoclose'     " カッコやダブルコーテーションを自動で閉じる
@@ -245,6 +249,7 @@ NeoBundle 'kien/ctrlp.vim.git'      " コマンドラインでのファイル補
 NeoBundle 'xolox/vim-lua-ftplugin.git'
 NeoBundle 'xolox/vim-misc.git'
 NeoBundle "scrooloose/nerdtree"
+NeoBundle "tyru/caw.vim.git"
 " カラースキーマ系
 NeoBundle 'altercation/vim-colors-solarized'    " solarized カラーテーマ
 NeoBundle 'tomasr/molokai'
@@ -256,7 +261,8 @@ NeoBundle 'jpo/vim-railscasts-theme'
 syntax enable   "シンタックスハイライト
 syntax on       "シンタックスハイライト
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme hybrid
 
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
@@ -269,21 +275,22 @@ syntax on
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_ignore_case = 1
 let g:neocomplete#enable_smart_case = 1
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 if !exists('g:neocomplete#keyword_patterns')
   let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns._ = '\h\w*'
+" if !exists('g:neocomplete#force_omni_input_patterns')
+"   let g:neocomplete#force_omni_input_patterns = {}
+" endif
+" let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
 
 "--------------------------------------------------------
 " ショートカット
 "--------------------------------------------------------
-cnoremap nt NERDTree
-cnoremap vs VimShell
+nmap <C-k><C-c> <Plug>(caw:I:toggle)
+vmap <C-k><C-c> <Plug>(caw:I:toggle)
+
 
 " マッピングに関するmemo
 " noreがつくものとつかないものの違い（mapとnoremapとか）
