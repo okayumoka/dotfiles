@@ -3,13 +3,14 @@
 "syntax enable	"シンタックスハイライト
 "syntax on		"シンタックスハイライト
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme hybrid
 
 
 "---------------------------------------------------------------------------
 " フォント設定:
 set guifont=Migu\ 1m:h10
-set guifont=Ricty\ Diminished:h11
+set guifont=Meiryo\ Consolas:h10
 " DirectDrawを有効に
 if has('win32')
   set renderoptions=type:directx,renmode:5
@@ -34,7 +35,7 @@ set guioptions-=m
 "---------------------------------------------------------------------------
 " ウインドウ位置とサイズの自動保存・復元
 "
-let g:save_window_file = expand('~/vimfiles/.vimwinpos')
+let g:save_window_file = expand('~/.vim/.vimwinpos')
 augroup SaveWindow
   autocmd!
   autocmd VimLeavePre * call s:save_window()

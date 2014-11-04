@@ -22,6 +22,8 @@ set backspace=indent,eol,start  "BSでなんでも消せるようにする
 set formatoptions+=mM           "整形オプションにマルチバイト系を追加
 set nowrap          " 折り返さない
 "set showtabline=2   " タブのラベルを常に表示する
+set nobackup        " バックアップファイルを作らない
+set noundofile      " UNDOファイルを作らない
 
 filetype indent on  " ファイルタイプによるインデントを行う
 filetype plugin on  " ファイルタイプによるプラグインを使う
@@ -229,10 +231,12 @@ set fileencodings=iso-2022-jp,cp932,euc-jp,utf-8,utf-32
 filetype off
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  "call neobundle#rc(expand('~/.vim/bundle/'))
+  call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  call neobundle#end()
 endif
 " originalrepos on github
-NeoBundle 'Shougo/neobundle.vim'    " プラグイン管理
 NeoBundle 'Shougo/vimproc'          " 非同期処理のため
 NeoBundle 'VimClojure'              " vimにおけるクロージャの開発環境
 NeoBundle 'Shougo/vimshell'         " vimからシェルを起動する
@@ -249,6 +253,12 @@ NeoBundle 'xolox/vim-misc.git'
 NeoBundle "scrooloose/nerdtree"
 NeoBundle "tyru/caw.vim.git"        " コメントアウト
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'taichouchou2/vim-javascript'
+NeoBundle 'kchmck/vim-coffee-script'
+
 " カラースキーマ系
 NeoBundle 'altercation/vim-colors-solarized'    " solarized カラーテーマ
 NeoBundle 'tomasr/molokai'
@@ -260,8 +270,9 @@ NeoBundle 'jpo/vim-railscasts-theme'
 syntax enable   "シンタックスハイライト
 syntax on       "シンタックスハイライト
 set background=dark
-colorscheme solarized
-let g:solarized_visibility="low"
+"colorscheme solarized
+"let g:solarized_visibility="low"
+colorscheme hybrid
 
 "--------------------------------------------------------
 " neocomplete
@@ -276,22 +287,45 @@ if !exists('g:neocomplete#keyword_patterns')
   let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns._ = '\h\w*'
-"if !exists('g:neocomplete#force_omni_input_patterns')
-"  let g:neocomplete#force_omni_input_patterns = {}
-"endif
-"let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><CR> pumvisible() ? neocomplete#close_popup() : "<CR>"
+inoremap <expr><C-e> neocomplete#cancel_popup()
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+" For perlomni.vim setting.
+" https://github.com/c9s/perlomni.vim
+let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
 
 "--------------------------------------------------------
 " indent guides
 "--------------------------------------------------------
-let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
+" let g:indent_guides_auto_colors=0
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
+" let g:indent_guides_enable_on_vim_startup=1
+" let g:indent_guides_guide_size=1
 
 "--------------------------------------------------------
-" ショートカット
+" caw.vim
 "--------------------------------------------------------
 nmap <C-k><C-c> <Plug>(caw:i:toggle)
 nmap <C-k><C-u> <Plug>(caw:i:toggle)
