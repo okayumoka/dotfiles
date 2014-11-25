@@ -21,10 +21,8 @@ set ambiwidth=double            " □とか○の文字があってもカーソ�
 set backspace=indent,eol,start  "BSでなんでも消せるようにする
 set formatoptions+=mM           "整形オプションにマルチバイト系を追加
 set nowrap          " 折り返さない
-set nobackup        " バックアップファイルを作成しない
-autocmd FileType text setlocal textwidth=0
+set noundofile      " undoファイルを作成しない
 "set showtabline=2   " タブのラベルを常に表示する
-set noundofile      " UNDOファイルを作らない
 
 filetype indent on  " ファイルタイプによるインデントを行う
 filetype plugin on  " ファイルタイプによるプラグインを使う
@@ -62,6 +60,13 @@ set shiftwidth=4    " インデントの幅
 set softtabstop=0   " Tab キー押下時に挿入される空白の量
 " Rubyスクリプトではインデントをスペース2個にする
 au FileType ruby setlocal ts=2 sw=2
+" SQLファイルのインデントはスペース2個
+au FileType sql setlocal ts=2 sw=2 softtabstop=2 expandtab
+" HTMLファイル
+au FileType html setlocal ts=2 sw=2 softtabstop=0
+au FileType xhtml setlocal ts=2 sw=2 softtabstop=0
+au FileType jsp setlocal ts=2 sw=2 softtabstop=0
+
 
 "filetype plugin on " ファイルタイプの検索を有効にする
 "filetype indent on " ファイルタイプに合わせたインデントを利用する
@@ -90,7 +95,8 @@ set guioptions-=T   " ツールバーを削除
 
 " 特殊文字(SpecialKey)の見える化
 set list
-set listchars=tab:.\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
+" set listchars=tab:\|\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
+set listchars=tab:\|\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
 "highlight SpecialKey term=underline ctermfg=darkgray guifg=darkgray
 
 " 全角スペースのハイライト表示
@@ -210,7 +216,7 @@ inoremap <C-l> <Right>
 "--------------------------------------------------------
 set ffs=unix,dos,mac   " 改行文字
 set encoding=utf-8     " デフォルトエンコーディング
-set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp,utf-32
+set fileencodings=iso-2022-jp,cp932,euc-jp,utf-8,utf-32
 
 "--------------------------------------------------------
 " 折り畳み
@@ -231,10 +237,13 @@ set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp,utf-32
 filetype off
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  "call neobundle#rc(expand('~/.vim/bundle/'))
+  call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  call neobundle#end()
 endif
 " originalrepos on github
-NeoBundle 'Shougo/neobundle.vim'    " プラグイン管理
+" NeoBundle 'Shougo/neobundle.vim'    " プラグイン管理
 "NeoBundle 'Shougo/vimproc'          " 非同期処理のため
 NeoBundle 'VimClojure'              " vimにおけるクロージャの開発環境
 NeoBundle 'Shougo/vimshell'         " vimからシェルを起動する
@@ -246,10 +255,24 @@ NeoBundle 'jpalardy/vim-slime'      " ??
 NeoBundle 'Townk/vim-autoclose'     " カッコやダブルコーテーションを自動で閉じる
 NeoBundle 'kien/ctrlp.vim.git'      " コマンドラインでのファイル補完
 "NeoBundle 'scrooloose/syntastic'   " シンタックスのチェック（重たくなるようなのでとりあえず解除）
+NeoBundle "scrooloose/nerdtree"
+NeoBundle "tyru/caw.vim.git"        " コメントアウト
+NeoBundle 'nathanaelkane/vim-indent-guides'
+" Lua
 NeoBundle 'xolox/vim-lua-ftplugin.git'
 NeoBundle 'xolox/vim-misc.git'
-NeoBundle "scrooloose/nerdtree"
-NeoBundle "tyru/caw.vim.git"
+" CoffeeScript
+NeoBundle 'kchmck/vim-coffee-script'
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" html5
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+"NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'taichouchou2/vim-javascript'
+" PHP
+" NeoBundle 'violetyk/neocomplete-php.vim'
+" let g:neocomplete_php_locale = 'ja'
+
 " カラースキーマ系
 NeoBundle 'altercation/vim-colors-solarized'    " solarized カラーテーマ
 NeoBundle 'tomasr/molokai'
@@ -263,8 +286,7 @@ syntax on       "シンタックスハイライト
 set background=dark
 "colorscheme solarized
 colorscheme hybrid
-
-""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+let g:solarized_visibility="low"
 
 "--------------------------------------------------------
 " neocomplete
@@ -278,19 +300,62 @@ let g:neocomplete#enable_smart_case = 1
 if !exists('g:neocomplete#keyword_patterns')
   let g:neocomplete#keyword_patterns = {}
 endif
-let g:neocomplete#keyword_patterns._ = '\h\w*'
-" if !exists('g:neocomplete#force_omni_input_patterns')
-"   let g:neocomplete#force_omni_input_patterns = {}
-" endif
-" let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+"let g:neocomplete#keyword_patterns._ = '\h\w*'
+"if !exists('g:neocomplete#force_omni_input_patterns')
+"  let g:neocomplete#force_omni_input_patterns = {}
+"endif
+"let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+"
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
 
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return neocomplete#close_popup() . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplete#close_popup()
+inoremap <expr><C-c>  neocomplete#close_popup()
+inoremap <expr><CR>  pumvisible() ? neocomplete#close_popup() : "<CR>"
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+"let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+
+"--------------------------------------------------------
+" indent guides
+"--------------------------------------------------------
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_guide_size=1
 
 "--------------------------------------------------------
 " ショートカット
 "--------------------------------------------------------
-nmap <C-k><C-c> <Plug>(caw:I:toggle)
-vmap <C-k><C-c> <Plug>(caw:I:toggle)
-
+nmap <C-k><C-c> <Plug>(caw:i:toggle)
+nmap <C-k><C-u> <Plug>(caw:i:toggle)
+vmap <C-k><C-c> <Plug>(caw:i:toggle)
+vmap <C-k><C-u> <Plug>(caw:i:toggle)
 
 " マッピングに関するmemo
 " noreがつくものとつかないものの違い（mapとnoremapとか）

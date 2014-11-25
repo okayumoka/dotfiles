@@ -8,7 +8,13 @@ colorscheme hybrid
 
 "---------------------------------------------------------------------------
 " フォント設定:
-set guifont=Migu\ 1m:h10
+"set guifont=Migu\ 1m:h10
+set guifont=Meiryo\ Consolas:h10
+" DirectDrawを有効に
+if has('win32')
+  set renderoptions=type:directx,renmode:5
+endif
+
 
 "---------------------------------------------------------------------------
 " ウインドウに関する設定:
