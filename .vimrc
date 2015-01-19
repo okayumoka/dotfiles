@@ -22,6 +22,7 @@ set formatoptions+=mM           "整形オプションにマルチバイト系�
 set nowrap          " 折り返さない
 set noundofile      " undoファイルを作成しない
 "set showtabline=2   " タブのラベルを常に表示する
+set nobackup        " バックアップファイルを作成しない
 
 filetype indent on  " ファイルタイプによるインデントを行う
 filetype plugin on  " ファイルタイプによるプラグインを使う
@@ -219,7 +220,7 @@ inoremap <C-l> <Right>
 "--------------------------------------------------------
 set ffs=unix,dos,mac   " 改行文字
 set encoding=utf-8     " デフォルトエンコーディング
-set fileencodings=iso-2022-jp,cp932,euc-jp,utf-8,utf-32
+set fileencodings=utf-8,cp932,euc-jp,utf-32,iso-2022-jp
 
 "--------------------------------------------------------
 " 折り畳み
@@ -346,13 +347,13 @@ endif
 "--------------------------------------------------------
 " indent guides
 "--------------------------------------------------------
-let g:indent_guides_auto_colors=0
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=black
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=darkgray
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=2
+" let g:indent_guides_auto_colors=0
+" " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
+" " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=black
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=darkgray
+" let g:indent_guides_enable_on_vim_startup=1
+" let g:indent_guides_guide_size=2
 
 "--------------------------------------------------------
 " ショートカット
