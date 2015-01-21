@@ -261,6 +261,11 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 " Lua
 NeoBundle 'xolox/vim-lua-ftplugin.git'
 NeoBundle 'xolox/vim-misc.git'
+" JavaScript
+NeoBundle 'jiangmiao/simple-javascript-indenter'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'elzr/vim-json'
+" NeoBundle 'mattn/jscomplete-vim'
 " CoffeeScript
 NeoBundle 'kchmck/vim-coffee-script'
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
