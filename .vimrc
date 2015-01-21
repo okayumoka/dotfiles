@@ -5,8 +5,7 @@ set noswapfile      " スワップファイルを作らない
 set nocompatible    " vi 互換モードをオフ（vim の拡張機能を有効に）
 "set hidden         " 編集中でも、保存しないで他のファイルを開けるようにする
 set confirm         " ファイルを保存していない場合に、ファイルの保存を確認するダイアログを出す
-set cmdheight=1     " 画面下部のコマンドラインの高さ
-set showcmd         " 入力したコマンドをステータスラインに表示
+set cmdheight=1     " 画面下部のコマンドラインの高さset showcmd         " 入力したコマンドをステータスラインに表示
 set scrolloff=5     " カーソルの上または下に表示される最小限の行数。5に設定してあるので、下に5行は必ず表示される
 set visualbell      " ビープの代わりにビジュアルベル（画面フラッシュ）を使う
 set vb t_vb=        " ビープを鳴らさない
@@ -23,12 +22,17 @@ set formatoptions+=mM           "整形オプションにマルチバイト系�
 set nowrap          " 折り返さない
 set noundofile      " undoファイルを作成しない
 "set showtabline=2   " タブのラベルを常に表示する
+set nobackup        " バックアップファイルを作成しない
 
 filetype indent on  " ファイルタイプによるインデントを行う
 filetype plugin on  " ファイルタイプによるプラグインを使う
 " キーコードはすぐにタイムアウト  マッピングはタイムアウトしない
 set notimeout ttimeout ttimeoutlen=200
 
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END "
 
 "--------------------------------------------------------
 " ステータスライン
@@ -216,7 +220,7 @@ inoremap <C-l> <Right>
 "--------------------------------------------------------
 set ffs=unix,dos,mac   " 改行文字
 set encoding=utf-8     " デフォルトエンコーディング
-set fileencodings=iso-2022-jp,cp932,euc-jp,utf-8,utf-32
+set fileencodings=utf-8,cp932,euc-jp,utf-32,iso-2022-jp
 
 "--------------------------------------------------------
 " 折り畳み
@@ -289,9 +293,9 @@ NeoBundle 'jpo/vim-railscasts-theme'
 syntax enable   "シンタックスハイライト
 syntax on       "シンタックスハイライト
 set background=dark
-"colorscheme solarized
+" colorscheme solarized
 colorscheme hybrid
-let g:solarized_visibility="low"
+" let g:solarized_visibility="low"
 
 "--------------------------------------------------------
 " neocomplete
@@ -348,11 +352,13 @@ endif
 "--------------------------------------------------------
 " indent guides
 "--------------------------------------------------------
-let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
+" let g:indent_guides_auto_colors=0
+" " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
+" " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=black
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=darkgray
+" let g:indent_guides_enable_on_vim_startup=1
+" let g:indent_guides_guide_size=2
 
 "--------------------------------------------------------
 " ショートカット
