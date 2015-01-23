@@ -296,7 +296,7 @@ set background=dark
 colorscheme solarized
 " colorscheme hybrid
 " let g:solarized_visibility="low"
-let g:solarized_termtrans=1
+" let g:solarized_termtrans=1
 
 "--------------------------------------------------------
 " neocomplete
