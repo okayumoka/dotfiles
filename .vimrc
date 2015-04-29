@@ -67,9 +67,9 @@ au FileType ruby setlocal ts=2 sw=2
 " SQLファイルのインデントはスペース2個
 au FileType sql setlocal ts=2 sw=2 softtabstop=2 expandtab
 " HTMLファイル
-au FileType html setlocal ts=2 sw=2 softtabstop=0
-au FileType xhtml setlocal ts=2 sw=2 softtabstop=0
-au FileType jsp setlocal ts=2 sw=2 softtabstop=0
+" au FileType html setlocal ts=2 sw=2 softtabstop=0
+" au FileType xhtml setlocal ts=2 sw=2 softtabstop=0
+" au FileType jsp setlocal ts=2 sw=2 softtabstop=0
 
 
 "filetype plugin on " ファイルタイプの検索を有効にする
@@ -276,7 +276,7 @@ au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 " html5
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
-"NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'taichouchou2/vim-javascript'
 " PHP
 " NeoBundle 'violetyk/neocomplete-php.vim'
@@ -293,6 +293,8 @@ NeoBundle 'jpo/vim-railscasts-theme'
 syntax enable   "シンタックスハイライト
 syntax on       "シンタックスハイライト
 set background=dark
+
+autocmd ColorScheme * highlight SpecialKey term=none cterm=none ctermfg=11 ctermbg=8
 colorscheme solarized
 " colorscheme hybrid
 " let g:solarized_visibility="low"
@@ -339,7 +341,7 @@ inoremap <expr><CR>  pumvisible() ? neocomplete#close_popup() : "<CR>"
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete

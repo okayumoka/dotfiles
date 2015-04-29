@@ -3,9 +3,9 @@
 "syntax enable	"シンタックスハイライト
 "syntax on		"シンタックスハイライト
 set background=dark
-"colorscheme solarized
-colorscheme hybrid
-
+colorscheme solarized
+" colorscheme hybrid
+highlight SpecialKey term=none cterm=none ctermfg=11 guifg=Yellow
 
 "---------------------------------------------------------------------------
 " フォント設定:
