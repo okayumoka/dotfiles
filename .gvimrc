@@ -5,7 +5,7 @@
 set background=dark
 colorscheme solarized
 " colorscheme hybrid
-highlight SpecialKey term=none cterm=none ctermfg=11 guifg=Yellow
+highlight specialkey term=none cterm=none gui=none ctermfg=11 ctermbg=8 guifg=#586e75 guibg=#002b36
 
 "---------------------------------------------------------------------------
 " フォント設定:
