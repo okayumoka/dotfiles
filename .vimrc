@@ -239,13 +239,17 @@ set fileencodings=utf-8,cp932,euc-jp,utf-32,iso-2022-jp
 
 " NeoBundle
 filetype off
+
+if 0 | endif
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  "call neobundle#rc(expand('~/.vim/bundle/'))
-  call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  call neobundle#end()
+	if &compatible
+		set nocompatible               " Be iMproved
+	endif
+	" Required:
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 " originalrepos on github
 " NeoBundle 'Shougo/neobundle.vim'    " プラグイン管理
 "NeoBundle 'Shougo/vimproc'          " 非同期処理のため
@@ -290,8 +294,12 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'jonathanfilip/vim-lucius'
 NeoBundle 'jpo/vim-railscasts-theme'
 
+" NeoBundleのおわり
+call neobundle#end()
+filetype plugin indent on     " required!
 syntax enable   "シンタックスハイライト
-syntax on       "シンタックスハイライト
+syntax on
+
 set background=dark
 
 autocmd ColorScheme * highlight SpecialKey term=none cterm=none ctermfg=11 ctermbg=8
@@ -303,9 +311,6 @@ colorscheme solarized
 "--------------------------------------------------------
 " neocomplete
 "--------------------------------------------------------
-filetype plugin indent on     " required!
-filetype indent on
-syntax on
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_ignore_case = 1
 let g:neocomplete#enable_smart_case = 1
