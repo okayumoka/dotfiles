@@ -25,7 +25,7 @@ set columns=120
 " ウインドウの高さ
 set lines=250
 " 透過背景
-autocmd GUIEnter * set transparency=225
+" autocmd GUIEnter * set transparency=225
 " ツールバーを削除
 set guioptions-=T
 "メニューを削除
