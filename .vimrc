@@ -280,11 +280,15 @@ au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 " html5
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'taichouchou2/html5.vim'
+" NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'taichouchou2/vim-javascript'
 " PHP
 " NeoBundle 'violetyk/neocomplete-php.vim'
 " let g:neocomplete_php_locale = 'ja'
+" puyo
+NeoBundle 'rbtnn/game_engine.vim'
+NeoBundle 'rbtnn/puyo.vim'
+
 
 " カラースキーマ系
 NeoBundle 'altercation/vim-colors-solarized'    " solarized カラーテーマ
@@ -392,6 +396,4 @@ vmap <C-k><C-u> <Plug>(caw:i:toggle)
 " vnoremap : ビジュアルモード（選択モード）限定
 " cnoremap : コマンドラインモード限定
 " inoremap : 挿入モード限定
-
-
 
