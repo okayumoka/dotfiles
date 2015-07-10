@@ -70,6 +70,7 @@ au FileType sql setlocal ts=2 sw=2 softtabstop=2 expandtab
 " au FileType html setlocal ts=2 sw=2 softtabstop=0
 " au FileType xhtml setlocal ts=2 sw=2 softtabstop=0
 " au FileType jsp setlocal ts=2 sw=2 softtabstop=0
+au FileType php setlocal ts=4 sw=4 softtabstop=0 expandtab
 
 
 "filetype plugin on " ファイルタイプの検索を有効にする
@@ -232,7 +233,6 @@ set fileencodings=utf-8,cp932,euc-jp,utf-32,iso-2022-jp
 "set foldmethod=manual
 "set foldmethod=diff
 
-
 "--------------------------------------------------------
 " プラグイン
 "--------------------------------------------------------
@@ -283,8 +283,18 @@ NeoBundle 'hail2u/vim-css3-syntax'
 " NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'taichouchou2/vim-javascript'
 " PHP
-" NeoBundle 'violetyk/neocomplete-php.vim'
-" let g:neocomplete_php_locale = 'ja'
+NeoBundle 'violetyk/neocomplete-php.vim'
+NeoBundle 'violetyk/cake.vim'
+NeoBundle 'tobyS/pdv'
+NeoBundle 'tobyS/vmustache'
+" NeoBundle 'honza/vim-snippets'
+" NeoBundle 'SirVer/ultisnips'
+let g:neocomplete_php_locale = 'ja'
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
+nnoremap <C-k><C-p> :call pdv#DocumentCurrentLine()<CR>
+" let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+" nnoremap <C-k><C-p> :call pdv#DocumentWithSnip()<CR>
+
 " puyo
 NeoBundle 'rbtnn/game_engine.vim'
 NeoBundle 'rbtnn/puyo.vim'
