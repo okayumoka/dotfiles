@@ -10,10 +10,14 @@ highlight specialkey term=none cterm=none gui=none ctermfg=11 ctermbg=8 guifg=#5
 "---------------------------------------------------------------------------
 " フォント設定:
 "set guifont=Migu\ 1m:h10
-set guifont=Meiryo\ Consolas:h10
+"set guifont=Meiryo\ Consolas:h10
+"set guifont=MyricaM\ M:h10
+set guifont=Myrica\ M:h10
 " DirectDrawを有効に
 if has('win32')
-  set renderoptions=type:directx,renmode:5
+  set renderoptions=type:directx,renmode:4
+  "set renderoptions=type:directx,renmode:5
+  "set renderoptions=type:directx,renmode:5,taamode:2
 endif
 
 

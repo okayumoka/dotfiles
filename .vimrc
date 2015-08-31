@@ -14,15 +14,14 @@ set viminfo+=!      " yankring用に!を追加
 set shellslash      " パス区切りをスラッシュにする
 set t_Co=256        " 256色ターミナルでVimを使用する
 set backspace=indent,eol,start  " BS でなんでも消せるようにする
-set formatoptions+=mM           " 整形オプションにマルチバイト系を追加
 set clipboard+=autoselect       " クリップボードを使用
 set ambiwidth=double            " □とか○の文字があってもカーソル位置がずれないようにする
 set backspace=indent,eol,start  "BSでなんでも消せるようにする
-set formatoptions+=mM           "整形オプションにマルチバイト系を追加
 set nowrap          " 折り返さない
 set noundofile      " undoファイルを作成しない
 "set showtabline=2   " タブのラベルを常に表示する
 set nobackup        " バックアップファイルを作成しない
+set formatoptions=q " 自動改行をオフにする
 
 filetype indent on  " ファイルタイプによるインデントを行う
 filetype plugin on  " ファイルタイプによるプラグインを使う
