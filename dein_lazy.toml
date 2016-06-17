@@ -1,0 +1,12 @@
+# 基本は github.com のレポジトリーを指定するだけ
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+#build = 'make'
+
+# スニペット
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+

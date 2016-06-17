@@ -5,7 +5,8 @@ set noswapfile      " スワップファイルを作らない
 set nocompatible    " vi 互換モードをオフ（vim の拡張機能を有効に）
 "set hidden         " 編集中でも、保存しないで他のファイルを開けるようにする
 set confirm         " ファイルを保存していない場合に、ファイルの保存を確認するダイアログを出す
-set cmdheight=1     " 画面下部のコマンドラインの高さset showcmd         " 入力したコマンドをステータスラインに表示
+set cmdheight=1     " 画面下部のコマンドラインの高さ
+set showcmd         " 入力したコマンドをステータスラインに表示
 set scrolloff=5     " カーソルの上または下に表示される最小限の行数。5に設定してあるので、下に5行は必ず表示される
 set visualbell      " ビープの代わりにビジュアルベル（画面フラッシュ）を使う
 set vb t_vb=        " ビープを鳴らさない
@@ -16,7 +17,6 @@ set t_Co=256        " 256色ターミナルでVimを使用する
 set backspace=indent,eol,start  " BS でなんでも消せるようにする
 set clipboard+=autoselect       " クリップボードを使用
 set ambiwidth=double            " □とか○の文字があってもカーソル位置がずれないようにする
-set backspace=indent,eol,start  "BSでなんでも消せるようにする
 set nowrap          " 折り返さない
 set noundofile      " undoファイルを作成しない
 "set showtabline=2   " タブのラベルを常に表示する
@@ -33,17 +33,6 @@ augroup vimrcEx
   \ exe "normal g`\"" | endif
 augroup END "
 
-"--------------------------------------------------------
-" ステータスライン
-"--------------------------------------------------------
-set laststatus=2    " ステータスラインを常に表示する
-set ruler           " ステータスライン上にルーラーを表示する（カーソルが何行目の何列目に置かれているか）
-
-" [ファイルフォーマット][エンコーディング][改行タイプ] 行数, 列数／総列数
-set statusline=%F%m%r%h%w\%=[FILETYPE=%Y][ENC=%{&fenc}][%{&ff}]%=%c,\%l/%L
-
-" MEMO
-" powerlineというプラグインを入れるとステータスラインを強化できるようだ
 
 
 "--------------------------------------------------------
@@ -61,17 +50,13 @@ set backspace=indent,eol,start
 set tabstop=4       " タブ幅
 set shiftwidth=4    " インデントの幅
 set softtabstop=0   " Tab キー押下時に挿入される空白の量
-" Rubyスクリプトではインデントをスペース2個にする
 au FileType ruby setlocal ts=2 sw=2
-" SQLファイルのインデントはスペース2個
 au FileType sql setlocal ts=2 sw=2 softtabstop=2 expandtab
-" HTMLファイル
-au FileType html setlocal ts=4 sw=4 softtabstop=0
-" au FileType xhtml setlocal ts=2 sw=2 softtabstop=0
+" au FileType html setlocal ts=4 sw=4 softtabstop=0
+" au FileType xhtml setlocal ts=4 sw=4 softtabstop=0
 " au FileType jsp setlocal ts=2 sw=2 softtabstop=0
 " au FileType php setlocal ts=4 sw=4 softtabstop=0 expandtab
-au FileType php setlocal ts=4 sw=4 softtabstop=0 autoindent
-
+" au FileType php setlocal ts=4 sw=4 softtabstop=0 autoindent
 
 "filetype plugin on " ファイルタイプの検索を有効にする
 "filetype indent on " ファイルタイプに合わせたインデントを利用する
@@ -91,8 +76,7 @@ au FileType php setlocal ts=4 sw=4 softtabstop=0 autoindent
 set number      " 行番号を表示
 set showmatch   " 括弧の対応をハイライト
 set cursorline  " カーソル行のハイライト
-"set ruler        "ルーラー表示(ステータスライン変えてるから意味ない)
-set title        "ウィンドウのタイトルを書き換える
+set title       " ウィンドウのタイトルを書き換える
 "set wrap           "長い行を折り返す
 "set numberwidth=6  "行番号の幅
 set showmode        "現在のモードを表示
@@ -100,7 +84,6 @@ set guioptions-=T   " ツールバーを削除
 
 " 特殊文字(SpecialKey)の見える化
 set list
-" set listchars=tab:\|\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
 set listchars=tab:\|\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
 "highlight SpecialKey term=underline ctermfg=darkgray guifg=darkgray
 
@@ -117,6 +100,16 @@ set listchars=tab:\|\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
 "    call ZenkakuSpace()
 "endif
 
+
+"--------------------------------------------------------
+" ステータスライン
+"--------------------------------------------------------
+set laststatus=2    " ステータスラインを常に表示する
+set ruler           " ステータスライン上にルーラーを表示する（カーソルが何行目の何列目に置かれているか）
+
+" [ファイルフォーマット][エンコーディング][改行タイプ] 行数, 列数／総列数
+set statusline=%F%m%r%h%w\%=[FILETYPE=%Y][ENC=%{&fenc}][%{&ff}]%=%c,\%l/%L
+
 " 入力モード時、ステータスラインのカラーを変更
 "augroup InsertHook
 " autocmd!
@@ -124,15 +117,12 @@ set listchars=tab:\|\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
 " autocmd InsertLeave * highlight StatusLine ctermfg=black ctermbg=lightgray guifg=black guibg=#c2bfa5
 "augroup END
 
-" MEMO
-" 不可視文字とはタブ文字や行末文字のことを指す
-
 
 "--------------------------------------------------------
 " 補完
 "--------------------------------------------------------
 set wildmenu        " コマンドラインモードでの補完を有効に
-set wildchar=<tab>    " コマンド補完を開始するキー
+set wildchar=<tab>  " コマンド補完を開始するキー
 set history=1000    " コマンド・検索パターンの履歴数
 set wildmode=list:longest,full
 set completeopt=menu,preview,menuone
@@ -226,8 +216,8 @@ set fileencodings=utf-8,cp932,euc-jp,utf-32,iso-2022-jp
 "--------------------------------------------------------
 " 折り畳み
 "--------------------------------------------------------
-"set foldmethod=syntax           "自動で折り畳み
-"set foldmethod=marker  "マーカーで折り畳み
+"set foldmethod=syntax    "自動で折り畳み
+"set foldmethod=marker    "マーカーで折り畳み
 "set foldmethod=indent
 "set foldmethod=expr
 "set foldmethod=manual
@@ -237,101 +227,47 @@ set fileencodings=utf-8,cp932,euc-jp,utf-32,iso-2022-jp
 " プラグイン
 "--------------------------------------------------------
 
-" NeoBundle
-filetype off
-
-if 0 | endif
-if has('vim_starting')
-	if &compatible
-		set nocompatible               " Be iMproved
+" Dein.vim
+" プラグインが実際にインストールされるディレクトリ
+let s:dein_dir = expand('~/.vim/dein/')
+" dein.vim 本体
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+" dein.vim がなければ github から落としてくる
+if &runtimepath !~# '/dein.vim'
+	if !isdirectory(s:dein_repo_dir)
+		execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
 	endif
-	" Required:
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+	execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-" originalrepos on github
-" NeoBundle 'Shougo/neobundle.vim'    " プラグイン管理
-"NeoBundle 'Shougo/vimproc'          " 非同期処理のため
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-    \ 'windows' : 'make -f make_mingw64.mak',
-    \ 'cygwin' : 'make -f make_cygwin.mak',
-    \ 'mac' : 'make -f make_mac.mak',
-    \ 'unix' : 'make -f make_unix.mak',
-  \ },
-\ }
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tyru/open-browser.vim'
+" dein設定開始
+"if dein#load_state(s:dein_dir)
+	call dein#begin(s:dein_dir)
+	" プラグインリストを収めた TOML ファイル
+	" 予め TOML ファイル（後述）を用意しておく
+	let g:rc_dir    = expand('~/.vim/rc')
+	let s:toml      = g:rc_dir . '/dein.toml'
+	let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+	" TOML を読み込み、キャッシュしておく
+	call dein#load_toml(s:toml,      {'lazy': 0})
+	call dein#load_toml(s:lazy_toml, {'lazy': 1})
+	" 設定終了
+	call dein#end()
+	" call dein#save_state()
+"endif
+" もし、未インストールものものがあったらインストール
+if dein#check_install()
+  call dein#install()
+endif
 
-"NeoBundle 'VimClojure'              " vimにおけるクロージャの開発環境
-NeoBundle 'Shougo/vimshell'         " vimからシェルを起動する
-NeoBundle 'Shougo/unite.vim'        " vim上で使用出来る統合ユーザーインターフェース
-"NeoBundle 'Shougo/neocomplcache'    " 補完
-NeoBundle 'Shougo/neocomplete'      " 補完
-NeoBundle 'Shougo/neosnippet'       " スニペット
-NeoBundle 'Shougo/neosnippet-snippets' " スニペット
-"NeoBundle 'jpalardy/vim-slime'      " ??
-NeoBundle 'Townk/vim-autoclose'     " カッコやダブルコーテーションを自動で閉じる
-NeoBundle 'kien/ctrlp.vim.git'      " コマンドラインでのファイル補完
-"NeoBundle 'scrooloose/syntastic'   " シンタックスのチェック（重たくなるようなのでとりあえず解除）
-NeoBundle "scrooloose/nerdtree"
-NeoBundle "tyru/caw.vim.git"        " コメントアウト
-"NeoBundle 'nathanaelkane/vim-indent-guides'
-" Lua
-NeoBundle 'xolox/vim-lua-ftplugin.git'
-NeoBundle 'xolox/vim-misc.git'
-" JavaScript
-NeoBundle 'jiangmiao/simple-javascript-indenter'
-let g:SimpleJsIndenter_BriefMode = 1
-NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'elzr/vim-json'
-" NeoBundle 'mattn/jscomplete-vim'
-" CoffeeScript
-NeoBundle 'kchmck/vim-coffee-script'
-au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
-" html5
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-" NeoBundle 'taichouchou2/html5.vim'
-NeoBundle 'taichouchou2/vim-javascript'
-" PHP
-" NeoBundle 'violetyk/neocomplete-php.vim'
-" NeoBundle 'violetyk/cake.vim'
-" NeoBundle 'tobyS/pdv'
-" NeoBundle 'tobyS/vmustache'
-" Markdown
-NeoBundle 'plasticboy/vim-markdown'
-let g:vim_markdown_folding_disabled = 1
-set syntax=markdown
-autocmd BufRead,BufNewFile *.mkd set filetype=markdown 
-autocmd BufRead,BufNewFile *.md set filetype=markdown 
-
-" puyo
-NeoBundle 'rbtnn/game_engine.vim'
-NeoBundle 'rbtnn/puyo.vim'
-
-" カラースキーマ系
-NeoBundle 'altercation/vim-colors-solarized'    " solarized カラーテーマ
-NeoBundle 'tomasr/molokai'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'jonathanfilip/vim-lucius'
-NeoBundle 'jpo/vim-railscasts-theme'
-
-" NeoBundleのおわり
-call neobundle#end()
-filetype plugin indent on     " required!
-syntax enable   "シンタックスハイライト
-syntax on
-
+"--------------------------------------------------------
+" カラースキーマ
+"--------------------------------------------------------
 set background=dark
-
 autocmd ColorScheme * highlight SpecialKey term=none cterm=none ctermfg=11 ctermbg=8
 colorscheme solarized
-" colorscheme hybrid
 " let g:solarized_visibility="low"
 " let g:solarized_termtrans=1
+
 
 "--------------------------------------------------------
 " neocomplete
@@ -380,18 +316,6 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 "let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-
-"--------------------------------------------------------
-" indent guides
-"--------------------------------------------------------
-" let g:indent_guides_auto_colors=0
-" " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
-" " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=black
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=darkgray
-" let g:indent_guides_enable_on_vim_startup=1
-" let g:indent_guides_guide_size=2
 
 
 "--------------------------------------------------------

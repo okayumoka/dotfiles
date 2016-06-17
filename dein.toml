@@ -1,0 +1,137 @@
+#-------------------------------
+# 基本
+#-------------------------------
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+#build = 'make'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets' # スニペット
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'        # カッコやダブルコーテーションを自動で閉じる
+
+[[plugins]]
+repo = 'kien/ctrlp.vim.git'         # コマンドラインでのファイル補完
+
+[[plugins]]
+repo = "scrooloose/nerdtree"
+
+[[plugins]]
+repo = "tyru/caw.vim.git"           # コメントアウト
+
+
+#-------------------------------
+# Lua
+#-------------------------------
+[[plugins]]
+repo = 'xolox/vim-lua-ftplugin.git'
+
+[[plugins]]
+repo = 'xolox/vim-misc.git'
+
+
+#-------------------------------
+# JavaScript
+#-------------------------------
+[[plugins]]
+repo = 'jiangmiao/simple-javascript-indenter'
+hook_post_update = '''
+	let g:SimpleJsIndenter_BriefMode = 1
+'''
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+
+#[[plugins]]
+# repo = 'mattn/jscomplete-vim'
+
+
+#-------------------------------
+# CoffeeScript
+#-------------------------------
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+hook_post_update = '''
+	au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+'''
+
+
+#-------------------------------
+# html
+#-------------------------------
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+
+
+#-------------------------------
+# PHP
+#-------------------------------
+#[[plugins]]
+#repo = 'violetyk/neocomplete-php.vim'
+
+#[[plugins]]
+#repo = 'violetyk/cake.vim'
+
+#[[plugins]]
+#repo = 'tobyS/pdv'
+
+#[[plugins]]
+#repo = 'tobyS/vmustache'
+
+
+#-------------------------------
+# Markdown
+#-------------------------------
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+hook_post_update = '''
+	let g:vim_markdown_folding_disabled = 1
+	set syntax=markdown
+	autocmd BufRead,BufNewFile *.mkd set filetype=markdown 
+	autocmd BufRead,BufNewFile *.md set filetype=markdown 
+'''
+
+
+#-------------------------------
+# puyo
+#-------------------------------
+#[[plugins]]
+#repo = 'rbtnn/game_engine.vim'
+
+#[[plugins]]
+#repo = 'rbtnn/puyo.vim'
+
+
+#-------------------------------
+# カラースキーマ
+#-------------------------------
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo = 'jonathanfilip/vim-lucius'
+
+[[plugins]]
+repo = 'jpo/vim-railscasts-theme'
