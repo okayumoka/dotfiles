@@ -6,10 +6,13 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
-#build = 'make'
+build = 'make'
 
 [[plugins]]
 repo = 'Shougo/vimshell'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets' # スニペット
@@ -57,6 +60,10 @@ repo = 'pangloss/vim-javascript'
 
 #[[plugins]]
 # repo = 'mattn/jscomplete-vim'
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+
 
 
 #-------------------------------
