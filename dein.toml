@@ -9,6 +9,9 @@ repo = 'Shougo/vimproc.vim'
 #build = 'make'
 
 [[plugins]]
+repo = 'Shougo/vimshell'
+
+[[plugins]]
 repo = 'Shougo/neosnippet-snippets' # スニペット
 
 [[plugins]]
