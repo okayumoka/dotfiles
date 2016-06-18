@@ -45,7 +45,7 @@ repo = 'xolox/vim-misc.git'
 #-------------------------------
 [[plugins]]
 repo = 'jiangmiao/simple-javascript-indenter'
-hook_post_update = '''
+hook_add = '''
 	let g:SimpleJsIndenter_BriefMode = 1
 '''
 
@@ -71,7 +71,7 @@ repo = 'mxw/vim-jsx'
 #-------------------------------
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
-hook_post_update = '''
+hook_add = '''
 	au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 '''
 
@@ -107,7 +107,7 @@ repo = 'hail2u/vim-css3-syntax'
 #-------------------------------
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
-hook_post_update = '''
+hook_add = '''
 	let g:vim_markdown_folding_disabled = 1
 	set syntax=markdown
 	autocmd BufRead,BufNewFile *.mkd set filetype=markdown 
