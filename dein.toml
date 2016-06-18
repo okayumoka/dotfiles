@@ -15,7 +15,10 @@ repo = 'Shougo/vimshell'
 repo = 'Shougo/unite.vim'
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets' # スニペット
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/neocomplete'
 
 [[plugins]]
 repo = 'Townk/vim-autoclose'        # カッコやダブルコーテーションを自動で閉じる
