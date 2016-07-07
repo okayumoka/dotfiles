@@ -75,7 +75,7 @@ au FileType sql setlocal ts=2 sw=2 softtabstop=2 expandtab
 "--------------------------------------------------------
 set number      " 行番号を表示
 set showmatch   " 括弧の対応をハイライト
-set cursorline  " カーソル行のハイライト
+"set cursorline  " カーソル行のハイライト
 set title       " ウィンドウのタイトルを書き換える
 "set wrap           "長い行を折り返す
 "set numberwidth=6  "行番号の幅
@@ -228,6 +228,7 @@ set fileencodings=utf-8,cp932,euc-jp,utf-32,iso-2022-jp
 "--------------------------------------------------------
 
 " Dein.vim
+filetype off
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.vim/dein/')
 " dein.vim 本体
@@ -259,15 +260,21 @@ if dein#check_install()
   call dein#install()
 endif
 
+filetype plugin indent on
+syntax enable   "シンタックスハイライト
+syntax on
+
 "--------------------------------------------------------
 " カラースキーマ
 "--------------------------------------------------------
-set background=dark
-autocmd ColorScheme * highlight SpecialKey term=none cterm=none ctermfg=11 ctermbg=8
-colorscheme solarized
-" let g:solarized_visibility="low"
-" let g:solarized_termtrans=1
+"set background=dark
+"autocmd ColorScheme * highlight SpecialKey term=none cterm=none ctermfg=11 ctermbg=8
+"colorscheme solarized
+"let g:solarized_visibility="low"
+"let g:solarized_termtrans=1
 
+colorscheme molokai
+highlight specialkey term=none cterm=none
 
 "--------------------------------------------------------
 " neocomplete

@@ -88,6 +88,9 @@ repo = 'mattn/emmet-vim'
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
 
+[[plugins]]
+repo = 'othree/html5.vim'
+
 
 #-------------------------------
 # PHP
@@ -136,6 +139,10 @@ repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
 repo = 'tomasr/molokai'
+
+[[plugins]]
+
+repo = 'crusoexia/vim-monokai'
 
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'
