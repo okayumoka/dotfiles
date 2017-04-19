@@ -1,5 +1,6 @@
-
+"---------------------------------------------------------------------------
 " カラー設定:
+"---------------------------------------------------------------------------
 "set background=dark
 "colorscheme solarized
 "colorscheme hybrid
@@ -10,21 +11,20 @@ highlight specialkey term=none cterm=none gui=none
 
 "---------------------------------------------------------------------------
 " フォント設定:
+"---------------------------------------------------------------------------
 "set guifont=Migu\ 1m:h10
 "set guifont=Meiryo\ Consolas:h10
 set guifont=MyricaM\ M:h10
-"set guifont=Myrica\ M:h10
 " DirectDrawを有効に
-if has('win32')
-  set renderoptions=type:directx,renmode:4
-  "set renderoptions=type:directx,renmode:5
-  "set renderoptions=type:directx,renmode:5,taamode:2
-endif
-
+"if has('win32')
+"  set renderoptions=type:directx,renmode:4
+"  "set renderoptions=type:directx,renmode:5
+"  "set renderoptions=type:directx,renmode:5,taamode:2
+"endif
 
 "---------------------------------------------------------------------------
 " ウインドウに関する設定:
-"
+"---------------------------------------------------------------------------
 " ウインドウの幅
 set columns=120
 " ウインドウの高さ
@@ -37,14 +37,10 @@ set guioptions-=T
 set guioptions-=m
 " コマンド行の高さ
 set cmdheight=1
-" 折り返さない
-set nowrap          " 折り返さない
-" バックアップファイルを作らない
-set nobackup
 
 "---------------------------------------------------------------------------
 " ウインドウ位置とサイズの自動保存・復元
-"
+"---------------------------------------------------------------------------
 let g:save_window_file = expand('~/.vim/.vimwinpos')
 augroup SaveWindow
   autocmd!
@@ -62,3 +58,4 @@ augroup END
 if filereadable(g:save_window_file)
   execute 'source' g:save_window_file
 endif
+

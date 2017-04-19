@@ -2,8 +2,10 @@
 " 基本設定
 "--------------------------------------------------------
 set noswapfile      " スワップファイルを作らない
+set nobackup        " バックアップファイルを作成しない
+set noundofile      " undoファイルを作成しない
 set nocompatible    " vi 互換モードをオフ（vim の拡張機能を有効に）
-"set hidden         " 編集中でも、保存しないで他のファイルを開けるようにする
+set hidden          " 編集中でも、保存しないで他のファイルを開けるようにする
 set confirm         " ファイルを保存していない場合に、ファイルの保存を確認するダイアログを出す
 set cmdheight=1     " 画面下部のコマンドラインの高さ
 set showcmd         " 入力したコマンドをステータスラインに表示
@@ -11,64 +13,34 @@ set scrolloff=5     " カーソルの上または下に表示される最小限�
 set visualbell      " ビープの代わりにビジュアルベル（画面フラッシュ）を使う
 set vb t_vb=        " ビープを鳴らさない
 set mouse=a         " 全モードでマウスを有効化
-set viminfo+=!      " yankring用に!を追加
 set shellslash      " パス区切りをスラッシュにする
 set t_Co=256        " 256色ターミナルでVimを使用する
 set backspace=indent,eol,start  " BS でなんでも消せるようにする
-set clipboard+=autoselect       " クリップボードを使用
+"set clipboard+=autoselect       " クリップボードを使用
 set ambiwidth=double            " □とか○の文字があってもカーソル位置がずれないようにする
 set nowrap          " 折り返さない
-set noundofile      " undoファイルを作成しない
-"set showtabline=2   " タブのラベルを常に表示する
-set nobackup        " バックアップファイルを作成しない
 set formatoptions=q " 自動改行をオフにする
 
 filetype indent on  " ファイルタイプによるインデントを行う
 filetype plugin on  " ファイルタイプによるプラグインを使う
-" キーコードはすぐにタイムアウト  マッピングはタイムアウトしない
-set notimeout ttimeout ttimeoutlen=200
-
-augroup vimrcEx
-  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
-  \ exe "normal g`\"" | endif
-augroup END "
-
-
+" set notimeout ttimeout ttimeoutlen=200
 
 "--------------------------------------------------------
 " インデント
 "--------------------------------------------------------
-set autoindent      " オートインデント
+"set autoindent      " オートインデント
 set smartindent     " スマートインデント
-set cindent         " C プログラムの自動インデン
-"set expandtab      " Tab文字を空白に展開
-
-" オートインデント、改行、インサートモード開始直後にバックスペースキーで削除できるようにする
-set backspace=indent,eol,start
-
-" softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
+"set cindent         " C プログラムの自動インデント
 set tabstop=4       " タブ幅
 set shiftwidth=4    " インデントの幅
 set softtabstop=0   " Tab キー押下時に挿入される空白の量
 au FileType ruby setlocal ts=2 sw=2
 au FileType sql setlocal ts=2 sw=2 softtabstop=2 expandtab
-" au FileType html setlocal ts=4 sw=4 softtabstop=0
+au FileType html setlocal ts=2 sw=2 softtabstop=0
 " au FileType xhtml setlocal ts=4 sw=4 softtabstop=0
 " au FileType jsp setlocal ts=2 sw=2 softtabstop=0
 " au FileType php setlocal ts=4 sw=4 softtabstop=0 expandtab
 " au FileType php setlocal ts=4 sw=4 softtabstop=0 autoindent
-
-"filetype plugin on " ファイルタイプの検索を有効にする
-"filetype indent on " ファイルタイプに合わせたインデントを利用する
-
-" MEMO
-" autoindent  : 改行時に半角スペース8文字を挿入する
-" smartindent : 新しい行をつくったときに高度な自動インデントを行う  cindentがONだと無効化される
-" tabstop     : タブ文字の幅を設定する  デフォルトは8
-" expandtab   : TABキー入力時に、タブ文字の代わりにスペースにする
-" softtabstop : タブ文字を入力した際にタブ文字の代わりに挿入されるホワイトスペースの量を設定する  shiftwidthと同じ値にすると良い
-" shiftwidth  : 「>>」等のコマンドや自動インデントの際に使う1レベル分のインデント量を設定する  tabstopと同じ値にすると良い
-
 
 "--------------------------------------------------------
 " 表示
@@ -77,29 +49,11 @@ set number      " 行番号を表示
 set showmatch   " 括弧の対応をハイライト
 "set cursorline  " カーソル行のハイライト
 set title       " ウィンドウのタイトルを書き換える
-"set wrap           "長い行を折り返す
-"set numberwidth=6  "行番号の幅
 set showmode        "現在のモードを表示
-set guioptions-=T   " ツールバーを削除
 
 " 特殊文字(SpecialKey)の見える化
 set list
 set listchars=tab:\|\ \,trail:_,nbsp:%,extends:$,precedes:$,eol:$
-"highlight SpecialKey term=underline ctermfg=darkgray guifg=darkgray
-
-" 全角スペースのハイライト表示
-"function! ZenkakuSpace()
-"    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
-"endfunction
-"if has('syntax')
-"    augroup ZenkakuSpace
-"        autocmd!
-"        autocmd ColorScheme       * call ZenkakuSpace()
-"        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
-"    augroup END
-"    call ZenkakuSpace()
-"endif
-
 
 "--------------------------------------------------------
 " ステータスライン
@@ -109,13 +63,6 @@ set ruler           " ステータスライン上にルーラーを表示する�
 
 " [ファイルフォーマット][エンコーディング][改行タイプ] 行数, 列数／総列数
 set statusline=%F%m%r%h%w\%=[FILETYPE=%Y][ENC=%{&fenc}][%{&ff}]%=%c,\%l/%L
-
-" 入力モード時、ステータスラインのカラーを変更
-"augroup InsertHook
-" autocmd!
-" autocmd InsertEnter * highlight StatusLine ctermfg=black ctermbg=white guifg=#2E4340 guibg=#ccdc90
-" autocmd InsertLeave * highlight StatusLine ctermfg=black ctermbg=lightgray guifg=black guibg=#c2bfa5
-"augroup END
 
 
 "--------------------------------------------------------
@@ -146,7 +93,6 @@ set completeopt=menu,preview,menuone
 "autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"'
 
 
-
 "--------------------------------------------------------
 " 検索
 "--------------------------------------------------------
@@ -164,46 +110,13 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 " インクリメンタルサーチとは「検索文字列を入力完了する前に、入力中の文字列にマッチしている場所へ移動する」機能
 
 
-
 "--------------------------------------------------------
 " 移動
 "--------------------------------------------------------
-"ウィンドウ移動
-"noremap <S-Up> <C-W>k
-"noremap <S-Down> <C-W>j
-"noremap <S-Left> <C-W>h
-"noremap <S-Right> <C-W>l
 
-" インサートモードでもhjklで移動（Ctrlを押しながら）
-"inoremap <C-j> <Down>
-"inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-
-"カーソルを表示行で移動する。物理行移動は<C-n>,<C-p>
-"nnoremap j gj
-"nnoremap k gk
-"nnoremap <Down> gj
-"nnoremap <Up>   gk
-
-" インサートモードでも削除
-"inoremap <C-x> <BS>
-
-"set whichwrap=b,s,h,l,<,>,[,] "カーソルを行頭、行末で止まらないようにする
-
-"Ctrl+上下で5行ずつ移動
-"map <C-Up> <Up><Up><Up><Up><Up>
-"imap <C-Up> <Up><Up><Up><Up><Up>
-"map <C-Down> <Down><Down><Down><Down><Down>
-"imap <C-Down> <Down><Down><Down><Down><Down>
-
-"フレームサイズをテンキーの+-で変更する
-"map <kPlus> <C-W>+
-"map <kMinus> <C-W>-
-
-"タブ切り替え
-"nnoremap <C-Tab>   gt
-"nnoremap <C-S-Tab> gT
+" タブ切り替え
+nnoremap <C-Tab>   gt
+nnoremap <C-S-Tab> gT
 
 
 "--------------------------------------------------------
@@ -212,6 +125,7 @@ inoremap <C-l> <Right>
 set ffs=dos,unix,mac   " 改行文字
 set encoding=utf-8     " デフォルトエンコーディング
 set fileencodings=utf-8,cp932,euc-jp,utf-32,iso-2022-jp
+
 
 "--------------------------------------------------------
 " 折り畳み
@@ -222,6 +136,7 @@ set fileencodings=utf-8,cp932,euc-jp,utf-32,iso-2022-jp
 "set foldmethod=expr
 "set foldmethod=manual
 "set foldmethod=diff
+
 
 "--------------------------------------------------------
 " プラグイン
@@ -276,6 +191,7 @@ syntax on
 colorscheme molokai
 highlight specialkey term=none cterm=none
 
+
 "--------------------------------------------------------
 " neocomplete
 "--------------------------------------------------------
@@ -326,34 +242,26 @@ endif
 
 
 "--------------------------------------------------------
-" quickrun
+" Unite
 "--------------------------------------------------------
-let g:quickrun_config = {}
-let g:quickrun_config.markdown = {
-      \ 'type': 'markdown/pandoc',
-      \ 'cmdopt': '-s',
-      \ 'outputter': 'browser'
-      \ }
+
+
 
 "--------------------------------------------------------
-" open-brower
-"--------------------------------------------------------
-if has('win32') || has('win64')
-	let g:openbrowser_browser_commands = [
-	\   {
-	\       "name": "C:\\Program\ Files\ (x86)\\Google\\Chrome\\Application\\chrome.exe",
-	\       "args": ["{browser}", "{uri}"]
-	\   }
-	\ ]
-endif
-
-"--------------------------------------------------------
-" ショートカット
+" コメントアウト
 "--------------------------------------------------------
 nmap <C-k><C-c> <Plug>(caw:i:toggle)
 nmap <C-k><C-u> <Plug>(caw:i:toggle)
 vmap <C-k><C-c> <Plug>(caw:i:toggle)
 vmap <C-k><C-u> <Plug>(caw:i:toggle)
+
+
+"--------------------------------------------------------
+" ファイルを開いたときに自動的にcdする
+"--------------------------------------------------------
+au BufEnter * execute ":lcd " . expand("%:p:h")
+
+
 
 " マッピングに関するmemo
 " noreがつくものとつかないものの違い（mapとnoremapとか）
@@ -371,4 +279,3 @@ vmap <C-k><C-u> <Plug>(caw:i:toggle)
 " vnoremap : ビジュアルモード（選択モード）限定
 " cnoremap : コマンドラインモード限定
 " inoremap : 挿入モード限定
-
