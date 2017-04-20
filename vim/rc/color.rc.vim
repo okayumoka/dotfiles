@@ -24,5 +24,10 @@ endfunction
 "--------------------------------------------------------
 
 call s:set_colorscheme('molokai')
-highlight specialkey term=none cterm=none
+if has('gui_running')
+	highlight specialkey term=none cterm=none gui=none
+else
+	highlight specialkey term=none cterm=none
+endif
+
 

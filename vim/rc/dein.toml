@@ -32,6 +32,9 @@ repo = "scrooloose/nerdtree"
 [[plugins]]
 repo = "tyru/caw.vim.git"           # コメントアウト
 
+[[plugins]]
+repo = "itchyny/lightline.vim"
+
 
 #-------------------------------
 # Lua
