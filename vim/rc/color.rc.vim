@@ -1,5 +1,6 @@
 "------------------------------------------------------------------------------
 " colorscheme config
+"------------------------------------------------------------------------------
 
 
 function! s:set_colorscheme(name) abort
@@ -7,9 +8,9 @@ function! s:set_colorscheme(name) abort
 endfunction
 
 
-"------------------------------------------------------------------------------
-
+"--------------------------------------------------------
 " solarized
+"--------------------------------------------------------
 
 "set background=dark
 "autocmd ColorScheme * highlight SpecialKey term=none cterm=none ctermfg=11 ctermbg=8
@@ -18,9 +19,9 @@ endfunction
 "let g:solarized_termtrans=1
 
 
-"------------------------------------------------------------------------------
-
+"--------------------------------------------------------
 " molokai
+"--------------------------------------------------------
 
 call s:set_colorscheme('molokai')
 highlight specialkey term=none cterm=none
