@@ -1,0 +1,74 @@
+"------------------------------------------------------------------------------
+" okayu's gvimrc
+"------------------------------------------------------------------------------
+
+
+" rcファイル読み込み関数
+function! s:source_rc(rc_file_name)
+	let rc_file = expand('~/.vim/rc/' . a:rc_file_name)
+	if filereadable(rc_file)
+		execute 'source' rc_file
+	endif
+endfunction
+
+
+"------------------------------------------------------------------------------
+
+
+" カラースキーマ
+call s:source_rc('color.rc.vim')
+
+
+"------------------------------------------------------------------------------
+
+
+" フォント設定:
+set guifont=MyricaM\ M:h10
+" DirectDrawを有効に
+if has('win32')
+  set renderoptions=type:directx,renmode:4
+  "set renderoptions=type:directx,renmode:5
+  "set renderoptions=type:directx,renmode:5,taamode:2
+endif
+
+
+"------------------------------------------------------------------------------
+
+
+" ウインドウに関する設定:
+
+" ウインドウの幅
+set columns=120
+" ウインドウの高さ
+set lines=250
+" 透過背景
+" autocmd GUIEnter * set transparency=225
+" ツールバーを削除
+set guioptions-=T
+" メニューを削除
+set guioptions-=m
+" コマンド行の高さ
+set cmdheight=1
+
+
+"------------------------------------------------------------------------------
+
+
+" ウインドウ位置とサイズの自動保存・復元
+let g:save_window_file = expand('~/.vim/.vimwinpos')
+augroup SaveWindow
+  autocmd!
+  autocmd VimLeavePre * call s:save_window()
+  function! s:save_window()
+    let options = [
+      \ 'set columns=' . &columns,
+      \ 'set lines=' . &lines,
+      \ 'winpos ' . getwinposx() . ' ' . getwinposy(),
+      \ ]
+    call writefile(options, g:save_window_file)
+  endfunction
+augroup END
+if filereadable(g:save_window_file)
+  execute 'source' g:save_window_file
+endif
+

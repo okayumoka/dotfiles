@@ -1,0 +1,39 @@
+"------------------------------------------------------------------------------
+" okayu's vimrc
+"------------------------------------------------------------------------------
+
+
+" rcファイル読み込み関数
+function! s:source_rc(rc_file_name)
+	let rc_file = expand('~/.vim/rc/' . a:rc_file_name)
+	if filereadable(rc_file)
+		execute 'source' rc_file
+	endif
+endfunction
+
+
+"------------------------------------------------------------------------------
+
+" 基本設定
+call s:source_rc('init.rc.vim')
+
+" エディタの設定
+call s:source_rc('editor.rc.vim')
+
+" Dein.vim
+call s:source_rc('dein.rc.vim')
+
+" カラースキーマ
+call s:source_rc('color.rc.vim')
+
+" neocomplete
+call s:source_rc('neocomplete.rc.vim')
+
+" unite
+call s:source_rc('unite.rc.vim')
+
+" caw.vim
+call s:source_rc('caw.rc.vim')
+
+
+
