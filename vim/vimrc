@@ -24,6 +24,7 @@ call s:source_rc('editor.rc.vim')
 call s:source_rc('dein.rc.vim')
 
 " カラースキーマ
+
 call s:source_rc('color.rc.vim')
 
 " neocomplete

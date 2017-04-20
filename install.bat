@@ -11,31 +11,23 @@ rem mklink %HOME%"\.vsvimrc" "%current%vsvim\.vsvimrc"
 
 
 rem --------------------------------------
-rem vim
+rem vim and neovim
 rem --------------------------------------
 
-set vimhome=%HOME%\.vim
+set vim_home=%HOME%\.vim
 
-mkdir %vimhome%
-rem mkdir %vimhome%\rc
-mklink %HOME%"\_vimrc" "%current%vim\vimrc"
-mklink %HOME%"\_gvimrc" "%current%vim\gvimrc"
-mklink /D %vimhome%"\rc" "%current%vim\rc"
+mkdir %vim_home%
+rem mkdir %vim_home%\rc
+mklink "%HOME%\.vimrc" "%current%vim\vimrc"
+mklink "%HOME%\.gvimrc" "%current%vim\gvimrc"
+mklink /D "%vim_home%\rc" "%current%vim\rc"
 
 
+set nvim_initdir=%userprofile%\AppData\Local\nvim
 
-rem --------------------------------------
-rem neovim
-rem --------------------------------------
-rem set nviminitdir=%userprofile%\AppData\Local\nvim
-rem set nvimhome=%HOME%\.nvim
-rem mkdir "%nviminitdir%"
-rem mkdir "%nvimhome%"
-rem mkdir "%nvimhome%\rc"
-rem mklink "%nviminitdir%\init.vim" "%current%neovim\init.vim"
-rem mklink "%nviminitdir%\ginit.vim" "%current%neovim\ginit.vim"
-rem mklink "%nvimhome%\rc\dein.toml" "%current%neovim\dein.toml"
-rem mklink "%nvimhome%\rc\dein_lazy.toml" "%current%neovim\dein_lazy.toml"
+mkdir "%nvim_initdir%"
+mklink %nvim_initdir%"\init.vim" "%current%vim\vimrc"
+
 
 
 @endlocal

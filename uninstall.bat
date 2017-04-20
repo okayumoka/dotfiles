@@ -7,27 +7,29 @@ set current=%~dp0
 rem --------------------------------------
 rem vsvim
 rem --------------------------------------
-del %HOME%"\_vsvimrc"
+del %HOME%"\.vsvimrc"
 
 
 rem --------------------------------------
 rem vim
 rem --------------------------------------
-del "%HOME%\_vimrc"
-del "%HOME%\_gvimrc"
-rmdir "%HOME%\.vim\rc"
+set vim_home=%HOME%\.vim
+
+del %HOME%"\.vimrc"
+del %HOME%"\.gvimrc"
+rmdir %vim_home%"\rc"
 
 
 
 rem --------------------------------------
 rem neovim
 rem --------------------------------------
-rem set nviminitdir=%userprofile%\AppData\Local\nvim
-rem set nvimhome=%HOME%\.nvim
-rem del "%nviminitdir%\init.vim"
-rem del "%nviminitdir%\ginit.vim"
-rem del "%nvimhome%\rc\dein.toml"
-rem del "%nvimhome%\rc\dein_lazy.toml"
+set nvim_initdir=%userprofile%\AppData\Local\nvim
+set nvim_home=%HOME%\.nvim
+
+del "%nvim_initdir%\init.vim"
+del "%nvim_initdir%\ginit.vim"
+rem rmdir %vim_home%"\rc"
 
 
 @endlocal
