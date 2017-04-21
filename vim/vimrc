@@ -35,5 +35,7 @@ call s:source_rc('unite.rc.vim')
 " caw.vim
 call s:source_rc('caw.rc.vim')
 
+" NERDTree
+call s:source_rc('nerdtree.vim')
 
 

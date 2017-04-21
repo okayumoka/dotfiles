@@ -67,9 +67,9 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 "--------------------------------------------------------
 " エンコーディング
 "--------------------------------------------------------
-set ffs=dos,unix,mac   " 改行文字
 set encoding=utf-8     " デフォルトエンコーディング
 set fileencodings=utf-8,cp932,euc-jp,utf-32,iso-2022-jp
+set fileformats=dos,unix,mac   " 改行文字
 
 
 

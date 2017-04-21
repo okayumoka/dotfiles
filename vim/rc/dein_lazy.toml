@@ -101,3 +101,10 @@ hook_add = '''
 repo = 'vim-scripts/rest.vim'
 
 
+#-------------------------------
+# TOML
+#-------------------------------
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+
