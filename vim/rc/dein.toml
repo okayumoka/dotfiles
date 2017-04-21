@@ -35,6 +35,9 @@ repo = "tyru/caw.vim.git"           # コメントアウト
 [[plugins]]
 repo = "itchyny/lightline.vim"
 
+"[[plugins]]
+"repo = "Yggdroot/indentLine"
+
 
 #-------------------------------
 # Lua
