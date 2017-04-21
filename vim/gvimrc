@@ -15,13 +15,6 @@ endfunction
 "------------------------------------------------------------------------------
 
 
-" カラースキーマ
-call s:source_rc('color.rc.vim')
-
-
-"------------------------------------------------------------------------------
-
-
 " フォント設定:
 set guifont=MyricaM\ M:h10
 " DirectDrawを有効に
@@ -72,3 +65,9 @@ if filereadable(g:save_window_file)
   execute 'source' g:save_window_file
 endif
 
+
+"------------------------------------------------------------------------------
+
+
+" カラースキーマ
+call s:source_rc('color.rc.vim')

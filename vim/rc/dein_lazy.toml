@@ -1,12 +1,103 @@
-# 基本は github.com のレポジトリーを指定するだけ
+#-------------------------------
+# JavaScript
+#-------------------------------
 [[plugins]]
-repo = 'Shougo/dein.vim'
+repo = 'jiangmiao/simple-javascript-indenter'
+hook_add = '''
+	let g:SimpleJsIndenter_BriefMode = 1
+'''
 
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-#build = 'make'
+repo = 'jelera/vim-javascript-syntax'
 
-# スニペット
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo = 'elzr/vim-json'
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+
+#[[plugins]]
+# repo = 'mattn/jscomplete-vim'
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+
+[[plugins]]
+repo = 'ryym/vim-riot'
+hook_add = '''
+	au BufRead,BufNewFile,BufReadPre *.tag  set filetype=javascript
+'''
+
+
+#-------------------------------
+# CoffeeScript
+#-------------------------------
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+hook_add = '''
+	au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+'''
+
+
+#-------------------------------
+# html
+#-------------------------------
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+
+[[plugins]]
+repo = 'othree/html5.vim'
+hook_add = '''
+	au BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
+'''
+
+
+#-------------------------------
+# Lua
+#-------------------------------
+[[plugins]]
+repo = 'xolox/vim-lua-ftplugin.git'
+
+[[plugins]]
+repo = 'xolox/vim-misc.git'
+
+
+#-------------------------------
+# PHP
+#-------------------------------
+#[[plugins]]
+#repo = 'violetyk/neocomplete-php.vim'
+
+#[[plugins]]
+#repo = 'violetyk/cake.vim'
+
+#[[plugins]]
+#repo = 'tobyS/pdv'
+
+#[[plugins]]
+#repo = 'tobyS/vmustache'
+
+
+#-------------------------------
+# Markdown
+#-------------------------------
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+hook_add = '''
+	let g:vim_markdown_folding_disabled = 1
+	set syntax=markdown
+	autocmd BufRead,BufNewFile *.mkd set filetype=markdown 
+	autocmd BufRead,BufNewFile *.md set filetype=markdown 
+'''
+
+
+#-------------------------------
+# reStructuredText
+#-------------------------------
+[[plugins]]
+repo = 'vim-scripts/rest.vim'
+
 
