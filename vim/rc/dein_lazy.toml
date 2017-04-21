@@ -12,6 +12,9 @@ repo = 'jelera/vim-javascript-syntax'
 
 [[plugins]]
 repo = 'elzr/vim-json'
+hook_add = '''
+	let g:vim_json_syntax_conceal = 0
+'''
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
