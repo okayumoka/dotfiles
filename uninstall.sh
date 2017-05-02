@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd $(dirname ${0}) 
+cd `dirname ${0}`
 
 #-------------------------------------
 # vim and neovim
@@ -8,7 +8,6 @@ cd $(dirname ${0})
 
 vim_home=~/.vim
 
-mkdir ${vim_home}
-ln -sf `pwd`/vim/vimrc ~/.vimrc
-ln -sf `pwd`/vim/rc ${vim_home}/rc
+rm -rf ~/.vimrc
+rm -rf ${vim_home}
 
