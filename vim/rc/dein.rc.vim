@@ -3,8 +3,6 @@
 "------------------------------------------------------------------------------
 
 filetype off
-let g:vim_home = expand('~/.vim')
-let g:rc_dir = expand('~/.vim/rc')
 let s:dein_dir = g:vim_home . '/dein'
 
 " dein.vim がなければ github からcloneしてくる
