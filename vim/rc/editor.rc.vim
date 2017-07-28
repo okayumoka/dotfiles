@@ -11,9 +11,11 @@ set smartindent     " スマートインデント
 set tabstop=4       " タブ幅
 set shiftwidth=4    " インデントの幅
 set softtabstop=0   " Tab キー押下時に挿入される空白の量
+set noexpandtab
 au FileType ruby setlocal ts=2 sw=2
 au FileType sql setlocal ts=2 sw=2 softtabstop=2 expandtab
 au FileType html setlocal ts=2 sw=2 softtabstop=0
+au FileType python setlocal ts=4 sw=4 softtabstop=0 noexpandtab
 " au FileType xhtml setlocal ts=4 sw=4 softtabstop=0
 " au FileType jsp setlocal ts=2 sw=2 softtabstop=0
 " au FileType php setlocal ts=4 sw=4 softtabstop=0 expandtab

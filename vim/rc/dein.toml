@@ -39,6 +39,14 @@ repo = 'itchyny/lightline.vim'
 #repo = 'Yggdroot/indentLine'
 
 
+[[plugins]]
+repo = 'rhysd/accelerated-jk'       # j,kでの移動の高速化
+hook_add = '''
+	nmap j <Plug>(accelerated_jk_gj)
+	nmap k <Plug>(accelerated_jk_gk)
+'''
+
+
 
 #-------------------------------
 # カラースキーマ
