@@ -34,6 +34,9 @@ call s:source_rc('dein.rc.vim')
 " カラースキーマ
 call s:source_rc('color.rc.vim')
 
+" ターミナル設定（今の所NeoVimの :terminal の設定）
+call s:source_rc('terminal.rc.vim')
+
 " neocomplete
 call s:source_rc('neocomplete.rc.vim')
 
@@ -44,6 +47,9 @@ call s:source_rc('unite.rc.vim')
 call s:source_rc('caw.rc.vim')
 
 " NERDTree
-call s:source_rc('nerdtree.vim')
+call s:source_rc('nerdtree.rc.vim')
+
+" lightline.vim
+call s:source_rc('lightline.rc.vim')
 
 
