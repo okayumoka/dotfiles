@@ -94,5 +94,12 @@ endif
 "--------------------------------------------------------
 " ファイルを開いたときに自動的にcdする
 "--------------------------------------------------------
-au BufEnter * execute ":lcd " . expand("%:p:h")
+function! CdOnBufEnter()
+	try
+		lcd %:p:h
+	catch
+		" Nothing.
+	endtry
+endfunction
+au BufEnter * execute "call CdOnBufEnter()"
 

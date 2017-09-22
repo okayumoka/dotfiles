@@ -20,6 +20,14 @@ repo = 'Shougo/unite.vim'
 
 [[plugins]]
 repo = 'Shougo/neocomplete'
+if = '!has("nvim")'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+if = 'has("nvim")'
+hook_add = '''
+	let g:deoplete#enable_at_startup = 1
+'''
 
 [[plugins]]
 repo = 'Townk/vim-autoclose'        # カッコやダブルコーテーションを自動で閉じる
