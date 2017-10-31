@@ -44,6 +44,9 @@ repo = 'tyru/caw.vim.git'           # コメントアウト
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
+[[plugins]]                         # Bcloseコマンド
+repo = 'rbgrouleff/bclose.vim'
+
 #[[plugins]]
 #repo = 'Yggdroot/indentLine'
 
@@ -80,6 +83,9 @@ repo = 'tomasr/molokai'
 
 #[[plugins]]
 #repo = 'jpo/vim-railscasts-theme'
+
+[[plugins]]
+repo = 'jacoborus/tender.vim'
 
 
 

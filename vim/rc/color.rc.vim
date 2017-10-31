@@ -31,3 +31,18 @@ else
 endif
 
 
+"--------------------------------------------------------
+" tender
+"--------------------------------------------------------
+" call s:set_colorscheme('tender')
+" if has('gui_running')
+" 	highlight specialkey term=none cterm=none gui=none
+" else
+" 	highlight specialkey term=none cterm=none
+" endif
+
+
+if (has("termguicolors"))
+	set termguicolors
+endif
+
