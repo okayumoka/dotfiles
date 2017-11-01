@@ -48,7 +48,7 @@ set cmdheight=1
 
 
 " ウインドウ位置とサイズの自動保存・復元
-let g:save_window_file = expand('~/.vim/.vimwinpos')
+let g:save_window_file = expand(g:vim_home . '/.vimwinpos')
 augroup SaveWindow
 	autocmd!
 	autocmd VimLeavePre * call s:save_window()
