@@ -15,7 +15,6 @@ set visualbell      " ビープの代わりにビジュアルベル（画面フ�
 set vb t_vb=        " ビープを鳴らさない
 set mouse=a         " 全モードでマウスを有効化
 set shellslash      " パス区切りをスラッシュにする
-set t_Co=256        " 256色ターミナルでVimを使用する
 set backspace=indent,eol,start  " BS でなんでも消せるようにする
 "set clipboard+=autoselect       " クリップボードを使用
 set ambiwidth=double            " □とか○の文字があってもカーソル位置がずれないようにする
