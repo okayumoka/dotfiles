@@ -30,7 +30,7 @@ endfunction
 "--------------------------------------------------------
 " molokai
 "--------------------------------------------------------
-call s:set_colorscheme('molokai')
+" call s:set_colorscheme('molokai')
 
 
 "--------------------------------------------------------
@@ -39,4 +39,8 @@ call s:set_colorscheme('molokai')
 " call s:set_colorscheme('tender')
 
 
+"--------------------------------------------------------
+" iceberg
+"--------------------------------------------------------
+call s:set_colorscheme('iceberg')
 

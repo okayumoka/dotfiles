@@ -10,3 +10,7 @@ if (has('nvim'))
 	tnoremap <silent> <ESC> <C-\><C-n>
 endif
 
+" VimShellのエイリアスとしてTermを設定
+command Term VimShell
+
+

@@ -87,6 +87,9 @@ repo = 'tomasr/molokai'
 [[plugins]]
 repo = 'jacoborus/tender.vim'
 
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
 
 
 #-------------------------------
@@ -134,6 +137,13 @@ hook_add = '''
 
 
 #-------------------------------
+# TypeScript
+#-------------------------------
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+
+#-------------------------------
 # html
 #-------------------------------
 [[plugins]]
@@ -151,6 +161,10 @@ repo = 'othree/html5.vim'
 hook_add = '''
 	au BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
 '''
+
+[[plugins]]
+repo = 'lilydjwg/colorizer'
+
 
 
 #-------------------------------
