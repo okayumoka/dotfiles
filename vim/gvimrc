@@ -53,12 +53,12 @@ augroup SaveWindow
 	autocmd!
 	autocmd VimLeavePre * call s:save_window()
 	function! s:save_window()
-	let options = [
+		let options = [
 		\ 'set columns=' . &columns,
 		\ 'set lines=' . &lines,
-		\ 'winpos ' . getwinposx() . ' ' . getwinposy(),
+		\ 'au VimEnter * winpos ' . getwinposx() . ' ' . getwinposy(),
 		\ ]
-	call writefile(options, g:save_window_file)
+		call writefile(options, g:save_window_file)
 	endfunction
 augroup END
 if filereadable(g:save_window_file)

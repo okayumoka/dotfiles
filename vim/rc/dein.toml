@@ -50,6 +50,8 @@ repo = 'rbgrouleff/bclose.vim'
 #[[plugins]]
 #repo = 'Yggdroot/indentLine'
 
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
 
 # [[plugins]]
 # repo = 'rhysd/accelerated-jk'       # j,kでの移動の高速化
