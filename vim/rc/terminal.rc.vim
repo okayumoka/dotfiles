@@ -2,8 +2,8 @@
 " ターミナル関連の設定
 "------------------------------------------------------------------------------
 
-" NeoVimの:terminalの設定
 if (has('nvim'))
+	" NeoVimの:terminalの設定
 	" デフォルトで起動するシェルをbashにする
 	set sh=bash
 	" ESCでコマンドモードにする。（デフォルトは<C-\><C-n>で使いにくい）
@@ -12,5 +12,6 @@ endif
 
 " VimShellのエイリアスとしてTermを設定
 command Term VimShell
+
 
 

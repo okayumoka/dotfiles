@@ -2,10 +2,28 @@
 " colorscheme config
 "------------------------------------------------------------------------------
 
-set t_Co=256        " 256色ターミナルでVimを使用する
-if (has("termguicolors"))
-	set termguicolors
+if has('gui_running')
+	" gvim
+	set t_Co=256
+	if has('termguicolors')
+		set termguicolors
+	endif
+else
+	if has('win32')
+		" cui vim
+		" set term=xterm
+		set t_Co=88
+		" let &t_AB="\e[48;5;%dm"
+		" let &t_AF="\e[38;5;%dm"
+	else
+		" other
+		set t_Co=256
+		if has('termguicolors')
+			set termguicolors
+		endif
+	endif
 endif
+
 
 function! s:set_colorscheme(name) abort
 	execute 'colorscheme' a:name
