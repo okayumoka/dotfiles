@@ -20,6 +20,8 @@ set backspace=indent,eol,start  " BS でなんでも消せるようにする
 set ambiwidth=double            " □とか○の文字があってもカーソル位置がずれないようにする
 set nowrap          " 折り返さない
 set formatoptions=q " 自動改行をオフにする
+set iminsert=0    " insertモード開始時にIMEをONにしない
+set imsearch=-1   " search開始時のIMEの状態をiminsertと同じ値に設定
 
 filetype indent on  " ファイルタイプによるインデントを行う
 filetype plugin on  " ファイルタイプによるプラグインを使う
