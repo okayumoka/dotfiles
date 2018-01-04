@@ -92,6 +92,12 @@ repo = 'jacoborus/tender.vim'
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
 
+[[plugins]]
+repo = 'felipesousa/rupza'
+
+[[plugins]]
+repo = 'dracula/vim'
+
 
 
 #-------------------------------
