@@ -98,6 +98,8 @@ repo = 'felipesousa/rupza'
 [[plugins]]
 repo = 'dracula/vim'
 
+[[plugins]]
+repo = 'jonathanfilip/vim-lucius'
 
 
 #-------------------------------
@@ -227,6 +229,12 @@ repo = 'vim-scripts/rest.vim'
 [[plugins]]
 repo = 'cespare/vim-toml'
 
+
+#-------------------------------
+# Arduino
+#-------------------------------
+[[plugins]]
+repo = 'sudar/vim-arduino-syntax'
 
 
 
