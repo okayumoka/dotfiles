@@ -6,7 +6,7 @@ set current=%~dp0
 rem --------------------------------------
 rem vsvim
 rem --------------------------------------
-rem mklink %HOME%"\.vsvimrc" "%current%vsvim\.vsvimrc"
+mklink %HOME%"\.vsvimrc" "%current%vsvim\.vsvimrc"
 
 
 
