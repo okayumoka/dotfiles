@@ -42,6 +42,10 @@ set guioptions-=T
 set guioptions-=m
 " コマンド行の高さ
 set cmdheight=1
+" メニューの文字化け解消
+source $VIMRUNTIME/delmenu.vim
+set langmenu=ja_jp.utf-8
+source $VIMRUNTIME/menu.vim
 
 
 "------------------------------------------------------------------------------
