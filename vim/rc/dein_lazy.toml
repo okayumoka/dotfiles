@@ -1,0 +1,163 @@
+# lazy load
+
+#-------------------------------
+# JavaScript
+#-------------------------------
+[[plugins]]
+repo = 'jiangmiao/simple-javascript-indenter'
+hook_add = '''
+	let g:SimpleJsIndenter_BriefMode = 1
+'''
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'elzr/vim-json'
+hook_add = '''
+	let g:vim_json_syntax_conceal = 0
+'''
+on_ft = ['javascript', 'json']
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = ['jsx']
+
+# [[plugins]]
+# repo = 'ryym/vim-riot'
+# hook_add = '''
+# 	au BufRead,BufNewFile,BufReadPre *.tag  set filetype=javascript
+# '''
+# on_ft = ['javascript']
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['vue']
+
+
+#-------------------------------
+# CoffeeScript
+#-------------------------------
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+hook_add = '''
+	au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+'''
+on_ft = ['coffee']
+
+
+#-------------------------------
+# TypeScript
+#-------------------------------
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['ts', 'typescript']
+
+
+#-------------------------------
+# html
+#-------------------------------
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = '''
+	let g:user_emmet_install_global = 1
+	let g:user_emmet_leader_key='<C-y>'
+'''
+on_ft = ['html', 'vue', 'tag', 'txt', 'text']
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+on_ft = ['html', 'css', 'scss']
+
+[[plugins]]
+repo = 'othree/html5.vim'
+hook_add = '''
+	au BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
+'''
+on_ft = ['html', 'vue', 'tag', 'txt', 'text']
+
+[[plugins]]
+repo = 'lilydjwg/colorizer'
+on_ft = ['html', 'vue', 'tag', 'txt', 'text']
+
+
+#-------------------------------
+# Lua
+#-------------------------------
+[[plugins]]
+repo = 'xolox/vim-lua-ftplugin.git'
+on_ft = ['lua']
+
+[[plugins]]
+repo = 'xolox/vim-misc.git'
+on_ft = ['lua']
+
+
+#-------------------------------
+# PHP
+#-------------------------------
+#[[plugins]]
+#repo = 'violetyk/neocomplete-php.vim'
+#on_ft = ['php']
+
+#[[plugins]]
+#repo = 'violetyk/cake.vim'
+#on_ft = ['php']
+
+#[[plugins]]
+#repo = 'tobyS/pdv'
+#on_ft = ['php']
+
+#[[plugins]]
+#repo = 'tobyS/vmustache'
+#on_ft = ['php']
+
+
+#-------------------------------
+# Markdown
+#-------------------------------
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+hook_add = '''
+	let g:vim_markdown_folding_disabled = 1
+	set syntax=markdown
+	autocmd BufRead,BufNewFile *.mkd set filetype=markdown 
+	autocmd BufRead,BufNewFile *.md set filetype=markdown 
+'''
+on_ft = ['markdown', 'mkd', 'md']
+
+
+#-------------------------------
+# reStructuredText
+#-------------------------------
+[[plugins]]
+repo = 'vim-scripts/rest.vim'
+on_ft = ['rest']
+
+
+#-------------------------------
+# TOML
+#-------------------------------
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+
+#-------------------------------
+# Arduino
+#-------------------------------
+[[plugins]]
+repo = 'sudar/vim-arduino-syntax'
+on_ft = ['arduino', 'ino', 'c', 'cpp']
+
+
+
+
+
+
