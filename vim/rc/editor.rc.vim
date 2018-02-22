@@ -94,13 +94,29 @@ endif
 
 "--------------------------------------------------------
 " ファイルを開いたときに自動的にcdする
+"   →ctagsとの相性が悪いので無効にする
 "--------------------------------------------------------
-function! CdOnBufEnter()
+" function! CdOnBufEnter()
+" 	try
+" 		lcd %:p:h
+" 	catch
+" 		" 握りつぶす
+" 	endtry
+" endfunction
+" au BufEnter * execute "call CdOnBufEnter()"
+
+"--------------------------------------------------------
+" カレントバッファのファイルがあるディレクトリにcdする
+"--------------------------------------------------------
+function! CdToCurrentBufDir()
 	try
-		lcd %:p:h
+		cd %:p:h
+		pwd
 	catch
-		" Nothing.
+		" 握りつぶす
 	endtry
 endfunction
-au BufEnter * execute "call CdOnBufEnter()"
+command! Cd call CdToCurrentBufDir()
+
+
 
