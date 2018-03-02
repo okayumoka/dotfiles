@@ -12,7 +12,7 @@ elseif (has('terminal'))
 	" ESCでコマンドモードにする。（デフォルトは<C-\><C-n>で使いにくい）
 	tnoremap <silent> <ESC> <C-\><C-n>
 	" 好みの設定をしておく
-	command! Term terminal ++close C:/home/bin/nyagos/nyagos.exe
+	command! Term terminal ++close
 else
 	" terminalが使えない時はVimShellで代用
 	" VimShellのエイリアスとしてTermを設定
