@@ -69,7 +69,7 @@ hook_add = '''
 	let g:user_emmet_install_global = 1
 	let g:user_emmet_leader_key='<C-y>'
 '''
-on_ft = ['html', 'vue', 'tag', 'txt', 'text']
+on_ft = ['html', 'vue', 'tag', 'txt', 'text', 'eruby']
 
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
