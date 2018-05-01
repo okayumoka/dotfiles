@@ -71,6 +71,10 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+
 #-------------------------------
 # カラースキーマ
 #-------------------------------

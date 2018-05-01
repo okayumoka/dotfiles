@@ -19,7 +19,7 @@ endfunction
 set guifont=MyricaM\ M:h10
 " DirectDrawを有効に
 if has('win32')
-  set renderoptions=type:directx,renmode:4
+  set renderoptions=type:directx,renmode:5,taamode:2
   "set renderoptions=type:directx,renmode:5
   "set renderoptions=type:directx,renmode:5,taamode:2
 endif

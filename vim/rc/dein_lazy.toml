@@ -143,6 +143,12 @@ hook_add = '''
 on_ft = ['markdown', 'mkd', 'md']
 
 
+[[plugins]]
+repo = 'kannokanno/previm'
+on_ft = ['markdown', 'mkd', 'md']
+
+
+
 #-------------------------------
 # reStructuredText
 #-------------------------------

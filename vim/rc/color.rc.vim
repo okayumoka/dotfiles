@@ -9,12 +9,12 @@ if has('gui_running')
 		set termguicolors
 	endif
 else
+	" cui vim
 	if has('win32')
-		" cui vim
-		" set term=xterm
-		set t_Co=88
-		" let &t_AB="\e[48;5;%dm"
-		" let &t_AF="\e[38;5;%dm"
+		"set term=xterm
+		set t_Co=256
+		"let &t_AB="\e[48;5;%dm"
+		"let &t_AF="\e[38;5;%dm"
 	else
 		" other
 		set t_Co=256
