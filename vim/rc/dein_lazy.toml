@@ -6,7 +6,7 @@
 [[plugins]]
 repo = 'jiangmiao/simple-javascript-indenter'
 hook_add = '''
-	let g:SimpleJsIndenter_BriefMode = 1
+    let g:SimpleJsIndenter_BriefMode = 1
 '''
 on_ft = ['javascript']
 
@@ -17,7 +17,7 @@ on_ft = ['javascript']
 [[plugins]]
 repo = 'elzr/vim-json'
 hook_add = '''
-	let g:vim_json_syntax_conceal = 0
+    let g:vim_json_syntax_conceal = 0
 '''
 on_ft = ['javascript', 'json']
 
@@ -32,7 +32,7 @@ on_ft = ['jsx']
 # [[plugins]]
 # repo = 'ryym/vim-riot'
 # hook_add = '''
-# 	au BufRead,BufNewFile,BufReadPre *.tag  set filetype=javascript
+#   au BufRead,BufNewFile,BufReadPre *.tag  set filetype=javascript
 # '''
 # on_ft = ['javascript']
 
@@ -47,7 +47,7 @@ on_ft = ['vue']
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
 hook_add = '''
-	au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+    au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 '''
 on_ft = ['coffee']
 
@@ -66,8 +66,8 @@ on_ft = ['ts', 'typescript']
 [[plugins]]
 repo = 'mattn/emmet-vim'
 hook_add = '''
-	let g:user_emmet_install_global = 1
-	let g:user_emmet_leader_key='<C-y>'
+    let g:user_emmet_install_global = 1
+    let g:user_emmet_leader_key='<C-y>'
 '''
 on_ft = ['html', 'vue', 'tag', 'txt', 'text', 'eruby']
 
@@ -78,7 +78,7 @@ on_ft = ['html', 'css', 'scss']
 [[plugins]]
 repo = 'othree/html5.vim'
 hook_add = '''
-	au BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
+    au BufRead,BufNewFile,BufReadPre *.ejs set filetype=html
 '''
 on_ft = ['html', 'vue', 'tag', 'txt', 'text']
 
@@ -135,9 +135,10 @@ repo = 'tpope/vim-rails'
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
 hook_add = '''
-	let g:vim_markdown_folding_disabled = 1
-	autocmd BufRead,BufNewFile *.mkd set filetype=markdown 
-	autocmd BufRead,BufNewFile *.md set filetype=markdown 
+    let g:vim_markdown_folding_disabled = 1
+    let g:vim_markdown_conceal = 0
+    autocmd BufRead,BufNewFile *.mkd set filetype=markdown 
+    autocmd BufRead,BufNewFile *.md set filetype=markdown 
 '''
 on_ft = ['markdown', 'mkd', 'md']
 
