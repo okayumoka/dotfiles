@@ -136,7 +136,6 @@ repo = 'tpope/vim-rails'
 repo = 'plasticboy/vim-markdown'
 hook_add = '''
 	let g:vim_markdown_folding_disabled = 1
-	set syntax=markdown
 	autocmd BufRead,BufNewFile *.mkd set filetype=markdown 
 	autocmd BufRead,BufNewFile *.md set filetype=markdown 
 '''

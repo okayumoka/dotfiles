@@ -74,6 +74,9 @@ repo = 'Shougo/context_filetype.vim'
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 
+[[plugins]]
+repo = 'godlygeek/tabular'
+
 
 #-------------------------------
 # カラースキーマ
