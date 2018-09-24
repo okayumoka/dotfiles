@@ -19,7 +19,8 @@ au FileType html setlocal ts=2 sw=2 softtabstop=2 expandtab
 au FileType eruby setlocal ts=2 sw=2 softtabstop=2 expandtab
 au FileType python setlocal ts=4 sw=4 softtabstop=4 expandtab
 au FileType vue setlocal ts=2 sw=2 softtabstop=2 expandtab
-au FileType javascript setlocal ts=2 sw=2 softtabstop=2
+au FileType javascript setlocal ts=2 sw=2 softtabstop=2 expandtab
+au FileType vim setlocal ts=2 sw=2 softtabstop=2 expandtab
 " au FileType xhtml setlocal ts=4 sw=4 softtabstop=0
 " au FileType jsp setlocal ts=2 sw=2 softtabstop=0
 " au FileType php setlocal ts=4 sw=4 softtabstop=0 expandtab
@@ -92,6 +93,25 @@ endif
 "set foldmethod=expr
 "set foldmethod=manual
 "set foldmethod=diff
+
+
+
+"--------------------------------------------------------
+" diff関係
+"--------------------------------------------------------
+function! SetDiffMode()
+  if &diff
+    setlocal nospell
+    setlocal wrap<
+  endif
+endfunction
+autocmd VimEnter,FilterWritePre * call SetDiffMode()
+
+set splitright
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+        \ | wincmd p | diffthis
+endif
 
 
 
