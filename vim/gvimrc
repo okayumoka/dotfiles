@@ -16,7 +16,7 @@ endfunction
 
 
 " フォント設定:
-set guifont=MyricaM\ M:h10
+set guifont=MyricaM\ M:h13
 " DirectDrawを有効に
 if has('win32')
   set renderoptions=type:directx,renmode:5,taamode:2
