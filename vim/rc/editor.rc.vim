@@ -33,7 +33,8 @@ au FileType vim setlocal ts=2 sw=2 softtabstop=2 expandtab
 "--------------------------------------------------------
 set number      " 行番号を表示
 set showmatch   " 括弧の対応をハイライト
-"set cursorline  " カーソル行のハイライト
+" set cursorline  " カーソル行のハイライト
+" set cursorcolumn " カーソル列のハイライト
 set title       " ウィンドウのタイトルを書き換える
 set showmode        "現在のモードを表示
 " 特殊文字(SpecialKey)の見える化
@@ -117,16 +118,15 @@ endif
 
 "--------------------------------------------------------
 " ファイルを開いたときに自動的にcdする
-"   →ctagsとの相性が悪いので無効にする
 "--------------------------------------------------------
-" function! CdOnBufEnter()
-" 	try
-" 		lcd %:p:h
-" 	catch
-" 		" 握りつぶす
-" 	endtry
-" endfunction
-" au BufEnter * execute "call CdOnBufEnter()"
+function! CdOnBufEnter()
+	try
+		lcd %:p:h
+	catch
+		" 握りつぶす
+	endtry
+endfunction
+au BufEnter * execute "call CdOnBufEnter()"
 
 "--------------------------------------------------------
 " カレントバッファのファイルがあるディレクトリにcdする

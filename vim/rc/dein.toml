@@ -77,6 +77,11 @@ repo = 'tyru/open-browser.vim'
 [[plugins]]
 repo = 'godlygeek/tabular'
 
+[[plugins]]
+repo = 'thinca/vim-ref'
+
+# [[plugins]]
+# repo = 'szw/vim-tags'
 
 #-------------------------------
 # カラースキーマ
@@ -116,5 +121,17 @@ repo = 'cocopon/iceberg.vim'
 #
 # [[plugins]]
 # repo = 'jonathanfilip/vim-lucius'
+
+
+#-------------------------------
+# lazyだと動きがおかしいもの
+#-------------------------------
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+
 
 

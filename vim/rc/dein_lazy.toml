@@ -122,17 +122,14 @@ on_ft = ['lua']
 #-------------------------------
 # Ruby
 #-------------------------------
-[[plugins]]
-repo = 'vim-ruby/vim-ruby'
-on_ft = ['ruby', 'eruby']
+# [[plugins]]
+# repo = 'vim-ruby/vim-ruby'
+# on_ft = ['ruby', 'eruby']
 
 [[plugins]]
 repo = 'tpope/vim-rails'
 on_ft = ['ruby', 'eruby']
 
-[[plugins]]
-repo ='thinca/vim-ref'
-on_ft = ['ruby', 'eruby']
 
 #-------------------------------
 # Markdown

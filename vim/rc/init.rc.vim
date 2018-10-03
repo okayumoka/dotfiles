@@ -22,6 +22,7 @@ set nowrap          " 折り返さない
 set formatoptions=q " 自動改行をオフにする
 set iminsert=0    " insertモード開始時にIMEをONにしない
 set imsearch=-1   " search開始時のIMEの状態をiminsertと同じ値に設定
+set tags=./tags;  " 現在のファイルからさかのぼってtagsファイルを探す
 
 filetype indent on  " ファイルタイプによるインデントを行う
 filetype plugin on  " ファイルタイプによるプラグインを使う
