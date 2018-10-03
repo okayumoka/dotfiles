@@ -83,6 +83,10 @@ repo = 'thinca/vim-ref'
 # [[plugins]]
 # repo = 'szw/vim-tags'
 
+[[plugins]]
+repo = 'simeji/winresizer'
+
+
 #-------------------------------
 # カラースキーマ
 #-------------------------------

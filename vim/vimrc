@@ -52,3 +52,6 @@ call s:source_rc('nerdtree.rc.vim')
 " lightline.vim
 call s:source_rc('lightline.rc.vim')
 
+" winresizer.vim
+call s:source_rc('winresizer.rc.vim')
+
