@@ -21,6 +21,8 @@ au FileType python setlocal ts=4 sw=4 softtabstop=4 expandtab
 au FileType vue setlocal ts=2 sw=2 softtabstop=2 expandtab
 au FileType javascript setlocal ts=2 sw=2 softtabstop=2 expandtab
 au FileType vim setlocal ts=2 sw=2 softtabstop=2 expandtab
+au FileType less setlocal ts=2 sw=2 softtabstop=2 expandtab
+au FileType css setlocal ts=2 sw=2 softtabstop=2 expandtab
 " au FileType xhtml setlocal ts=4 sw=4 softtabstop=0
 " au FileType jsp setlocal ts=2 sw=2 softtabstop=0
 " au FileType php setlocal ts=4 sw=4 softtabstop=0 expandtab
