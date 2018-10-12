@@ -175,7 +175,12 @@ repo = 'sudar/vim-arduino-syntax'
 on_ft = ['arduino', 'ino', 'c', 'cpp']
 
 
-
+#-------------------------------
+# pug(jade)
+#-------------------------------
+[[plugins]]
+repo = 'digitaltoad/vim-pug'
+on_ft = ['jade', 'pug']
 
 
 

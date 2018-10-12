@@ -8,9 +8,9 @@
 "set autoindent      " オートインデント
 set smartindent     " スマートインデント
 "set cindent         " C プログラムの自動インデント
-set tabstop=4       " タブ幅
-set shiftwidth=4    " インデントの幅
-set softtabstop=4   " Tab キー押下時に挿入される空白の量
+set tabstop=2       " タブ幅
+set shiftwidth=2    " インデントの幅
+set softtabstop=2   " Tab キー押下時に挿入される空白の量
 " set noexpandtab
 set expandtab
 au FileType ruby setlocal ts=2 sw=2 softtabstop=2 expandtab
@@ -23,6 +23,8 @@ au FileType javascript setlocal ts=2 sw=2 softtabstop=2 expandtab
 au FileType vim setlocal ts=2 sw=2 softtabstop=2 expandtab
 au FileType less setlocal ts=2 sw=2 softtabstop=2 expandtab
 au FileType css setlocal ts=2 sw=2 softtabstop=2 expandtab
+au FileType jade setlocal ts=2 sw=2 softtabstop=2 expandtab
+au FileType pug setlocal ts=2 sw=2 softtabstop=2 expandtab
 " au FileType xhtml setlocal ts=4 sw=4 softtabstop=0
 " au FileType jsp setlocal ts=2 sw=2 softtabstop=0
 " au FileType php setlocal ts=4 sw=4 softtabstop=0 expandtab
@@ -121,14 +123,15 @@ endif
 "--------------------------------------------------------
 " ファイルを開いたときに自動的にcdする
 "--------------------------------------------------------
-function! CdOnBufEnter()
-	try
-		lcd %:p:h
-	catch
-		" 握りつぶす
-	endtry
-endfunction
-au BufEnter * execute "call CdOnBufEnter()"
+" function! CdOnBufEnter()
+" 	try
+" 		lcd %:p:h
+" 	catch
+" 		" 握りつぶす
+" 	endtry
+" endfunction
+" au BufEnter * execute "call CdOnBufEnter()"
+
 
 "--------------------------------------------------------
 " カレントバッファのファイルがあるディレクトリにcdする
@@ -143,5 +146,10 @@ function! CdToCurrentBufDir()
 endfunction
 command! Cd call CdToCurrentBufDir()
 
+
+"--------------------------------------------------------
+" ファイル保存時に末尾の余計なスペースを削除
+"--------------------------------------------------------
+autocmd BufWritePre * :%s/\s\+$//ge
 
 
