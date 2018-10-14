@@ -13,24 +13,19 @@ build = 'make'
 repo = 'Shougo/vimshell'
 
 [[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
-repo = 'Shougo/neocomplete'
-if = '!has("nvim")'
+repo = 'Shougo/deol.nvim'
 
 # [[plugins]]
-# repo = 'Shougo/neosnippet'
-#
-# [[plugins]]
-# repo = 'Shougo/neosnippet-snippets'
+# repo = 'Shougo/unite.vim'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-if = 'has("nvim")'
-hook_add = '''
-    let g:deoplete#enable_at_startup = 1
-'''
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'  # for Denite
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'  # for Denite
 
 [[plugins]]
 repo = 'Townk/vim-autoclose'        # カッコやダブルコーテーションを自動で閉じる
@@ -53,21 +48,6 @@ repo = 'rbgrouleff/bclose.vim'
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 
-# [[plugins]]
-# repo = 'nathanaelkane/vim-indent-guides'
-# hook_add = '''
-#     let g:indent_guides_enable_on_vim_startup = 1
-#     let g:indent_guides_start_level = 2
-#     let g:indent_guides_guide_size = 1
-#     let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar', 'unite']
-# '''
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
@@ -85,6 +65,71 @@ repo = 'thinca/vim-ref'
 
 [[plugins]]
 repo = 'simeji/winresizer'
+
+
+
+#-------------------------------
+# Git
+#-------------------------------
+[[plugins]]
+repo = 'airblade/vim-gitgutter' # 左側の差分表示
+
+[[plugins]]
+repo = 'tpope/vim-fugitive' # Gstatusなど
+
+[[plugins]]
+repo = 'tpope/vim-rhubarb' # Gbrowseコマンド用
+
+[[plugins]]
+repo = 'cohama/agit.vim' # Agitコマンド。git logの整形
+
+
+
+#-------------------------------
+# 補完
+#-------------------------------
+# [[plugins]]
+# repo = 'Shougo/neocomplete'
+# if = '!has("nvim")'
+
+# [[plugins]]
+# repo = 'Shougo/neosnippet'
+#
+# [[plugins]]
+# repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+'''
+
+# [[plugins]]
+# repo = 'Shougo/deoppet.nvim'
+#
+# [[plugins]]
+# repo = 'Shougo/deoppet-snippets'
+# depends = ['deoppet']
+
+[[plugins]]
+if = '!has("nvim")'
+repo = 'roxma/nvim-yarp'  # Vimでdeopleteを動かすのに必須。neovimでは不要。
+
+[[plugins]]
+if = '!has("nvim")'
+repo = 'roxma/vim-hug-neovim-rpc'  # Vimでdeopleteを動かすのに必須。neovimでは不要。
+
+[[plugins]]
+repo = 'Shougo/neco-vim'
+depends = ['deoplete']
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+depends = ['deoplete']
+
+[[plugins]]
+repo = 'ujihisa/neco-look'  # English
+depends = ['deoplete']
 
 
 #-------------------------------

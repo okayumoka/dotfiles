@@ -4,6 +4,13 @@
 # JavaScript
 #-------------------------------
 [[plugins]]
+repo = 'carlitux/deoplete-ternjs' # JS
+build = '''
+  npm install -g term
+'''
+on_ft = ['javascript']
+
+[[plugins]]
 repo = 'jiangmiao/simple-javascript-indenter'
 hook_add = '''
     let g:SimpleJsIndenter_BriefMode = 1
@@ -58,6 +65,14 @@ on_ft = ['coffee']
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
 on_ft = ['ts', 'typescript']
+
+# [[plugins]]
+# repo = 'mhartington/nvim-typescript'
+# build = '''
+#   npm -g install typescript
+#   npm -g update typescript
+# '''
+# on_ft = ['ts', 'typescript']
 
 
 #-------------------------------
@@ -130,6 +145,23 @@ on_ft = ['lua']
 repo = 'tpope/vim-rails'
 on_ft = ['ruby', 'eruby']
 
+[[plugins]]
+repo = 'uplus/deoplete-solargraph'  # Ruby
+build = '''
+  gem install solargraph
+  pip3 install --user --upgrade solargraph-utils.py
+'''
+
+
+#-------------------------------
+# Python
+#-------------------------------
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
+build = '''
+  pip3 install jedi --upgrade
+'''
+
 
 #-------------------------------
 # Markdown
@@ -139,8 +171,8 @@ repo = 'plasticboy/vim-markdown'
 hook_add = '''
     let g:vim_markdown_folding_disabled = 1
     let g:vim_markdown_conceal = 0
-    autocmd BufRead,BufNewFile *.mkd set filetype=markdown 
-    autocmd BufRead,BufNewFile *.md set filetype=markdown 
+    autocmd BufRead,BufNewFile *.mkd set filetype=markdown
+    autocmd BufRead,BufNewFile *.md set filetype=markdown
 '''
 on_ft = ['markdown', 'mkd', 'md']
 
@@ -182,5 +214,12 @@ on_ft = ['arduino', 'ino', 'c', 'cpp']
 repo = 'digitaltoad/vim-pug'
 on_ft = ['jade', 'pug']
 
+
+#-------------------------------
+# Others
+#-------------------------------
+[[plugins]]
+repo = 'zchee/deoplete-clang'
+on_ft = ['c', 'cpp', 'h', 'hpp']
 
 

@@ -1,9 +1,9 @@
 #!/bin/sh
 
-cd $(dirname ${0}) 
+cd $(dirname ${0})
 
 #-------------------------------------
-# vim and neovim
+# Vim and Neovim
 #-------------------------------------
 
 vim_home=~/.vim
