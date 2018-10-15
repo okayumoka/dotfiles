@@ -20,3 +20,11 @@ mkdir -p ~/.config/nvim
 ln -sf `pwd`/vim/vimrc ~/.config/nvim/init.vim
 ln -sf `pwd`/vim/rc ${nvim_home}/rc
 
+
+#-------------------------------------
+# fish
+#-------------------------------------
+ln -sf `pwd`/fish/fishfile ~/.config/fish/fishfile
+ln -sf `pwd`/fish/config.fishfile ~/.config/fish/config.fish
+
+
