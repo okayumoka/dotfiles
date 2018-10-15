@@ -141,16 +141,21 @@ on_ft = ['lua']
 # repo = 'vim-ruby/vim-ruby'
 # on_ft = ['ruby', 'eruby']
 
-[[plugins]]
-repo = 'tpope/vim-rails'
-on_ft = ['ruby', 'eruby']
+# [[plugins]]
+# repo = 'tpope/vim-rails'
+# on_ft = ['ruby', 'eruby']
 
 [[plugins]]
 repo = 'uplus/deoplete-solargraph'  # Ruby
 build = '''
-  gem install solargraph
   pip3 install --user --upgrade solargraph-utils.py
+  gem install solargraph
 '''
+on_ft = ['ruby', 'eruby']
+
+[[plugins]]
+repo = '5t111111/denite-rails'  # Ruby
+on_ft = ['ruby', 'eruby']
 
 
 #-------------------------------

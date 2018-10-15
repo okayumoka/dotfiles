@@ -22,7 +22,7 @@ repo = 'Shougo/deol.nvim'
 repo = 'Shougo/denite.nvim'
 
 [[plugins]]
-repo = 'Shougo/neoyank.vim'  # for Denite
+repo = 'Shougo/neomru.vim'  # for Denite
 
 [[plugins]]
 repo = 'Shougo/neoyank.vim'  # for Denite
@@ -56,9 +56,6 @@ repo = 'tyru/open-browser.vim'
 
 [[plugins]]
 repo = 'godlygeek/tabular'
-
-[[plugins]]
-repo = 'thinca/vim-ref'
 
 # [[plugins]]
 # repo = 'szw/vim-tags'
@@ -182,5 +179,10 @@ repo = 'vim-ruby/vim-ruby'
 [[plugins]]
 repo = 'tpope/vim-rails'
 
+[[plugins]]
+repo = 'thinca/vim-ref'
+build = '''
+  gem install refe2
+'''
 
 
