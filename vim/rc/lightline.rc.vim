@@ -4,14 +4,15 @@
 
 let g:lightline = {
 	\ 'colorscheme': 'one',
-	\ 'separator': { 'left': '・ω)っ' },
-	\ 'active': {
+  \ 'active': {
 	\   'left': [ [ 'mode', 'paste' ],
 	\             [ 'fugitive', 'readonly', 'absolutepath', 'modified' ] ],
 	\ },
 	\ 'component_function': {
 	\   'absolutepath': 'LightLineAbsolutePath'
 	\ },
+  \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+  \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
 \ }
 
 function! LightLineAbsolutePath()

@@ -20,8 +20,8 @@ else
 		set t_Co=256
 		if has('termguicolors')
 			set termguicolors
-			let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-			let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+			" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+			" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 		endif
 	endif
 endif
@@ -46,36 +46,33 @@ endfunction
 "let g:solarized_visibility="low"
 "let g:solarized_termtrans=1
 
-
 "--------------------------------------------------------
 " molokai
 "--------------------------------------------------------
 " call s:set_colorscheme('molokai')
-
+"
+"--------------------------------------------------------
+" jellybeans
+"--------------------------------------------------------
+" call s:set_colorscheme('jellybeans')
 
 "--------------------------------------------------------
 " tender
 "--------------------------------------------------------
 " call s:set_colorscheme('tender')
 
-
 "--------------------------------------------------------
 " iceberg
 "--------------------------------------------------------
-call s:set_colorscheme('iceberg')
+" call s:set_colorscheme('iceberg')
 
 "--------------------------------------------------------
-" rupza
+" hybrid
 "--------------------------------------------------------
-" call s:set_colorscheme('rupza')
+" call s:set_colorscheme('hybrid')
 
 "--------------------------------------------------------
-" dracula
+" onedark
 "--------------------------------------------------------
-" call s:set_colorscheme('dracula')
-
-"--------------------------------------------------------
-" lucius
-"--------------------------------------------------------
-" call s:set_colorscheme('lucius')
+call s:set_colorscheme('onedark')
 

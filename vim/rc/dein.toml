@@ -132,20 +132,17 @@ depends = ['deoplete']
 #-------------------------------
 # カラースキーマ
 #-------------------------------
-#[[plugins]]
-#repo = 'altercation/vim-colors-solarized'
+# [[plugins]]
+# repo = 'altercation/vim-colors-solarized'
 
 # [[plugins]]
 # repo = 'tomasr/molokai'
 
-#[[plugins]]
-#repo = 'crusoexia/vim-monokai'
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
 
-#[[plugins]]
-#repo = 'nanotech/jellybeans.vim'
-
-#[[plugins]]
-#repo = 'w0ng/vim-hybrid'
+# [[plugins]]
+# repo = 'w0ng/vim-hybrid'
 
 #[[plugins]]
 #repo = 'jonathanfilip/vim-lucius'
@@ -153,8 +150,8 @@ depends = ['deoplete']
 #[[plugins]]
 #repo = 'jpo/vim-railscasts-theme'
 
-# [[plugins]]
-# repo = 'jacoborus/tender.vim'
+[[plugins]]
+repo = 'jacoborus/tender.vim'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
@@ -165,9 +162,8 @@ repo = 'cocopon/iceberg.vim'
 # [[plugins]]
 # repo = 'dracula/vim'
 #
-# [[plugins]]
-# repo = 'jonathanfilip/vim-lucius'
-
+[[plugins]]
+repo = 'joshdick/onedark.vim'
 
 #-------------------------------
 # lazyだと動きがおかしいもの
