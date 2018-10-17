@@ -9,10 +9,11 @@ let g:lightline = {
 	\             [ 'fugitive', 'readonly', 'absolutepath', 'modified' ] ],
 	\ },
 	\ 'component_function': {
-	\   'absolutepath': 'LightLineAbsolutePath'
+	\   'absolutepath': 'LightLineAbsolutePath',
+	\   'fugitive': 'LightlineFugitive'
 	\ },
-  \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-  \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
+	\ 'separator': { 'left': "\u2b80", 'right': "\u2b82" },
+  \ 'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
 \ }
 
 function! LightLineAbsolutePath()
@@ -26,4 +27,11 @@ function! LightLineAbsolutePath()
 	endif
 endfunction
 
+function! LightlineFugitive()
+  if exists('*fugitive#head')
+    let branch = fugitive#head()
+    return branch !=# '' ? "\u2b60".branch : ''
+  endif
+  return ''
+endfunction
 
