@@ -17,6 +17,9 @@ inoremap <silent><expr> <C-n>
       \ pumvisible() ? "\<C-u>deoplete#manual_complete()" :
       \ deoplete#manual_complete()
 
+" <CR>: close popup.
+inoremap <expr><CR> pumvisible() ? deoplete#close_popup() : "<CR>"
+
 " <C-h>, <BS>, <C-e>: close popup and delete backword char.
 inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"

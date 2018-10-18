@@ -22,42 +22,34 @@ endfunction
 
 "------------------------------------------------------------------------------
 
+
 " 基本設定
 call s:source_rc('init.rc.vim')
-
 " エディタの設定
 call s:source_rc('editor.rc.vim')
-
 " Dein.vim
 call s:source_rc('dein.rc.vim')
-
 " カラースキーマ
 call s:source_rc('color.rc.vim')
-
-" ターミナル設定（今の所NeoVimの :terminal の設定）
+" ターミナル設定
 call s:source_rc('terminal.rc.vim')
-
-" neocomplete
-call s:source_rc('neocomplete.rc.vim')
-
 " deoplete
 call s:source_rc('deoplete.rc.vim')
-
-" unite
-" call s:source_rc('unite.rc.vim')
-
 " denite
 call s:source_rc('denite.rc.vim')
-
 " caw.vim
 call s:source_rc('caw.rc.vim')
-
 " NERDTree
 call s:source_rc('nerdtree.rc.vim')
-
 " lightline.vim
 call s:source_rc('lightline.rc.vim')
-
 " winresizer.vim
 call s:source_rc('winresizer.rc.vim')
+" その他の設定
+call s:source_rc('my_settings.vim')
+
+" neocomplete
+" call s:source_rc('neocomplete.rc.vim')
+" unite
+" call s:source_rc('unite.rc.vim')
 

@@ -131,8 +131,8 @@ depends = ['deoplete']
 #-------------------------------
 # カラースキーマ
 #-------------------------------
-# [[plugins]]
-# repo = 'altercation/vim-colors-solarized'
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
 
 # [[plugins]]
 # repo = 'tomasr/molokai'
@@ -140,8 +140,8 @@ depends = ['deoplete']
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'
 
-# [[plugins]]
-# repo = 'w0ng/vim-hybrid'
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
 
 #[[plugins]]
 #repo = 'jonathanfilip/vim-lucius'
@@ -158,9 +158,9 @@ repo = 'cocopon/iceberg.vim'
 # [[plugins]]
 # repo = 'felipesousa/rupza'
 #
-# [[plugins]]
-# repo = 'dracula/vim'
-#
+[[plugins]]
+repo = 'dracula/vim'
+
 [[plugins]]
 repo = 'joshdick/onedark.vim'
 
