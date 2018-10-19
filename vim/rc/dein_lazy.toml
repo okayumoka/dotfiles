@@ -54,7 +54,7 @@ on_ft = ['vue']
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
 hook_add = '''
-    au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+    au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 '''
 on_ft = ['coffee']
 
@@ -149,7 +149,7 @@ on_ft = ['lua']
 repo = 'uplus/deoplete-solargraph'  # Ruby
 build = '''
   pip3 install --user --upgrade solargraph-utils.py
-  gem install solargraph
+  gem install solargraph -v 0.18.0
 '''
 on_ft = ['ruby', 'eruby']
 

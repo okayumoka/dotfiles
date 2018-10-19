@@ -1,0 +1,20 @@
+[include]
+  path = ~/.gitconfig.local
+[core]
+  editor = vim
+[url "github:"]
+  InsteadOf = https://github.com/
+  InsteadOf = git@github.com:
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[diff]
+  # tool = vimdiff
+  tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
+[mergetool "nvimdiff"]
+  cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
+

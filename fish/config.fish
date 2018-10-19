@@ -2,7 +2,7 @@
 set -x PATH $HOME/.nodebrew/current/bin $PATH
 
 # Java
-set -x JAVA_HOME (/usr/libexec/java_home -v 10)
+set -x JAVA_HOME (/usr/libexec/java_home -v 11)
 
 # General
 set -x LANG "ja_JP.UTF-8"

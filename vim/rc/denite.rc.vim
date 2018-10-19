@@ -31,13 +31,13 @@ nnoremap <C-k><C-f> :Denite<Space>buffer<CR>
 " https://qiita.com/pocari/items/1b76c211d5555fa87834
 "--------------------------------------------------------
 " grepする
-command! Dg execute(":Denite grep -buffer-name=grep-buffer-denite")
+command! Dgrep execute(":Denite grep -buffer-name=grep-buffer-denite")
 " Denite grep検索結果を再表示する
-command! Dgresume :Denite -resume -buffer-name=grep-buffer-denite<CR>
+command! Dgresume execute(":Denite -resume -buffer-name=grep-buffer-denite")
 " resumeした検索結果の次の行の結果へ飛ぶ
-command! Dgnext :Denite -resume -buffer-name=grep-buffer-denite -select=+1 -immediately<CR>
+command! Dgnext execute(":Denite -resume -buffer-name=grep-buffer-denite -select=+1 -immediately")
 " resumeした検索結果の前の行の結果へ飛ぶ
-command! Dgprev :Denite -resume -buffer-name=grep-buffer-denite -select=-1 -immediately<CR>
+command! Dgprev execute(":Denite -resume -buffer-name=grep-buffer-denite -select=-1 -immediately")
 
 " ショートカット
 noremap [denite]<C-g> :<C-u>Dg<CR>

@@ -45,6 +45,8 @@ call s:source_rc('nerdtree.rc.vim')
 call s:source_rc('lightline.rc.vim')
 " winresizer.vim
 call s:source_rc('winresizer.rc.vim')
+" git関係
+call s:source_rc('git.vim')
 " その他の設定
 call s:source_rc('my_settings.vim')
 
