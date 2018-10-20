@@ -13,22 +13,21 @@ set shiftwidth=2    " インデントの幅
 set softtabstop=2   " Tab キー押下時に挿入される空白の量
 " set noexpandtab
 set expandtab
-au FileType ruby setlocal ts=2 sw=2 softtabstop=2 expandtab
-au FileType sql setlocal ts=2 sw=2 softtabstop=2 expandtab
-au FileType html setlocal ts=2 sw=2 softtabstop=2 expandtab
-au FileType eruby setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType ruby setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType sql setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType html setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType eruby setlocal ts=2 sw=2 softtabstop=2 expandtab
 au FileType python setlocal ts=4 sw=4 softtabstop=4 expandtab
-au FileType vue setlocal ts=2 sw=2 softtabstop=2 expandtab
-au FileType javascript setlocal ts=2 sw=2 softtabstop=2 expandtab
-au FileType vim setlocal ts=2 sw=2 softtabstop=2 expandtab
-au FileType less setlocal ts=2 sw=2 softtabstop=2 expandtab
-au FileType css setlocal ts=2 sw=2 softtabstop=2 expandtab
-au FileType jade setlocal ts=2 sw=2 softtabstop=2 expandtab
-au FileType pug setlocal ts=2 sw=2 softtabstop=2 expandtab
-" au FileType xhtml setlocal ts=4 sw=4 softtabstop=0
-" au FileType jsp setlocal ts=2 sw=2 softtabstop=0
+" au FileType vue setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType javascript setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType vim setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType less setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType css setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType jade setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType pug setlocal ts=2 sw=2 softtabstop=2 expandtab
+" au FileType xhtml setlocal ts=2 sw=2 softtabstop= expandtab
+" au FileType jsp setlocal ts=2 sw=2 softtabstop=0 expandtab
 " au FileType php setlocal ts=4 sw=4 softtabstop=0 expandtab
-" au FileType php setlocal ts=4 sw=4 softtabstop=0 autoindent
 
 
 

@@ -1,7 +1,6 @@
 "------------------------------------------------------------------------------
 " 基本設定
 "------------------------------------------------------------------------------
-
 set noswapfile      " スワップファイルを作らない
 set nobackup        " バックアップファイルを作成しない
 set noundofile      " undoファイルを作成しない
@@ -17,7 +16,7 @@ set mouse=a         " 全モードでマウスを有効化
 set shellslash      " パス区切りをスラッシュにする
 set backspace=indent,eol,start  " BS でなんでも消せるようにする
 "set clipboard+=autoselect       " クリップボードを使用
-set ambiwidth=double            " □とか○の文字があってもカーソル位置がずれないようにする
+" set ambiwidth=double            " □とか○の文字があってもカーソル位置がずれないようにする
 set nowrap          " 折り返さない
 set formatoptions=q " 自動改行をオフにする
 set iminsert=0    " insertモード開始時にIMEをONにしない
