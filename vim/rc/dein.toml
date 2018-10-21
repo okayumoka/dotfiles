@@ -131,8 +131,11 @@ depends = ['deoplete']
 #-------------------------------
 # カラースキーマ
 #-------------------------------
+# [[plugins]]
+# repo = 'altercation/vim-colors-solarized'
+
 [[plugins]]
-repo = 'altercation/vim-colors-solarized'
+repo = 'lifepillar/vim-solarized8'
 
 # [[plugins]]
 # repo = 'tomasr/molokai'

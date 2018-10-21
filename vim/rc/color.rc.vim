@@ -16,12 +16,15 @@ else
 		"let &t_AF="\e[38;5;%dm"
 	else
 		" other
-		if has('termguicolors')
-			set termguicolors
-			let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-			let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-		endif
-	endif
+		set t_Co=256
+		if has('termguicolors') && $COLORTERM == "truecolor"
+      set termguicolors
+      if !has('nvim')
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+      endif
+    endif
+  endif
 endif
 
 
@@ -31,18 +34,19 @@ function! s:set_colorscheme(name) abort
 		highlight specialkey term=none cterm=none gui=none
 	else
 		highlight specialkey term=none cterm=none
-	endif
+  endif
 endfunction
 
+set background=dark
 
 "--------------------------------------------------------
 " solarized
 "--------------------------------------------------------
-"set background=dark
-"autocmd ColorScheme * highlight SpecialKey term=none cterm=none ctermfg=11 ctermbg=8
-"call s:set_colorscheme('solarized')
-"let g:solarized_visibility="low"
-"let g:solarized_termtrans=1
+" autocmd ColorScheme * highlight SpecialKey term=none cterm=none ctermfg=11 ctermbg=8
+" let g:solarized_visibility="low"
+" let g:solarized_termtrans=1
+" call s:set_colorscheme('solarized8')
+" call s:set_colorscheme('solarized8_flat')
 
 "--------------------------------------------------------
 " molokai

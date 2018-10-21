@@ -20,5 +20,5 @@ alias vi='/usr/local/bin/vim'
 # vimでnvim
 alias vim='/usr/local/bin/nvim'
 # rmでゴミ箱に入れる
-alias rm='rmtrash'
+# alias rm='rmtrash'
 
