@@ -7,12 +7,11 @@
 "--------------------------------------------------------
 "set autoindent      " オートインデント
 set smartindent     " スマートインデント
-"set cindent         " C プログラムの自動インデント
+set expandtab
+" set noexpandtab
 set tabstop=2       " タブ幅
 set shiftwidth=2    " インデントの幅
 set softtabstop=2   " Tab キー押下時に挿入される空白の量
-" set noexpandtab
-set expandtab
 " au FileType ruby setlocal ts=2 sw=2 softtabstop=2 expandtab
 " au FileType sql setlocal ts=2 sw=2 softtabstop=2 expandtab
 " au FileType html setlocal ts=2 sw=2 softtabstop=2 expandtab

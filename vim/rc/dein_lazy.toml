@@ -3,38 +3,41 @@
 #-------------------------------
 # JavaScript
 #-------------------------------
-[[plugins]]
-repo = 'carlitux/deoplete-ternjs' # JS
-build = '''
-  npm install -g term
-'''
-on_ft = ['javascript']
+# [[plugins]]
+# repo = 'carlitux/deoplete-ternjs' # JS
+# build = '''
+#   npm install -g term
+# '''
+# on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'jiangmiao/simple-javascript-indenter'
 hook_add = '''
     let g:SimpleJsIndenter_BriefMode = 1
 '''
-on_ft = ['javascript']
+on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'jelera/vim-javascript-syntax'
-on_ft = ['javascript']
+on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'elzr/vim-json'
 hook_add = '''
     let g:vim_json_syntax_conceal = 0
 '''
-on_ft = ['javascript', 'json']
+on_ft = ['javascript', 'javascript.jsx', 'json']
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
-on_ft = ['javascript']
+on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
 repo = 'mxw/vim-jsx'
-on_ft = ['jsx']
+on_ft = ['jsx', 'javascript.jsx']
+hook_add = '''
+  let g:jsx_ext_required = 1
+'''
 
 # [[plugins]]
 # repo = 'ryym/vim-riot'
@@ -145,13 +148,13 @@ on_ft = ['lua']
 # repo = 'tpope/vim-rails'
 # on_ft = ['ruby', 'eruby']
 
-[[plugins]]
-repo = 'uplus/deoplete-solargraph'  # Ruby
-build = '''
-  pip3 install --user --upgrade solargraph-utils.py
-  gem install solargraph -v 0.18.0
-'''
-on_ft = ['ruby', 'eruby']
+# [[plugins]]
+# repo = 'uplus/deoplete-solargraph'  # Ruby
+# build = '''
+#   pip3 install --user --upgrade solargraph-utils.py
+#   gem install solargraph -v 0.18.0
+# '''
+# on_ft = ['ruby', 'eruby']
 
 [[plugins]]
 repo = '5t111111/denite-rails'  # Ruby

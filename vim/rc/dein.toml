@@ -127,6 +127,19 @@ depends = ['deoplete']
 repo = 'ujihisa/neco-look'  # English
 depends = ['deoplete']
 
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+depends = ['deoplete']
+rev = 'next'
+build = '''
+  bash install.sh
+  gem install solargraph
+  npm install -g javascript-typescript-langserver
+  npm install -g vscode-css-languageserver-bin
+'''
+
+[[plugins]] # for LanguageClient-neovim
+repo = 'junegunn/fzf'
 
 #-------------------------------
 # カラースキーマ
@@ -160,7 +173,7 @@ repo = 'cocopon/iceberg.vim'
 
 # [[plugins]]
 # repo = 'felipesousa/rupza'
-#
+
 [[plugins]]
 repo = 'dracula/vim'
 
