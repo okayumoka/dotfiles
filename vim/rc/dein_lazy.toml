@@ -91,7 +91,7 @@ on_ft = ['html', 'vue', 'tag', 'txt', 'text', 'eruby']
 
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
-on_ft = ['html', 'css', 'scss']
+on_ft = ['html', 'css', 'scss', 'less']
 
 [[plugins]]
 repo = 'othree/html5.vim'
@@ -102,7 +102,7 @@ on_ft = ['html', 'vue', 'tag', 'txt', 'text']
 
 [[plugins]]
 repo = 'lilydjwg/colorizer'
-on_ft = ['html', 'vue', 'tag', 'txt', 'text']
+on_ft = ['html', 'vue', 'tag', 'txt', 'text', 'css', 'scss', 'less']
 
 
 #-------------------------------
