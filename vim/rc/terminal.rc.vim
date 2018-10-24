@@ -4,15 +4,15 @@
 
 if (has('nvim'))
 	" NeoVimの:terminalの設定
-	" デフォルトで起動するシェルをbashにする
-	set sh=bash
+	" デフォルトで起動するシェル
+	set sh=fish
 	" ESCでコマンドモードにする。（デフォルトは<C-\><C-n>で使いにくい）
 	tnoremap <silent> <ESC> <C-\><C-n>
 	" 好みの設定をしておく
 	command! Term split term://bash
 elseif (has('terminal'))
-	" デフォルトで起動するシェルをbashにする
-	set sh=bash
+	" デフォルトで起動するシェル
+	set sh=fish
 	" ESCでコマンドモードにする。（デフォルトは<C-\><C-n>で使いにくい）
 	tnoremap <silent> <ESC> <C-\><C-n>
 	" 好みの設定をしておく
