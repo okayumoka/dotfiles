@@ -30,6 +30,17 @@ command! Cd call CdToCurrentBufDir()
 
 
 "--------------------------------------------------------
+" カレントバッファのファイルのフルパスを表示
+"--------------------------------------------------------
+function! EchoCurrentPath()
+  let path = execute(':echo expand("%:p")')
+  execute(':normal i' . path)
+endfunction
+command! EchoCurrentPath call EchoCurrentPath()
+command! CurrentPath execute(':echo expand("%:p")')
+
+
+"--------------------------------------------------------
 " ファイル保存時に末尾の余計なスペースを削除
 "--------------------------------------------------------
 " autocmd BufWritePre * :%s/\s\+$//ge
