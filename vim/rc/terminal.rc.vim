@@ -9,14 +9,14 @@ if (has('nvim'))
 	" ESCでコマンドモードにする。（デフォルトは<C-\><C-n>で使いにくい）
 	tnoremap <silent> <ESC> <C-\><C-n>
 	" 好みの設定をしておく
-	command! Term split term://bash
+	command! Term split term://fish
 elseif (has('terminal'))
 	" デフォルトで起動するシェル
 	set sh=fish
 	" ESCでコマンドモードにする。（デフォルトは<C-\><C-n>で使いにくい）
 	tnoremap <silent> <ESC> <C-\><C-n>
 	" 好みの設定をしておく
-	command! Term terminal ++close bash
+	command! Term terminal ++close fish
 else
 	" terminalが使えない時はVimShellで代用
 	" VimShellのエイリアスとしてTermを設定
