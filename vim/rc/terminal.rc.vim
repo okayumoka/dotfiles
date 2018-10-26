@@ -9,7 +9,8 @@ if (has('nvim'))
 	" ESCでコマンドモードにする。（デフォルトは<C-\><C-n>で使いにくい）
 	tnoremap <silent> <ESC> <C-\><C-n>
 	" 好みの設定をしておく
-	command! Term split term://fish
+	" command! Term split term://fish
+	command! Term execute(":tabe | :terminal")
 elseif (has('terminal'))
 	" デフォルトで起動するシェル
 	set sh=fish
