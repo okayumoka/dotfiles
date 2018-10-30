@@ -30,6 +30,9 @@ repo = 'Shougo/neoyank.vim'  # for Denite
 repo = 'Townk/vim-autoclose'        # カッコやダブルコーテーションを自動で閉じる
 
 [[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
 repo = 'kien/ctrlp.vim.git'         # コマンドラインでのファイル補完
 
 [[plugins]]
