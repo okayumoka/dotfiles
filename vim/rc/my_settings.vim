@@ -50,8 +50,8 @@ command! CurrentPath execute(':echo expand("%:p")')
 " <% をいれられたら %> を補完
 "--------------------------------------------------------
 inoremap <expr> % ErbTagComp()
-function ErbTagComp()
-  if getline('.') == "<"
+function! ErbTagComp()
+  if getline('.')[col('.') - 2] == "<"
 		return "\% \%\>\<Left>\<Left>\<Left>"
 	else
 		return "\%"

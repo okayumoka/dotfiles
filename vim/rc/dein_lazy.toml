@@ -56,9 +56,6 @@ on_ft = ['vue']
 #-------------------------------
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
-hook_add = '''
-    au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
-'''
 on_ft = ['coffee']
 
 
