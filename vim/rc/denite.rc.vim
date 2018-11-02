@@ -26,6 +26,9 @@ nnoremap [denite]c     :<C-u>DeniteBufferDir -buffer-name=files file<CR>
 "--------------------------------------------------------
 nnoremap <C-k><C-b> :Denite<Space>buffer<CR>
 nnoremap <C-k><C-f> :Denite<Space>buffer<CR>
+command! Dbuffer execute(":Dnite buffer")
+command! Dfile execute(":Denite file")
+command! Dmru execute(":Denite file_mru")
 
 "--------------------------------------------------------
 " grep用のコマンドを作っておく
