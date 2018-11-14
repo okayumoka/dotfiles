@@ -44,7 +44,7 @@ endfunction
 
 function! LightlineReadonly()
   " return &readonly ? '' : ''
-  return &readonly ? '\ue0a2' : ''
+  return &readonly ? "\ue0a2" : ''
 endfunction
 
   "                        Default    powerline       vim-powerline

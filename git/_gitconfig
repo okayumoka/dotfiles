@@ -2,6 +2,7 @@
   path = ~/.gitconfig.local
 [core]
 	editor = nvim
+	excludesfile = /Users/okayu/.gitignore_global
 [url "github:"]
   InsteadOf = https://github.com/
   InsteadOf = git@github.com:
@@ -20,3 +21,12 @@
 [mergetool "nvimdiff"]
   cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
 
+[user]
+	name = okayu
+	email = okamoto@sikmi.com
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
