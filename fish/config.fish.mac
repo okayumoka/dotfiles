@@ -1,8 +1,11 @@
+# rbenv
+set -x PATH $HOME/.rbenv/bin $PATH
+
 # nodebrew (nodejs)
-set -x PATH $HOME/.nodebrew/current/bin $PATH
+#set -x PATH $HOME/.nodebrew/current/bin $PATH
 
 # Java
-set -x JAVA_HOME (/usr/libexec/java_home -v 11)
+#set -x JAVA_HOME (/usr/libexec/java_home -v 11)
 
 # General
 set -x LANG "ja_JP.UTF-8"
@@ -16,9 +19,9 @@ set -g theme_color_scheme dracula
 # set -g theme_color_scheme zenburn
 
 # viでvim
-alias vi='/usr/local/bin/vim'
+#alias vi='/usr/local/bin/vim'
 # vimでnvim
-alias vim='/usr/local/bin/nvim'
+#alias vim='/usr/local/bin/nvim'
 # rmでゴミ箱に入れる
 # alias rm='rmtrash'
 
