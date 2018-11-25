@@ -3,38 +3,15 @@
 cd $(dirname ${0})
 current=`pwd`
 
-echo "パラメータ設定"
-
-echo "Git用ユーザー名: "
-read git_user
-if [ -z $git_user ]; then
-  git_user=okayu
-fi
-
-echo "Git用メールアドレス: "
-read git_email
-
-echo "現在の環境を選択: "
-echo "  mac"
-echo "  ubuntu"
-read env
-if [ -z $env ]; then
-  git_user=mac
-fi
+git_user=$1
+git_email=$2
+env=$3
 
 echo "===================================="
 echo "Gitユーザー名: "$git_user
 echo "Gitメールアドレス: "$git_email
 echo "環境: "$env
 echo "===================================="
-
-echo "上記でインストールしますか？[yes/no]"
-read input
-
-if [ ! $input = "yes" ]; then
-  echo "終了します。"
-  exit 1
-fi
 
 #-------------------------------------
 # Vim and Neovim
