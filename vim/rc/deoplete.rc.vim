@@ -52,6 +52,8 @@ call deoplete#custom#option('max_list', 500)
 
 call deoplete#custom#var('omni', 'input_patterns', {
     \ 'ruby': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
+    \ 'javascript': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
+    \ 'typescript': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
 \})
 
 "-------------------------------
@@ -62,7 +64,9 @@ let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {
     \ 'ruby': ['solargraph', 'stdio'],
     \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'typescript': ['javascript-typescript-stdio'],
     \ 'css': ['css-languageserver --stdio'],
+    \ 'vue': ['vls'],
 \}
 
 nnoremap [lsp] <NOP>

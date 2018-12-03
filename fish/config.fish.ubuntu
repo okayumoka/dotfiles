@@ -1,8 +1,12 @@
 # rbenv
 set -x PATH $HOME/.rbenv/bin $PATH
+rbenv init - | source
 
-# nodebrew (nodejs)
-#set -x PATH $HOME/.nodebrew/current/bin $PATH
+# nvm
+set -x NVM_DIR $HOME/.nvm
+# bash $NVM_DIR/nvm.sh
+npm --version > /dev/null
+
 
 # Java
 #set -x JAVA_HOME (/usr/libexec/java_home -v 11)
