@@ -139,6 +139,7 @@ build = '''
   gem install solargraph
   npm install -g javascript-typescript-langserver
   npm install -g vscode-css-languageserver-bin
+  npm install -g vue-language-server
 '''
 
 [[plugins]] # for LanguageClient-neovim
