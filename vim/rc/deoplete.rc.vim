@@ -65,7 +65,9 @@ let g:LanguageClient_serverCommands = {
     \ 'ruby': ['solargraph', 'stdio'],
     \ 'javascript': ['javascript-typescript-stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
-    \ 'css': ['css-languageserver --stdio'],
+    \ 'css': ['css-languageserver', '--stdio'],
+    \ 'scss': ['css-languageserver', '--stdio'],
+    \ 'less': ['css-languageserver', '--stdio'],
     \ 'vue': ['vls'],
 \}
 
