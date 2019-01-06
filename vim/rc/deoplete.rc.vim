@@ -26,6 +26,7 @@ inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 
 inoremap <expr><C-g> deoplete#refresh()
 inoremap <expr><C-e> deoplete#cancel_popup()
+inoremap <expr><Space> deoplete#cancel_popup()
 
 " call deoplete#custom#source('_', 'matchers',
 "      \ ['matcher_fuzzy', 'matcher_length'])
