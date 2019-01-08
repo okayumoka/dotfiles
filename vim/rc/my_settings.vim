@@ -5,11 +5,11 @@
 "--------------------------------------------------------
 " カッコなどを自動で閉じる
 "--------------------------------------------------------
-inoremap { {}<Left>
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
+" inoremap { {}<Left>
+" inoremap ( ()<Left>
+" inoremap [ []<Left>
+" inoremap " ""<Left>
+" inoremap ' ''<Left>
 
 
 "--------------------------------------------------------
