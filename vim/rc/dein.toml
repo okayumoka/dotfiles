@@ -1,5 +1,6 @@
 #-------------------------------
-# 基本 #-------------------------------
+# 基本
+#-------------------------------
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
@@ -26,8 +27,8 @@ repo = 'Shougo/neomru.vim'  # for Denite
 [[plugins]]
 repo = 'Shougo/neoyank.vim'  # for Denite
 
-[[plugins]]
-repo = 'Townk/vim-autoclose'        # カッコやダブルコーテーションを自動で閉じる
+# [[plugins]]
+# repo = 'Townk/vim-autoclose'        # カッコやダブルコーテーションを自動で閉じる
 
 [[plugins]]
 repo = 'tpope/vim-surround'
