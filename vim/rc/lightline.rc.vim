@@ -8,6 +8,9 @@ let g:lightline = {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'absolutepath', 'modified' ] ],
       \ },
+      \ 'inactive': {
+      \   'left': [ [ 'fugitive', 'readonly', 'absolutepath', 'modified' ] ],
+      \ },
       \ 'component_function': {
       \   'absolutepath': 'LightLineAbsolutePath',
       \   'fugitive': 'LightlineFugitive',
