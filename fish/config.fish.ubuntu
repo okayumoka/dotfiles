@@ -5,8 +5,8 @@ rbenv init - | source
 # nvm
 set -x NVM_DIR $HOME/.nvm
 # bash $NVM_DIR/nvm.sh
+set -x NVM_NODEJS_ORG_MIRROR http://nodejs.org/dist
 npm --version > /dev/null
-
 
 # Java
 #set -x JAVA_HOME (/usr/libexec/java_home -v 11)
