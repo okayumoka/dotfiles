@@ -39,6 +39,9 @@ if [ $env = "mac" ]; then
 elif [ $env = "ubuntu" ]; then
   ln -sf ${current}/fish/fishfile.ubuntu ~/.config/fish/fishfile
   ln -sf ${current}/fish/config.fish.ubuntu ~/.config/fish/config.fish
+elif [ $env = "ubuntu-wsl" ]; then
+  ln -sf ${current}/fish/fishfile.ubuntu-wsl ~/.config/fish/fishfile
+  ln -sf ${current}/fish/config.fish.ubuntu-wsl ~/.config/fish/config.fish
 fi
 
 #-------------------------------------
