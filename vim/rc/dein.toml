@@ -135,6 +135,20 @@ depends = ['deoplete']
 repo = 'autozimu/LanguageClient-neovim'
 depends = ['deoplete']
 rev = 'next'
+if = 'has("win32")'
+build = '''
+  powershell .\install.ps1
+  gem install solargraph
+  npm install -g javascript-typescript-langserver
+  npm install -g vscode-css-languageserver-bin
+  npm install -g vue-language-server
+'''
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+depends = ['deoplete']
+rev = 'next'
+if = '!has("win32")'
 build = '''
   bash install.sh
   gem install solargraph
