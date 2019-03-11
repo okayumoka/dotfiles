@@ -43,6 +43,8 @@ call s:source_rc('caw.rc.vim')
 call s:source_rc('nerdtree.rc.vim')
 " lightline.vim
 call s:source_rc('lightline.rc.vim')
+" airline.vim
+call s:source_rc('airline.rc.vim')
 " winresizer.vim
 call s:source_rc('winresizer.rc.vim')
 " git関係
