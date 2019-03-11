@@ -24,7 +24,8 @@ inoremap <expr><CR> pumvisible() ? deoplete#close_popup() : "<CR>"
 inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 
-inoremap <expr><C-g> deoplete#refresh()
+" inoremap <expr><C-g> deoplete#refresh()
+inoremap <expr><C-g> deoplete#cancel_popup()
 inoremap <expr><C-e> deoplete#cancel_popup()
 
 " call deoplete#custom#source('_', 'matchers',
