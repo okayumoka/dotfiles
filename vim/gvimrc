@@ -16,13 +16,18 @@ endfunction
 
 
 " フォント設定:
-" set guifont=MyricaM\ M:h13
-set guifont=Cica:h14
-" DirectDrawを有効に
-if has('win32')
-  set renderoptions=type:directx,renmode:5,taamode:2
-  "set renderoptions=type:directx,renmode:5
-  "set renderoptions=type:directx,renmode:5,taamode:2
+if has('nvim')
+  Guifont! Cica:h10
+	" !call GuiWindowMaximized(1)
+else
+  " set guifont=MyricaM\ M:h13
+  set guifont=Cica:h10
+  " DirectDrawを有効に
+  if has('win32')
+    set renderoptions=type:directx,renmode:5,taamode:2
+    "set renderoptions=type:directx,renmode:5
+    "set renderoptions=type:directx,renmode:5,taamode:2
+  endif
 endif
 
 
