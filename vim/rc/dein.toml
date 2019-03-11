@@ -34,7 +34,7 @@ repo = 'Shougo/neoyank.vim'  # for Denite
 repo = 'tpope/vim-surround'
 
 [[plugins]]
-repo = 'kien/ctrlp.vim.git'         # コマンドラインでのファイル補完
+repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
