@@ -99,7 +99,11 @@ on_ft = ['html', 'vue', 'tag', 'txt', 'text']
 
 [[plugins]]
 repo = 'lilydjwg/colorizer'
-on_ft = ['html', 'vue', 'tag', 'txt', 'text', 'css', 'scss', 'less']
+on_ft = ['html', 'vue', 'tag', 'txt', 'text', 'css', 'scss', 'less', 'slim', 'erb']
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
+on_ft = ['html', 'vue', 'tag', 'txt', 'text', 'css', 'scss', 'less', 'slim', 'erb']
 
 
 #-------------------------------
@@ -155,7 +159,11 @@ on_ft = ['lua']
 
 [[plugins]]
 repo = '5t111111/denite-rails'  # Ruby
-on_ft = ['ruby', 'eruby']
+on_ft = ['ruby', 'eruby', 'erb']
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_ft = ['ruby', 'eruby', 'erb']
 
 
 #-------------------------------

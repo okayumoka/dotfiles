@@ -72,6 +72,15 @@ repo = 'simeji/winresizer'
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 
+[[plugins]]
+repo = 'majutsushi/tagbar'
+
+
+# [[plugins]]
+# repo = 'bagrat/vim-buffet'
+# hook_add = '''
+#   let g:buffet_powerline_separators = 1
+# '''
 
 
 #-------------------------------
