@@ -48,6 +48,12 @@ repo = 'tyru/caw.vim.git'           # コメントアウト
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
+# [[plugins]]
+# repo = 'vim-airline/vim-airline'
+
+# [[plugins]]
+# repo = 'vim-airline/vim-airline-themes'
+
 [[plugins]]                         # Bcloseコマンド
 repo = 'rbgrouleff/bclose.vim'
 
