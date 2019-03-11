@@ -40,6 +40,9 @@ repo = 'kien/ctrlp.vim.git'         # コマンドラインでのファイル補
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
 repo = 'tyru/caw.vim.git'           # コメントアウト
 
 [[plugins]]
@@ -65,6 +68,9 @@ repo = 'godlygeek/tabular'
 
 [[plugins]]
 repo = 'simeji/winresizer'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
 
 
 
