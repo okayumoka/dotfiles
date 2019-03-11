@@ -45,6 +45,15 @@ elif [ $env = "ubuntu-wsl" ]; then
 fi
 
 #-------------------------------------
+# alacritty
+#-------------------------------------
+
+if [ $env = "mac" ]; then
+  ln -sf ${current}/alacritty/alacritty.yml.mac ~/.config/alacritty/alacritty.yml
+fi
+
+
+#-------------------------------------
 # Git
 #-------------------------------------
 ln -sf ${current}/git/_gitconfig ~/.gitconfig
