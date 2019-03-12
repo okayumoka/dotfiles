@@ -33,7 +33,7 @@ call s:source_rc('dein.rc.vim')
 call s:source_rc('color.rc.vim')
 " ターミナル設定
 call s:source_rc('terminal.rc.vim')
-" deoplete
+" " deoplete
 call s:source_rc('deoplete.rc.vim')
 " denite
 call s:source_rc('denite.rc.vim')

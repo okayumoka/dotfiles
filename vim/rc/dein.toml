@@ -109,16 +109,6 @@ repo = 'cohama/agit.vim' # Agitコマンド。git logの整形
 #-------------------------------
 # 補完
 #-------------------------------
-# [[plugins]]
-# repo = 'Shougo/neocomplete'
-# if = '!has("nvim")'
-
-# [[plugins]]
-# repo = 'Shougo/neosnippet'
-#
-# [[plugins]]
-# repo = 'Shougo/neosnippet-snippets'
-
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
@@ -158,7 +148,7 @@ depends = ['deoplete']
 rev = 'next'
 if = 'has("win32")'
 build = '''
-  powershell .\install.ps1
+  powershell -executionpolicy bypass -File install.ps1
   gem install solargraph
   npm install -g javascript-typescript-langserver
   npm install -g vscode-css-languageserver-bin

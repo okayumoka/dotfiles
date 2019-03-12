@@ -2,22 +2,57 @@
 " lightline.vim config
 "------------------------------------------------------------------------------
 
+
+" ↓デフォルトのコンポーネント
+" let g:lightline.component = {
+"  \ 'mode': '%{lightline#mode()}',
+"  \ 'absolutepath': '%F',
+"  \ 'relativepath': '%f',
+"  \ 'filename': '%t',
+"  \ 'modified': '%M',
+"  \ 'bufnum': '%n',
+"  \ 'paste': '%{&paste?"PASTE":""}',
+"  \ 'readonly': '%R',
+"  \ 'charvalue': '%b',
+"  \ 'charvaluehex': '%B',
+"  \ 'fileencoding': '%{strlen(&fenc)?&fenc:&enc}',
+"  \ 'fileformat': '%{&fileformat}',
+"  \ 'filetype': '%{strlen(&filetype)?&filetype:"no ft"}',
+"  \ 'percent': '%3p%%',
+"  \ 'percentwin': '%P',
+"  \ 'lineinfo': '%3l:%-2v',
+"  \ 'line': '%l',
+"  \ 'column': '%c'
+"  \ 'close': '%999X X ' }
+
+
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'absolutepath', 'modified' ] ],
+      \   'left':  [ [ 'mode', 'paste' ],
+      \              [ 'fugitive', 'readonly', 'absolutepath', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'lineinfo2' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
       \ },
       \ 'inactive': {
-      \   'left': [ [ 'fugitive', 'readonly', 'absolutepath', 'modified' ] ],
+      \   'left':  [ [ 'fugitive', 'readonly', 'absolutepath', 'modified' ] ],
+      \   'right': [ [ 'lineinfo2', 'lineinfo' ],
+      \              [ 'filetype' ] ]
+      \ },
+      \ 'component': {
+      \   'rows': '%L',
+      \   'lineinfo2': '%3p%%(%l/%L)',
       \ },
       \ 'component_function': {
       \   'absolutepath': 'LightLineAbsolutePath',
       \   'fugitive': 'LightlineFugitive',
-      \   'readonly': 'LightlineReadonly'
+      \   'readonly': 'LightlineReadonly',
       \ },
-      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2 " },
-      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3 " }
+      \ 'separator': { 'left': "\u2b80", 'right': "\u2b82" },
+      \ 'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
+      \ 'tabline_separator': { 'left': "\u2b80", 'right': "\u2b82" },
+      \ 'tabline_subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
       \ }
 
       "\ 'separator': { 'left': "\u2b80", 'right': "\u2b82" },
@@ -48,6 +83,10 @@ endfunction
 function! LightlineReadonly()
   " return &readonly ? '' : ''
   return &readonly ? "\ue0a2" : ''
+endfunction
+
+function! LightlineTabInfo()
+	return lightline#tabs()
 endfunction
 
   "                        Default    powerline       vim-powerline
