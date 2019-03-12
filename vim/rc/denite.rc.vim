@@ -21,7 +21,7 @@ nnoremap [denite]y     :<C-u>Denite<Space>neoyank<CR>
 nnoremap [denite]r     :<C-u>Denite -buffer-name=register register<CR>
 nnoremap [denite]c     :<C-u>DeniteBufferDir -buffer-name=files file<CR>
 
-"--------------------------------------------------------
+"-------------------------------------------------------
 " よく使うやつは短いものも用意しておく
 "--------------------------------------------------------
 nnoremap <C-k><C-b> :Denite<Space>buffer<CR>
@@ -51,13 +51,13 @@ call denite#custom#var('grep', 'pattern_opt', [])
 call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])
 
 " ショートカット
-noremap [denite]<C-g> :<C-u>Dg<CR>
-noremap [denite]<C-n> :<C-u>Dgresume<CR>
-noremap [denite]<C-n> :<C-u>Dgnext<CR>
-noremap [denite]<C-p> :<C-u>Dgprev<CR>
-noremap [denite]g     :<C-u>Dg<CR>
-noremap [denite]r     :<C-u>Dgresume<CR>
-noremap [denite]n     :<C-u>Dgnext<CR>
-noremap [denite]p     :<C-u>Dgprev<CR>
+nnoremap [denite]<C-g> :Denite grep -buffer-name=grep-buffer-denite<CR>
+nnoremap [denite]<C-r> :Denite -resume -buffer-name=grep-buffer-denite<CR>
+nnoremap [denite]<C-n> :Denite -resume -buffer-name=grep-buffer-denite -select=+1 -immediately<CR>
+nnoremap [denite]<C-p> :Denite -resume -buffer-name=grep-buffer-denite -select=-1 -immediately<CR>
+nnoremap [denite]j     :Denite grep -buffer-name=grep-buffer-denite<CR>
+nnoremap [denite]r     :Denite -resume -buffer-name=grep-buffer-denite<CR>
+nnoremap [denite]n     :Denite -resume -buffer-name=grep-buffer-denite -select=+1 -immediately<CR>
+nnoremap [denite]p     :Denite -resume -buffer-name=grep-buffer-denite -select=-1 -immediately<CR>
 
 
