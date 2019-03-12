@@ -49,16 +49,16 @@ let g:lightline = {
       \   'fugitive': 'LightlineFugitive',
       \   'readonly': 'LightlineReadonly',
       \ },
-      \ 'separator': { 'left': "\u2b80", 'right': "\u2b82" },
-      \ 'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
-      \ 'tabline_separator': { 'left': "\u2b80", 'right': "\u2b82" },
-      \ 'tabline_subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2 " },
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3 " },
+      \ 'tabline_separator': { 'left': "\ue0b0", 'right': "\ue0b2 " },
+      \ 'tabline_subseparator': { 'left': "\ue0b1", 'right': "\ue0b3 " },
       \ }
 
       "\ 'separator': { 'left': "\u2b80", 'right': "\u2b82" },
       "\ 'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
       "\ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2 " },
-      "\ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3 " }
+      "\ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3 " },
 
 function! LightLineAbsolutePath()
   let a = substitute(expand('%:p'), $HOME, '~', '')

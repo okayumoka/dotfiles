@@ -161,9 +161,9 @@ on_ft = ['lua']
 repo = '5t111111/denite-rails'  # Ruby
 on_ft = ['ruby', 'eruby', 'erb']
 
-[[plugins]]
-repo = 'tpope/vim-endwise'
-on_ft = ['ruby', 'eruby', 'erb']
+# [[plugins]]
+# repo = 'tpope/vim-endwise'
+# on_ft = ['ruby', 'eruby', 'erb']
 
 
 #-------------------------------

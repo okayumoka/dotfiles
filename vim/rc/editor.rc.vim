@@ -74,7 +74,7 @@ set incsearch   " インクリメンタルサーチを有効化
 set grepprg=internal    " 内蔵grepを使う
 
 " Esc の 2 回押しでハイライトを消去
-nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
+nnoremap <Esc><Esc> :sign unplace *<CR>:nohlsearch<CR><ESC>
 
 " MEMO
 " インクリメンタルサーチとは「検索文字列を入力完了する前に、入力中の文字列にマッチしている場所へ移動する」機能
