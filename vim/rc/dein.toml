@@ -35,6 +35,9 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+  let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+'''
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
