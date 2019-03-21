@@ -10,12 +10,19 @@
 # '''
 # on_ft = ['javascript', 'javascript.jsx']
 
+# [[plugins]]
+# repo = 'jiangmiao/simple-javascript-indenter'
+# hook_add = '''
+#   let g:SimpleJsIndenter_BriefMode = 1
+# '''
+# on_ft = ['javascript', 'javascript.jsx']
+
 [[plugins]]
-repo = 'jiangmiao/simple-javascript-indenter'
-hook_add = '''
-    let g:SimpleJsIndenter_BriefMode = 1
-'''
-on_ft = ['javascript', 'javascript.jsx']
+repo = 'jason0x43/vim-js-indent'
+# hook_add = '''
+#   let g:js_indent_flat_switch = 1
+# '''
+on_ft = ['javascript', 'javascript.jsx', 'ts', 'typescript']
 
 [[plugins]]
 repo = 'jelera/vim-javascript-syntax'
@@ -65,9 +72,12 @@ on_ft = ['coffee']
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
 on_ft = ['ts', 'typescript']
+hook_add = '''
+'''
 
 # [[plugins]]
 # repo = 'mhartington/nvim-typescript'
+# if = 'has("nvim")'
 # build = '''
 #   npm -g install typescript
 #   npm -g update typescript
