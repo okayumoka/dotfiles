@@ -21,7 +21,7 @@ if has('nvim')
 	" !call GuiWindowMaximized(1)
 else
   " set guifont=MyricaM\ M:h13
-  set guifont=Cica:h10
+  set guifont=Cica:h9.5
   " DirectDrawを有効に
   if has('win32')
     set renderoptions=type:directx,renmode:5,taamode:2
@@ -29,7 +29,6 @@ else
     "set renderoptions=type:directx,renmode:5,taamode:2
   endif
 endif
-
 
 "------------------------------------------------------------------------------
 
@@ -46,6 +45,8 @@ set lines=250
 set guioptions-=T
 " メニューを削除
 set guioptions-=m
+" テキストベースでタブを表示する
+set guioptions-=e
 " コマンド行の高さ
 set cmdheight=1
 " メニューの文字化け解消
