@@ -112,6 +112,50 @@ repo = 'cohama/agit.vim' # Agitコマンド。git logの整形
 #-------------------------------
 # 補完
 #-------------------------------
+# [[plugins]]
+# repo = 'prabirshrestha/asyncomplete.vim'
+#
+# [[plugins]]
+# repo = 'prabirshrestha/asyncomplete-buffer.vim'
+#
+# [[plugins]]
+# repo = 'prabirshrestha/asyncomplete-emoji.vim'
+#
+# [[plugins]]
+# repo = 'prabirshrestha/asyncomplete-file.vim'
+#
+# [[plugins]]
+# repo = 'yami-beta/asyncomplete-omni.vim'
+#
+# [[plugins]]
+# repo = 'Shougo/neco-vim'
+#
+# [[plugins]]
+# repo = 'prabirshrestha/asyncomplete-necovim.vim'
+#
+# [[plugins]]
+# repo = 'prabirshrestha/async.vim'
+#
+# [[plugins]]
+# repo = 'prabirshrestha/vim-lsp'
+#
+# [[plugins]]
+# repo = 'prabirshrestha/asyncomplete-lsp.vim'
+# build = '''
+#   gem install solargraph
+#   npm install -g typescript typescript-language-server
+#   npm install -g vscode-css-languageserver-bin
+#   npm install -g vue-language-server
+#   pip3 install python-language-server
+# '''
+#
+# [[plugins]]
+# repo = 'ryanolsonx/vim-lsp-typescript'
+#
+# [[plugins]]
+# repo = 'ryanolsonx/vim-lsp-javascript'
+
+
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
@@ -169,6 +213,7 @@ build = '''
   npm install -g javascript-typescript-langserver
   npm install -g vscode-css-languageserver-bin
   npm install -g vue-language-server
+  pip3 install python-language-server
 '''
 
 [[plugins]] # for LanguageClient-neovim

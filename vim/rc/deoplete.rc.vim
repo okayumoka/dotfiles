@@ -9,7 +9,7 @@ inoremap <silent><expr> <TAB>
      \ deoplete#manual_complete()
 function! s:check_back_space() abort
   let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
+  return !col || getline('.')[col - 1] =~ '\s'
 endfunction
 
 " <C-n>: completion.
@@ -71,6 +71,7 @@ let g:LanguageClient_serverCommands = {
     \ 'scss': ['css-languageserver', '--stdio'],
     \ 'less': ['css-languageserver', '--stdio'],
     \ 'vue': ['vls'],
+    \ 'python': ['pyls', '--stdio'],
 \}
 
 nnoremap [lsp] <NOP>
