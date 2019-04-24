@@ -34,9 +34,9 @@ call s:source_rc('color.rc.vim')
 " ターミナル設定
 call s:source_rc('terminal.rc.vim')
 " deoplete
-call s:source_rc('deoplete.rc.vim')
+" call s:source_rc('deoplete.rc.vim')
 " asyncomplete
-" call s:source_rc('asyncomplete.rc.vim')
+call s:source_rc('asyncomplete.rc.vim')
 " denite
 call s:source_rc('denite.rc.vim')
 " caw.vim

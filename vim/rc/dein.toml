@@ -112,112 +112,112 @@ repo = 'cohama/agit.vim' # Agitコマンド。git logの整形
 #-------------------------------
 # 補完
 #-------------------------------
-# [[plugins]]
-# repo = 'prabirshrestha/asyncomplete.vim'
-#
-# [[plugins]]
-# repo = 'prabirshrestha/asyncomplete-buffer.vim'
-#
-# [[plugins]]
-# repo = 'prabirshrestha/asyncomplete-emoji.vim'
-#
-# [[plugins]]
-# repo = 'prabirshrestha/asyncomplete-file.vim'
-#
-# [[plugins]]
-# repo = 'yami-beta/asyncomplete-omni.vim'
-#
-# [[plugins]]
-# repo = 'Shougo/neco-vim'
-#
-# [[plugins]]
-# repo = 'prabirshrestha/asyncomplete-necovim.vim'
-#
-# [[plugins]]
-# repo = 'prabirshrestha/async.vim'
-#
-# [[plugins]]
-# repo = 'prabirshrestha/vim-lsp'
-#
-# [[plugins]]
-# repo = 'prabirshrestha/asyncomplete-lsp.vim'
-# build = '''
-#   gem install solargraph
-#   npm install -g typescript typescript-language-server
-#   npm install -g vscode-css-languageserver-bin
-#   npm install -g vue-language-server
-#   pip3 install python-language-server
-# '''
-#
-# [[plugins]]
-# repo = 'ryanolsonx/vim-lsp-typescript'
-#
-# [[plugins]]
-# repo = 'ryanolsonx/vim-lsp-javascript'
-
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-  let g:deoplete#enable_at_startup = 1
-'''
-
-# [[plugins]]
-# repo = 'Shougo/deoppet.nvim'
-#
-# [[plugins]]
-# repo = 'Shougo/deoppet-snippets'
-# depends = ['deoppet']
+repo = 'prabirshrestha/asyncomplete-buffer.vim'
 
 [[plugins]]
-if = '!has("nvim")'
-repo = 'roxma/nvim-yarp'  # Vimでdeopleteを動かすのに必須。neovimでは不要。
+repo = 'prabirshrestha/asyncomplete-emoji.vim'
 
 [[plugins]]
-if = '!has("nvim")'
-repo = 'roxma/vim-hug-neovim-rpc'  # Vimでdeopleteを動かすのに必須。neovimでは不要。
+repo = 'prabirshrestha/asyncomplete-file.vim'
+
+[[plugins]]
+repo = 'yami-beta/asyncomplete-omni.vim'
 
 [[plugins]]
 repo = 'Shougo/neco-vim'
-depends = ['deoplete']
 
 [[plugins]]
-repo = 'Shougo/neco-syntax'
-depends = ['deoplete']
+repo = 'prabirshrestha/asyncomplete-necovim.vim'
 
 [[plugins]]
-repo = 'ujihisa/neco-look'  # English
-depends = ['deoplete']
+repo = 'prabirshrestha/async.vim'
 
 [[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-depends = ['deoplete']
-rev = 'next'
-if = 'has("win32")'
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
 build = '''
-  powershell -executionpolicy bypass -File install.ps1
   gem install solargraph
-  npm install -g javascript-typescript-langserver
-  npm install -g vscode-css-languageserver-bin
-  npm install -g vue-language-server
-'''
-
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-depends = ['deoplete']
-rev = 'next'
-if = '!has("win32")'
-build = '''
-  bash install.sh
-  gem install solargraph
-  npm install -g javascript-typescript-langserver
+  npm install -g typescript typescript-language-server
   npm install -g vscode-css-languageserver-bin
   npm install -g vue-language-server
   pip3 install python-language-server
 '''
 
-[[plugins]] # for LanguageClient-neovim
-repo = 'junegunn/fzf'
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-typescript'
+
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-javascript'
+
+
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# hook_add = '''
+#   let g:deoplete#enable_at_startup = 1
+# '''
+#
+# # [[plugins]]
+# # repo = 'Shougo/deoppet.nvim'
+# #
+# # [[plugins]]
+# # repo = 'Shougo/deoppet-snippets'
+# # depends = ['deoppet']
+#
+# [[plugins]]
+# if = '!has("nvim")'
+# repo = 'roxma/nvim-yarp'  # Vimでdeopleteを動かすのに必須。neovimでは不要。
+#
+# [[plugins]]
+# if = '!has("nvim")'
+# repo = 'roxma/vim-hug-neovim-rpc'  # Vimでdeopleteを動かすのに必須。neovimでは不要。
+#
+# [[plugins]]
+# repo = 'Shougo/neco-vim'
+# depends = ['deoplete']
+#
+# [[plugins]]
+# repo = 'Shougo/neco-syntax'
+# depends = ['deoplete']
+#
+# [[plugins]]
+# repo = 'ujihisa/neco-look'  # English
+# depends = ['deoplete']
+#
+# [[plugins]]
+# repo = 'autozimu/LanguageClient-neovim'
+# depends = ['deoplete']
+# rev = 'next'
+# if = 'has("win32")'
+# build = '''
+#   powershell -executionpolicy bypass -File install.ps1
+#   gem install solargraph
+#   npm install -g javascript-typescript-langserver
+#   npm install -g vscode-css-languageserver-bin
+#   npm install -g vue-language-server
+# '''
+#
+# [[plugins]]
+# repo = 'autozimu/LanguageClient-neovim'
+# depends = ['deoplete']
+# rev = 'next'
+# if = '!has("win32")'
+# build = '''
+#   bash install.sh
+#   gem install solargraph
+#   npm install -g javascript-typescript-langserver
+#   npm install -g vscode-css-languageserver-bin
+#   npm install -g vue-language-server
+#   pip3 install python-language-server
+# '''
+#
+# [[plugins]] # for LanguageClient-neovim
+# repo = 'junegunn/fzf'
 
 #-------------------------------
 # カラースキーマ

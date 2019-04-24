@@ -10,7 +10,7 @@ let g:asyncomplete_log_file = expand('~/asyncomplete.log')
 " inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 " imap <c-space> <Plug>(asyncomplete_force_refresh)
-" imap <C-k><C-a> <Plug>(asyncomplete_force_refresh)
+imap <C-k><C-a> <Plug>(asyncomplete_force_refresh)
 
 " asyncomplete-buffer.vim
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
@@ -77,9 +77,15 @@ if executable('typescript-language-server')
   "      \ })
 
   au User lsp_setup call lsp#register_server({
-        \ 'name': 'javascript support using typescript-language-server',
+        \ 'name': 'typescript-language-server',
         \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
         \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
+        \ 'whitelist': ['typescript', 'typescript.tsx', 'javascript', 'javascript.jsx'],
+        \ })
+
+  au User lsp_setup call lsp#register_server({
+        \ 'name': '2 typescript-language-server',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
         \ 'whitelist': ['typescript', 'typescript.tsx', 'javascript', 'javascript.jsx'],
         \ })
 endif
