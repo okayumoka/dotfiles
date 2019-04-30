@@ -192,10 +192,11 @@ build = '''
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
 hook_add = '''
-    let g:vim_markdown_folding_disabled = 1
-    let g:vim_markdown_conceal = 0
-    autocmd BufRead,BufNewFile *.mkd set filetype=markdown
-    autocmd BufRead,BufNewFile *.md set filetype=markdown
+  let g:vim_markdown_folding_disabled = 1
+  let g:vim_markdown_conceal = 0
+  let g:vim_markdown_conceal_code_blocks = 0
+  autocmd BufRead,BufNewFile *.mkd set filetype=markdown
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
 '''
 on_ft = ['markdown', 'mkd', 'md']
 
