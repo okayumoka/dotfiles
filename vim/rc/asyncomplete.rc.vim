@@ -10,7 +10,7 @@ let g:asyncomplete_log_file = expand('~/asyncomplete.log')
 " inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 " imap <c-space> <Plug>(asyncomplete_force_refresh)
-imap <C-k><C-a> <Plug>(asyncomplete_force_refresh)
+imap <C-k><C-n> <Plug>(asyncomplete_force_refresh)
 
 " asyncomplete-buffer.vim
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
@@ -83,11 +83,11 @@ if executable('typescript-language-server')
         \ 'whitelist': ['typescript', 'typescript.tsx', 'javascript', 'javascript.jsx'],
         \ })
 
-  au User lsp_setup call lsp#register_server({
-        \ 'name': '2 typescript-language-server',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-        \ 'whitelist': ['typescript', 'typescript.tsx', 'javascript', 'javascript.jsx'],
-        \ })
+  " au User lsp_setup call lsp#register_server({
+  "      \ 'name': '2 typescript-language-server',
+  "      \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+  "      \ 'whitelist': ['typescript', 'typescript.tsx', 'javascript', 'javascript.jsx'],
+  "      \ })
 endif
 
 if executable('solargraph')
