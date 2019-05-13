@@ -12,8 +12,8 @@ build = 'make'
 [[plugins]]
 repo = 'Shougo/vimshell'
 
-[[plugins]]
-repo = 'Shougo/deol.nvim'
+# [[plugins]]
+# repo = 'Shougo/deol.nvim'
 
 # [[plugins]]
 # repo = 'Shougo/unite.vim'
@@ -30,8 +30,8 @@ repo = 'Shougo/neoyank.vim'  # for Denite
 # [[plugins]]
 # repo = 'Townk/vim-autoclose'        # カッコやダブルコーテーションを自動で閉じる
 
-[[plugins]]
-repo = 'tpope/vim-surround'
+# [[plugins]]
+# repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
@@ -46,7 +46,7 @@ repo = 'scrooloose/nerdtree'
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
-repo = 'tyru/caw.vim.git'           # コメントアウト
+repo = 'tyru/caw.vim.git'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -57,7 +57,7 @@ repo = 'itchyny/lightline.vim'
 # [[plugins]]
 # repo = 'vim-airline/vim-airline-themes'
 
-[[plugins]]                         # Bcloseコマンド
+[[plugins]]
 repo = 'rbgrouleff/bclose.vim'
 
 [[plugins]]
@@ -231,11 +231,11 @@ repo = 'lifepillar/vim-solarized8'
 # [[plugins]]
 # repo = 'tomasr/molokai'
 
-[[plugins]]
-repo = 'nanotech/jellybeans.vim'
+# [[plugins]]
+# repo = 'nanotech/jellybeans.vim'
 
-[[plugins]]
-repo = 'w0ng/vim-hybrid'
+# [[plugins]]
+# repo = 'w0ng/vim-hybrid'
 
 #[[plugins]]
 #repo = 'jonathanfilip/vim-lucius'
@@ -243,8 +243,8 @@ repo = 'w0ng/vim-hybrid'
 #[[plugins]]
 #repo = 'jpo/vim-railscasts-theme'
 
-[[plugins]]
-repo = 'jacoborus/tender.vim'
+# [[plugins]]
+# repo = 'jacoborus/tender.vim'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
@@ -252,8 +252,8 @@ repo = 'cocopon/iceberg.vim'
 # [[plugins]]
 # repo = 'felipesousa/rupza'
 
-[[plugins]]
-repo = 'dracula/vim'
+# [[plugins]]
+# repo = 'dracula/vim'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
