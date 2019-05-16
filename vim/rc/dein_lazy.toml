@@ -179,11 +179,11 @@ on_ft = ['ruby', 'eruby', 'erb']
 #-------------------------------
 # Python
 #-------------------------------
-[[plugins]]
-repo = 'zchee/deoplete-jedi'
-build = '''
-  pip3 install jedi --upgrade
-'''
+# [[plugins]]
+# repo = 'zchee/deoplete-jedi'
+# build = '''
+#   pip3 install jedi --upgrade
+# '''
 
 
 #-------------------------------
@@ -252,8 +252,8 @@ hook_add = '''
 #-------------------------------
 # Others
 #-------------------------------
-[[plugins]]
-repo = 'zchee/deoplete-clang'
-on_ft = ['c', 'cpp', 'h', 'hpp']
+# [[plugins]]
+# repo = 'zchee/deoplete-clang'
+# on_ft = ['c', 'cpp', 'h', 'hpp']
 
 

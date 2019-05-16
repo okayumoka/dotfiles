@@ -12,8 +12,9 @@ build = 'make'
 [[plugins]]
 repo = 'Shougo/vimshell'
 
-[[plugins]]
-repo = 'Shougo/deol.nvim'
+# [[plugins]]
+# repo = 'Shougo/deol.nvim'
+# if = 'has("nvim")'
 
 # [[plugins]]
 # repo = 'Shougo/unite.vim'
@@ -30,8 +31,8 @@ repo = 'Shougo/neoyank.vim'  # for Denite
 # [[plugins]]
 # repo = 'Townk/vim-autoclose'        # カッコやダブルコーテーションを自動で閉じる
 
-[[plugins]]
-repo = 'tpope/vim-surround'
+# [[plugins]]
+# repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
@@ -69,8 +70,8 @@ repo = 'Shougo/context_filetype.vim'
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 
-[[plugins]]
-repo = 'godlygeek/tabular'
+# [[plugins]]
+# repo = 'godlygeek/tabular'
 
 # [[plugins]]
 # repo = 'szw/vim-tags'
@@ -81,8 +82,14 @@ repo = 'simeji/winresizer'
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 
+# [[plugins]]
+# repo = 'majutsushi/tagbar'
+
 [[plugins]]
-repo = 'majutsushi/tagbar'
+repo = 'mattn/vim-sqlfmt'
+build = '''
+  pip3 install --upgrade sqlparse
+'''
 
 
 # [[plugins]]
