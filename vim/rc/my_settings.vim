@@ -90,10 +90,10 @@ command! Reload execute(":e!")
 "--------------------------------------------------------
 " 新規タブ
 nnoremap <C-k><C-k><C-t> :<C-u>tabnew<CR>
-nnoremap <C-k><C-k><C-d> :<C-u>tabnew<CR>
-nnoremap <C-k><C-k><C-l> :<C-u>tabnext<CR>
+" nnoremap <C-k><C-k><C-d> :<C-u>tabnew<CR>
+" nnoremap <C-k><C-k><C-l> :<C-u>tabnext<CR>
 nnoremap <C-k><C-k><C-n> :<C-u>tabnext<CR>
-nnoremap <C-k><C-k><C-h> :<C-u>tabprev<CR>
+" nnoremap <C-k><C-k><C-h> :<C-u>tabprev<CR>
 nnoremap <C-k><C-k><C-p> :<C-u>tabprev<CR>
 
 

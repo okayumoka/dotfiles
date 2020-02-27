@@ -79,8 +79,12 @@ nmap <C-k><C-l> [lsp]
 nnoremap [lsp]m     :call LanguageClient_contextMenu()<CR>
 nnoremap [lsp]<C-m> :call LanguageClient_contextMenu()<CR>
 nnoremap [lsp]h     :call LanguageClient_textDocument_hover()<CR>
+nnoremap [lsp]<C-h> :call LanguageClient_textDocument_hover()<CR>
 nnoremap [lsp]k     :call LanguageClient_textDocument_hover()<CR>
+nnoremap [lsp]<C-k> :call LanguageClient_textDocument_hover()<CR>
 nnoremap [lsp]d     :call LanguageClient_textDocument_definition()<CR>
+nnoremap [lsp]<C-d> :call LanguageClient_textDocument_definition()<CR>
 nnoremap [lsp]r     :call LanguageClient_textDocument_rename()<CR>
+nnoremap [lsp]<C-r> :call LanguageClient_textDocument_rename()<CR>
 
 

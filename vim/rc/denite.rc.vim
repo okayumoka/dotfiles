@@ -2,6 +2,23 @@
 " denite config
 "------------------------------------------------------------------------------
 
+" 基本設定
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+  \ denite#do_map('do_action')
+  nnoremap <silent><buffer><expr> d
+  \ denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p
+  \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> q
+  \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> i
+  \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <Space>
+  \ denite#do_map('toggle_select').'j'
+endfunction
+
 " キーマッピング
 nnoremap [denite]   <Nop>
 nmap <C-k><C-d> [denite]
@@ -24,8 +41,8 @@ nnoremap [denite]c     :<C-u>DeniteBufferDir -buffer-name=files file<CR>
 "-------------------------------------------------------
 " よく使うやつは短いものも用意しておく
 "--------------------------------------------------------
-nnoremap <C-k><C-b> :Denite<Space>buffer<CR>
-nnoremap <C-k><C-f> :Denite<Space>buffer<CR>
+" nnoremap <C-k><C-b> :Denite<Space>buffer<CR>
+" nnoremap <C-k><C-f> :Denite<Space>buffer<CR>
 command! Dbuffer execute(":Denite buffer")
 command! Dfile execute(":Denite file")
 command! Dmru execute(":Denite file_mru")
