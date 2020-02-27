@@ -4,9 +4,25 @@ rbenv init - | source
 
 # nvm
 set -x NVM_DIR $HOME/.nvm
-# bash $NVM_DIR/nvm.sh
 set -x NVM_NODEJS_ORG_MIRROR http://nodejs.org/dist
 npm --version > /dev/null
+
+# ssh-agent
+set -x SSH_AGENT_FILE $HOME/.ssh/ssh-agent
+if test -f $SSH_AGENT_FILE
+  source $SSH_AGENT_FILE
+end
+ssh-add -l > /dev/null ^&1
+if test $status -ne 0
+  # ssh-agent に -c オプションを追加 (csh-style)
+  ssh-agent -c > $SSH_AGENT_FILE
+  source $SSH_AGENT_FILE
+  ssh-add $HOME/.ssh/id_rsa
+end
+function on_exit --on-process %self
+  # echo fish is now exiting
+  ssh-agent -k
+end
 
 # Java
 #set -x JAVA_HOME (/usr/libexec/java_home -v 11)
