@@ -96,3 +96,15 @@ nnoremap <C-k><C-k><C-n> :<C-u>tabnext<CR>
 nnoremap <C-k><C-k><C-h> :<C-u>tabprev<CR>
 nnoremap <C-k><C-k><C-p> :<C-u>tabprev<CR>
 
+
+"--------------------------------------------------------
+" 整形
+"--------------------------------------------------------
+function! Format_file()
+  let view = winsaveview()
+  normal gg=G
+  silent call winrestview(view)
+endfunction
+nnoremap <C-k><C-f> :call Format_file()<CR>
+
+
