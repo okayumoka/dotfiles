@@ -95,7 +95,7 @@ call deoplete#custom#option('max_list', 200)
 "-------------------------------
 let g:lsp_settings_servers_dir = '~/.lsp_servers'
 let g:lsp_preview_float = 1
-let g:lsp_diagnostics_enabled =   " lintはaleでやるので無効にしておく
+let g:lsp_diagnostics_enabled = 0  " lintはaleでやるので無効にしておく
 let g:lsp_signs_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 
