@@ -10,7 +10,7 @@ npm --version > /dev/null
 # ssh-agent
 set -x SSH_AGENT_FILE $HOME/.ssh/ssh-agent
 if test -f $SSH_AGENT_FILE
-  source $SSH_AGENT_FILE
+  source $SSH_AGENT_FILE > /dev/null ^&1
 end
 ssh-add -l > /dev/null ^&1
 if test $status -ne 0
