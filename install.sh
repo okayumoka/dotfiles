@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# ============================================================
+# Example:
+# $ bash install.sh okayu studiomikan@gmail.com mac
+# $ bash install.sh okayu studiomikan@gmail.com ubuntu
+# $ bash install.sh okayu studiomikan@gmail.com ubuntu-wsl
+# ============================================================
+
 cd $(dirname ${0})
 current=`pwd`
 
@@ -45,12 +52,9 @@ elif [ $env = "ubuntu-wsl" ]; then
 fi
 
 #-------------------------------------
-# alacritty
+# tmux
 #-------------------------------------
-
-if [ $env = "mac" ]; then
-  ln -sf ${current}/alacritty/alacritty.yml.mac ~/.config/alacritty/alacritty.yml
-fi
+ln -sf ${current}/tmux/tmux.conf ~/.tmux.conf
 
 
 #-------------------------------------
