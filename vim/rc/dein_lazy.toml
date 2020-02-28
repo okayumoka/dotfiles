@@ -1,6 +1,23 @@
 # lazy load
 
 #-------------------------------
+# Any
+#-------------------------------
+[[plugins]]
+repo = 'prettier/vim-prettier'
+build = 'npm install'
+on_ft = ['javascript', 'typescript', 'vue', 'css', 'scss', 'json', 'markdown']
+hook_source = '''
+  " @formatアノテーションを持ったファイルの自動フォーマットを無効に
+  let g:prettier#autoformat = 0
+  " エラーをquickfixに表示しない
+  let g:prettier#quickfix_enabled = 0
+  " 保存時に自動でフォーマット
+  autocmd BufWritePre *.js,*.ts,*.vue,*.css,*.scss,*.json,*.md PrettierAsync
+'''
+
+
+#-------------------------------
 # JavaScript
 #-------------------------------
 # [[plugins]]

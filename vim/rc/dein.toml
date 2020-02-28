@@ -91,7 +91,6 @@ build = '''
   pip3 install --upgrade sqlparse
 '''
 
-
 # [[plugins]]
 # repo = 'bagrat/vim-buffet'
 # hook_add = '''
