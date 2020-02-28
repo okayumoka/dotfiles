@@ -52,35 +52,45 @@ call deoplete#custom#option('refresh_always', v:true)
 call deoplete#custom#option('max_list', 500)
 
 
-call deoplete#custom#var('omni', 'input_patterns', {
-    \ 'ruby': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
-    \ 'javascript': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
-    \ 'typescript': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
-\})
+" MEMO: LSPと相性があんまりよくないのでオフにしておく
+" call deoplete#custom#var('omni', 'input_patterns', {
+"    \ 'ruby': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
+"    \ 'javascript': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
+"    \ 'typescript': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
+"\})
+
+" "-------------------------------
+" " LSP settings (LanguageClient-neovim)
+" "-------------------------------
+" set hidden
+" let g:LanguageClient_autoStart = 1
+" let g:LanguageClient_serverCommands = {
+"    \ 'ruby': ['solargraph', 'stdio'],
+"    \ 'javascript': ['javascript-typescript-stdio'],
+"    \ 'typescript': ['javascript-typescript-stdio'],
+"    \ 'css': ['css-languageserver', '--stdio'],
+"    \ 'scss': ['css-languageserver', '--stdio'],
+"    \ 'less': ['css-languageserver', '--stdio'],
+"    \ 'vue': ['vls'],
+"    \ 'python': ['pyls', '--stdio'],
+"\}
+"
+" nnoremap [lsp] <NOP>
+" nmap <C-k><C-l> [lsp]
+" nnoremap [lsp]m     :call LanguageClient_contextMenu()<CR>
+" nnoremap [lsp]<C-m> :call LanguageClient_contextMenu()<CR>
+" nnoremap [lsp]h     :call LanguageClient_textDocument_hover()<CR>
+" nnoremap [lsp]<C-h> :call LanguageClient_textDocument_hover()<CR>
+" nnoremap [lsp]k     :call LanguageClient_textDocument_hover()<CR>
+" nnoremap [lsp]<C-k> :call LanguageClient_textDocument_hover()<CR>
+" nnoremap [lsp]d     :call LanguageClient_textDocument_definition()<CR>
+" nnoremap [lsp]<C-d> :call LanguageClient_textDocument_definition()<CR>
+" nnoremap [lsp]r     :call LanguageClient_textDocument_rename()<CR>
+" nnoremap [lsp]<C-r> :call LanguageClient_textDocument_rename()<CR>
+"
 
 "-------------------------------
-" LSP settings
+" LSP settings (vim-lsp & vim-lsp-settings)
 "-------------------------------
-set hidden
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {
-    \ 'ruby': ['solargraph', 'stdio'],
-    \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'typescript': ['javascript-typescript-stdio'],
-    \ 'css': ['css-languageserver', '--stdio'],
-    \ 'scss': ['css-languageserver', '--stdio'],
-    \ 'less': ['css-languageserver', '--stdio'],
-    \ 'vue': ['vls'],
-    \ 'python': ['pyls', '--stdio'],
-\}
-
-nnoremap [lsp] <NOP>
-nmap <C-k><C-l> [lsp]
-nnoremap [lsp]m     :call LanguageClient_contextMenu()<CR>
-nnoremap [lsp]<C-m> :call LanguageClient_contextMenu()<CR>
-nnoremap [lsp]h     :call LanguageClient_textDocument_hover()<CR>
-nnoremap [lsp]k     :call LanguageClient_textDocument_hover()<CR>
-nnoremap [lsp]d     :call LanguageClient_textDocument_definition()<CR>
-nnoremap [lsp]r     :call LanguageClient_textDocument_rename()<CR>
-
+let g:lsp_settings_servers_dir = '~/.lsp_servers'
 

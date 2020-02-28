@@ -196,32 +196,47 @@ depends = ['deoplete']
 repo = 'ujihisa/neco-look'  # English
 depends = ['deoplete']
 
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-depends = ['deoplete']
-rev = 'next'
-if = 'has("win32")'
-build = '''
-  powershell -executionpolicy bypass -File install.ps1
-  gem install solargraph
-  npm install -g javascript-typescript-langserver
-  npm install -g vscode-css-languageserver-bin
-  npm install -g vue-language-server
-'''
+# [[plugins]]
+# repo = 'autozimu/LanguageClient-neovim'
+# depends = ['deoplete']
+# rev = 'next'
+# if = 'has("win32")'
+# build = '''
+#   powershell -executionpolicy bypass -File install.ps1
+#   gem install solargraph
+#   npm install -g javascript-typescript-langserver
+#   npm install -g vscode-css-languageserver-bin
+#   npm install -g vue-language-server
+# '''
+#
+# [[plugins]]
+# repo = 'autozimu/LanguageClient-neovim'
+# depends = ['deoplete']
+# rev = 'next'
+# if = '!has("win32")'
+# build = '''
+#   bash install.sh
+#   gem install solargraph
+#   npm install -g javascript-typescript-langserver
+#   npm install -g vscode-css-languageserver-bin
+#   npm install -g vue-language-server
+#   pip3 install python-language-server
+# '''
 
 [[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-depends = ['deoplete']
-rev = 'next'
-if = '!has("win32")'
-build = '''
-  bash install.sh
-  gem install solargraph
-  npm install -g javascript-typescript-langserver
-  npm install -g vscode-css-languageserver-bin
-  npm install -g vue-language-server
-  pip3 install python-language-server
-'''
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
 
 [[plugins]] # for LanguageClient-neovim
 repo = 'junegunn/fzf'
@@ -238,8 +253,8 @@ repo = 'lifepillar/vim-solarized8'
 # [[plugins]]
 # repo = 'tomasr/molokai'
 
-[[plugins]]
-repo = 'nanotech/jellybeans.vim'
+# [[plugins]]
+# repo = 'nanotech/jellybeans.vim'
 
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
@@ -250,8 +265,8 @@ repo = 'w0ng/vim-hybrid'
 #[[plugins]]
 #repo = 'jpo/vim-railscasts-theme'
 
-[[plugins]]
-repo = 'jacoborus/tender.vim'
+# [[plugins]]
+# repo = 'jacoborus/tender.vim'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
