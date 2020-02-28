@@ -28,6 +28,7 @@ end
 
 # General
 set -x LANG "ja_JP.UTF-8"
+set -x COLORTERM "truecolor"
 
 # bobthefish
 set -g theme_powerline_fonts yes
