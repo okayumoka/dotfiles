@@ -43,13 +43,14 @@ inoremap <expr><C-e> deoplete#cancel_popup()
 
 call deoplete#custom#option('enable_at_startup', v:true)
 call deoplete#custom#option('auto_complete_delay', 0)
-call deoplete#custom#option('auto_complete_start_length', 1)
+" call deoplete#custom#option('auto_complete_start_length', 3)
+call deoplete#custom#option('min_pattern_length', 3)
 
 call deoplete#custom#option('camel_case', v:true)
 " call deoplete#custom#option('enable_ignore_case', v:true)
 call deoplete#custom#option('refresh_always', v:true)
 " call deoplete#custom#option('smart_case', v:true)
-call deoplete#custom#option('max_list', 500)
+call deoplete#custom#option('max_list', 200)
 
 
 " MEMO: LSPと相性があんまりよくないのでオフにしておく
@@ -93,4 +94,17 @@ call deoplete#custom#option('max_list', 500)
 " LSP settings (vim-lsp & vim-lsp-settings)
 "-------------------------------
 let g:lsp_settings_servers_dir = '~/.lsp_servers'
+let g:lsp_preview_float = 1
+let g:lsp_diagnostics_enabled =   " lintはaleでやるので無効にしておく
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+
+nnoremap [lsp] <NOP>
+nmap <C-k><C-l> [lsp]
+nnoremap [lsp]h     :<C-u>LspHover<CR>
+nnoremap [lsp]<C-h> :<C-u>LspHover<CR>
+nnoremap [lsp]d     :<C-u>LspDefinition<CR>
+nnoremap [lsp]<C-d> :<C-u>LspDefinition<CR>
+nnoremap [lsp]r     :<C-u>LspRename<CR>
+nnoremap [lsp]<C-r> :<C-u>LspRename<CR>
 

@@ -57,7 +57,7 @@ nnoremap [denite]c     :<C-u>DeniteBufferDir -buffer-name=files file<CR>
 "-------------------------------------------------------
 " よく使うやつは短いものも用意しておく
 "--------------------------------------------------------
-" nnoremap <C-k><C-b> :Denite<Space>buffer<CR>
+nnoremap <C-k><C-b> :Denite<Space>buffer<CR>
 " nnoremap <C-k><C-f> :Denite<Space>buffer<CR>
 command! Dbuffer execute(":Denite buffer")
 command! Dfile execute(":Denite file")

@@ -20,20 +20,6 @@ hook_source = '''
 #-------------------------------
 # JavaScript
 #-------------------------------
-# [[plugins]]
-# repo = 'carlitux/deoplete-ternjs' # JS
-# build = '''
-#   npm install -g term
-# '''
-# on_ft = ['javascript', 'javascript.jsx']
-
-# [[plugins]]
-# repo = 'jiangmiao/simple-javascript-indenter'
-# hook_add = '''
-#   let g:SimpleJsIndenter_BriefMode = 1
-# '''
-# on_ft = ['javascript', 'javascript.jsx']
-
 [[plugins]]
 repo = 'jason0x43/vim-js-indent'
 # hook_add = '''
@@ -62,13 +48,6 @@ on_ft = ['jsx', 'javascript.jsx']
 hook_add = '''
   let g:jsx_ext_required = 1
 '''
-
-# [[plugins]]
-# repo = 'ryym/vim-riot'
-# hook_add = '''
-#   au BufRead,BufNewFile,BufReadPre *.tag  set filetype=javascript
-# '''
-# on_ft = ['javascript']
 
 [[plugins]]
 repo = 'posva/vim-vue'

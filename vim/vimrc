@@ -56,6 +56,8 @@ call s:source_rc('lightline.rc.vim')
 call s:source_rc('airline.rc.vim')
 " winresizer.vim
 call s:source_rc('winresizer.rc.vim')
+" ale
+call s:source_rc('ale.vim')
 " git関係
 call s:source_rc('git.vim')
 " その他の設定

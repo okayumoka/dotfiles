@@ -295,4 +295,9 @@ build = '''
   gem install refe2
 '''
 
+[[plugins]]
+repo = 'dense-analysis/ale'
+build = '''
+  npm install -g eslint
+'''
 
