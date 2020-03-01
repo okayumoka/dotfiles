@@ -12,7 +12,7 @@ mklink %HOME%"\.vsvimrc" "%current%vsvim\.vsvimrc"
 rem --------------------------------------
 rem hyper.js
 rem --------------------------------------
-mklink "%userprofile%\\AppData\\Roaming\\Hyper\\.hyper.js" "%current%hyper\.hyper.js"
+mklink "%userprofile%\\AppData\\Roaming\\Hyper\\.hyper.js" "%current%hyper\.hyper.win.js"
 
 rem --------------------------------------
 rem vim and neovim

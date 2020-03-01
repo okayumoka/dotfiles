@@ -36,7 +36,6 @@ mkdir -p ~/.config/nvim
 ln -sf ${current}/vim/vimrc ~/.config/nvim/init.vim
 ln -sf ${current}/vim/rc ${nvim_home}/rc
 
-
 #-------------------------------------
 # fish
 #-------------------------------------
@@ -56,6 +55,13 @@ fi
 #-------------------------------------
 ln -sf ${current}/tmux/tmux.conf ~/.tmux.conf
 
+#-------------------------------------
+# hyper.js
+#-------------------------------------
+hyperconfig=${current}/hyper/hyper.${env}.js
+if [ -f $hyperconfig ]; then
+  ln -sf $hyperconfig ~/.hyper.js
+fi
 
 #-------------------------------------
 # Git
