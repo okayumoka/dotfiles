@@ -244,16 +244,16 @@ repo = 'junegunn/fzf'
 # カラースキーマ
 #-------------------------------
 # [[plugins]]
-# repo = 'altercation/vim-colors-solarized'
+repo = 'altercation/vim-colors-solarized'
 
-[[plugins]]
-repo = 'lifepillar/vim-solarized8'
+# [[plugins]]
+# repo = 'lifepillar/vim-solarized8'
 
 # [[plugins]]
 # repo = 'tomasr/molokai'
 
 # [[plugins]]
-# repo = 'nanotech/jellybeans.vim'
+repo = 'nanotech/jellybeans.vim'
 
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
@@ -273,11 +273,15 @@ repo = 'cocopon/iceberg.vim'
 # [[plugins]]
 # repo = 'felipesousa/rupza'
 
-[[plugins]]
-repo = 'dracula/vim'
+# [[plugins]]
+# repo = 'dracula/vim'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
+
+[[plugins]]
+repo = 'NLKNguyen/papercolor-theme'
+
 
 #-------------------------------
 # lazyだと動きがおかしいもの
