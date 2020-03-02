@@ -50,7 +50,7 @@ set background=dark
 " call s:set_colorscheme('molokai')
 "
 " jellybeans
-call s:set_colorscheme('jellybeans')
+" call s:set_colorscheme('jellybeans')
 
 " tender
 " call s:set_colorscheme('tender')
@@ -68,5 +68,5 @@ call s:set_colorscheme('jellybeans')
 " call s:set_colorscheme('dracula')
 
 " PaperColor
-" call s:set_colorscheme('PaperColor')
+call s:set_colorscheme('PaperColor')
 
