@@ -11,6 +11,12 @@ del %HOME%"\.vsvimrc"
 
 
 rem --------------------------------------
+rem hyper
+rem --------------------------------------
+del "%userprofile%\\AppData\\Roaming\\Hyper\\hyper.win.js"
+
+
+rem --------------------------------------
 rem vim
 rem --------------------------------------
 set vim_home=%HOME%\.vim

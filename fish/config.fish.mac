@@ -8,12 +8,17 @@ set -x PATH $HOME/.nodebrew/current/bin $PATH
 # Java
 #set -x JAVA_HOME (/usr/libexec/java_home -v 11)
 
+# android sdk
+set -x PATH $HOME/Library/Android/sdk/platform-tools $PATH
+
 # GO
-set -x GOPATH $HOME/godev
-set -x PATH $PATH $GOPATH/bin
+# set -x GOPATH $HOME/godev
+# set -x PATH $PATH $GOPATH/bin
 
 # General
 set -x LANG "ja_JP.UTF-8"
+set -x KIDSLY_BASIC_USER "purokai"
+set -x KIDSLY_BASIC_PASS "fcfpAij89V"
 
 # bobthefish
 set -g theme_powerline_fonts yes
@@ -29,4 +34,9 @@ set -g theme_color_scheme dracula
 #alias vim='/usr/local/bin/nvim'
 # rmでゴミ箱に入れる
 # alias rm='rmtrash'
+
+set -g fish_user_paths "/usr/local/opt/mysql@5.7/bin" $fish_user_paths
+set -gx LDFLAGS "-L/usr/local/opt/mysql@5.7/lib"
+set -gx CPPFLAGS "-I/usr/local/opt/mysql@5.7/include"
+set -gx PKG_CONFIG_PATH "/usr/local/opt/mysql@5.7/lib/pkgconfig"
 
