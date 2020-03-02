@@ -27,7 +27,7 @@
 
 
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor dark',
+      \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left':  [ [ 'mode', 'paste' ],
       \              [ 'fugitive', 'readonly', 'absolutepath', 'modified' ] ],
