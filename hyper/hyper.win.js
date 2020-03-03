@@ -9,7 +9,7 @@ module.exports = {
     updateChannel: "stable",
 
     // default font size in pixels for all tabs
-    fontSize: 13,
+    fontSize: 14,
 
     // font family with optional fallbacks
     fontFamily:
@@ -160,7 +160,7 @@ module.exports = {
     "hyper-tabs-enhanced",
     "hyper-material-theme",
     "hyper-search",
-    "hyperpower",
+    // "hyperpower",
     "hyper-drop-file"
   ],
 
