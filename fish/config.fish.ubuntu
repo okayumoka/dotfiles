@@ -34,8 +34,8 @@ set -x COLORTERM "truecolor"
 set -x CURRENT_UID (id -u):(id -g)
 
 # bobthefish
-# set -g theme_powerline_fonts yes
-set -g theme_powerline_fonts no
+set -g theme_powerline_fonts yes
+# set -g theme_powerline_fonts no
 set -g theme_nerd_fonts yes
 set -g theme_date_format "+%Y/%m/%d(%a) %H:%M:%S"
 # set -g theme_newline_cursor yes

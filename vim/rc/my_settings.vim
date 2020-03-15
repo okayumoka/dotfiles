@@ -28,12 +28,12 @@
 " カレントバッファのファイルがあるディレクトリにcdする
 "--------------------------------------------------------
 function! CdToCurrentBufDir()
-	try
-		cd %:p:h
-		pwd
-	catch
-		" 握りつぶす
-	endtry
+  try
+    cd %:p:h
+    pwd
+  catch
+    " 握りつぶす
+  endtry
 endfunction
 command! Cd call CdToCurrentBufDir()
 
@@ -61,10 +61,10 @@ command! CurrentPath execute(':echo expand("%:p")')
 inoremap <expr> % ErbTagComp()
 function! ErbTagComp()
   if getline('.')[col('.') - 2] == "<"
-		return "\% \%\>\<Left>\<Left>\<Left>"
-	else
-		return "\%"
-	end
+    return "\% \%\>\<Left>\<Left>\<Left>"
+  else
+    return "\%"
+  end
 endf
 
 
