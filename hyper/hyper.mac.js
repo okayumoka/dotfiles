@@ -160,7 +160,7 @@ module.exports = {
     "hyper-tabs-enhanced",
     "hyper-material-theme",
     "hyper-search",
-    "hyperpower",
+    // "hyperpower",
     "hyper-drop-file"
   ],
 

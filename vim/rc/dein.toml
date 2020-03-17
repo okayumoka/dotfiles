@@ -97,6 +97,13 @@ build = '''
 #   let g:buffet_powerline_separators = 1
 # '''
 
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
 
 #-------------------------------
 # Git
@@ -118,6 +125,15 @@ repo = 'cohama/agit.vim' # Agitコマンド。git logの整形
 #-------------------------------
 # 補完
 #-------------------------------
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
 # [[plugins]]
 # repo = 'prabirshrestha/asyncomplete.vim'
 #
@@ -140,20 +156,7 @@ repo = 'cohama/agit.vim' # Agitコマンド。git logの整形
 # repo = 'prabirshrestha/asyncomplete-necovim.vim'
 #
 # [[plugins]]
-# repo = 'prabirshrestha/async.vim'
-#
-# [[plugins]]
-# repo = 'prabirshrestha/vim-lsp'
-#
-# [[plugins]]
 # repo = 'prabirshrestha/asyncomplete-lsp.vim'
-# build = '''
-#   gem install solargraph
-#   npm install -g typescript typescript-language-server
-#   npm install -g vscode-css-languageserver-bin
-#   npm install -g vue-language-server
-#   pip3 install python-language-server
-# '''
 #
 # [[plugins]]
 # repo = 'ryanolsonx/vim-lsp-typescript'
@@ -195,50 +198,8 @@ depends = ['deoplete']
 repo = 'ujihisa/neco-look'  # English
 depends = ['deoplete']
 
-# [[plugins]]
-# repo = 'autozimu/LanguageClient-neovim'
-# depends = ['deoplete']
-# rev = 'next'
-# if = 'has("win32")'
-# build = '''
-#   powershell -executionpolicy bypass -File install.ps1
-#   gem install solargraph
-#   npm install -g javascript-typescript-langserver
-#   npm install -g vscode-css-languageserver-bin
-#   npm install -g vue-language-server
-# '''
-#
-# [[plugins]]
-# repo = 'autozimu/LanguageClient-neovim'
-# depends = ['deoplete']
-# rev = 'next'
-# if = '!has("win32")'
-# build = '''
-#   bash install.sh
-#   gem install solargraph
-#   npm install -g javascript-typescript-langserver
-#   npm install -g vscode-css-languageserver-bin
-#   npm install -g vue-language-server
-#   pip3 install python-language-server
-# '''
-
-[[plugins]]
-repo = 'prabirshrestha/async.vim'
-
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
-
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
-
 [[plugins]]
 repo = 'lighttiger2505/deoplete-vim-lsp'
-
-[[plugins]] # for LanguageClient-neovim
-repo = 'junegunn/fzf'
 
 #-------------------------------
 # カラースキーマ

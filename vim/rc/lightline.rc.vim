@@ -79,12 +79,9 @@ function! LightLineAbsolutePath()
 endfunction
 
 function! LightlineFugitive()
-  if exists('*fugitive#head')
-    let branch = fugitive#head()
-    " return branch !=# '' ? "\u2b60".branch : ''
-    return branch !=# '' ? "\ue0a0 ".branch : ''
-  endif
-  return ''
+  let branch = fugitive#head()
+  " return branch !=# '' ? "\u2b60".branch : ''
+  return branch !=# '' ? "\ue0a0 ".branch : ''
 endfunction
 
 function! LightlineReadonly()
