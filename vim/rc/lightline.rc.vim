@@ -70,7 +70,7 @@ endif
 function! LightLineAbsolutePath()
   let a = substitute(expand('%:p'), $HOME, '~', '')
   if a == ""
-    return 'null'
+    return 'Untitled'
   elseif strlen(a) > 40
     return a[strlen(a)-40:]
   else
