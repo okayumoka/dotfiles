@@ -205,15 +205,15 @@ repo = 'lighttiger2505/deoplete-vim-lsp'
 # カラースキーマ
 #-------------------------------
 # [[plugins]]
-repo = 'altercation/vim-colors-solarized'
+# repo = 'altercation/vim-colors-solarized'
 
-# [[plugins]]
-# repo = 'lifepillar/vim-solarized8'
+[[plugins]]
+repo = 'lifepillar/vim-solarized8'
 
-# [[plugins]]
-# repo = 'tomasr/molokai'
+[[plugins]]
+repo = 'tomasr/molokai'
 
-# [[plugins]]
+[[plugins]]
 repo = 'nanotech/jellybeans.vim'
 
 [[plugins]]
@@ -225,8 +225,8 @@ repo = 'w0ng/vim-hybrid'
 #[[plugins]]
 #repo = 'jpo/vim-railscasts-theme'
 
-# [[plugins]]
-# repo = 'jacoborus/tender.vim'
+[[plugins]]
+repo = 'jacoborus/tender.vim'
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
@@ -234,14 +234,17 @@ repo = 'cocopon/iceberg.vim'
 # [[plugins]]
 # repo = 'felipesousa/rupza'
 
-# [[plugins]]
-# repo = 'dracula/vim'
+[[plugins]]
+repo = 'dracula/vim'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'NLKNguyen/papercolor-theme'
+
+[[plugins]]
+repo = 'jcherven/jummidark.vim'
 
 
 #-------------------------------

@@ -68,5 +68,8 @@ set background=dark
 " call s:set_colorscheme('dracula')
 
 " PaperColor
-call s:set_colorscheme('PaperColor')
+" call s:set_colorscheme('PaperColor')
+
+" jummidark
+call s:set_colorscheme('jummidark')
 
