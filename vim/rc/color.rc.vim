@@ -73,3 +73,6 @@ set background=dark
 " jummidark
 call s:set_colorscheme('jummidark')
 
+" Nord
+call s:set_colorscheme('nord')
+

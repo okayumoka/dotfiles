@@ -26,8 +26,9 @@
 "  \ 'close': '%999X X ' }
 
 
+" https://github.com/itchyny/lightline.vim/blob/master/colorscheme.md
 let g:lightline = {
-      \ 'colorscheme': 'powerline',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left':  [ [ 'mode', 'paste' ],
       \              [ 'fugitive', 'readonly', 'absolutepath', 'modified' ] ],

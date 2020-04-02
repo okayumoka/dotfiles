@@ -246,6 +246,8 @@ repo = 'NLKNguyen/papercolor-theme'
 [[plugins]]
 repo = 'jcherven/jummidark.vim'
 
+[[plugins]]
+repo = 'arcticicestudio/nord-vim'
 
 #-------------------------------
 # lazyだと動きがおかしいもの
