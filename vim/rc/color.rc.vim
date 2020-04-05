@@ -71,7 +71,7 @@ set background=dark
 " call s:set_colorscheme('PaperColor')
 
 " jummidark
-call s:set_colorscheme('jummidark')
+" call s:set_colorscheme('jummidark')
 
 " Nord
 call s:set_colorscheme('nord')
