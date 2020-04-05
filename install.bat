@@ -36,6 +36,13 @@ mklink %nvim_initdir%"\ginit.vim" "%current%vim\gvimrc"
 mklink /D "%nvim_home%\rc" "%current%vim\rc"
 
 
+rem --------------------------------------
+rem goneovim
+rem --------------------------------------
+set goneovim_home=%HOME%\.goneovim
+mkdir "%nvim_home%"
+mklink "%HOME%\.goneovim\setting.toml" "%current%goneovim\setting.toml"
+
 
 @endlocal
 @echo on

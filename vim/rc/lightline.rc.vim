@@ -61,12 +61,12 @@ let g:lightline = {
       "\ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2 " },
       "\ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3 " },
 
-if has('win32')
-  let g:lightline.separator = {}
-  let g:lightline.subseparator = {}
-  let g:lightline.tabline_separator = {}
-  let g:lightline.tabline_subseparator = {}
-endif
+" if has('win32')
+"   let g:lightline.separator = {}
+"   let g:lightline.subseparator = {}
+"   let g:lightline.tabline_separator = {}
+"   let g:lightline.tabline_subseparator = {}
+" endif
 
 function! LightLineAbsolutePath()
   let a = substitute(expand('%:p'), $HOME, '~', '')
