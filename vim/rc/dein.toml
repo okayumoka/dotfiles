@@ -249,6 +249,13 @@ repo = 'jcherven/jummidark.vim'
 [[plugins]]
 repo = 'arcticicestudio/nord-vim'
 
+[[plugins]]
+repo = 'danilo-augusto/vim-afterglow'
+
+[[plugins]]
+repo = 'morhetz/gruvbox'
+
+
 #-------------------------------
 # lazyだと動きがおかしいもの
 #-------------------------------
