@@ -62,7 +62,7 @@ set background=dark
 " call s:set_colorscheme('hybrid')
 
 " onedark
-" call s:set_colorscheme('onedark')
+call s:set_colorscheme('onedark')
 
 " dracla
 " call s:set_colorscheme('dracula')
@@ -74,5 +74,5 @@ set background=dark
 " call s:set_colorscheme('jummidark')
 
 " Nord
-call s:set_colorscheme('nord')
+" call s:set_colorscheme('nord')
 
