@@ -77,11 +77,12 @@ set background=dark
 " call s:set_colorscheme('nord')
 
 " gruvbox
-" call s:set_colorscheme('gruvbox')
+call s:set_colorscheme('gruvbox')
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 " night-owl
-call s:set_colorscheme('night-owl')
-let g:lightline = { 'colorscheme': 'nightowl' }
+" call s:set_colorscheme('night-owl')
+" let g:lightline = { 'colorscheme': 'nightowl' }
 
 " afterglow
 " call s:set_colorscheme('afterglow')
