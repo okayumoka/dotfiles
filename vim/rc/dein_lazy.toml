@@ -232,7 +232,7 @@ on_ft = ['arduino', 'ino', 'c', 'cpp']
 #-------------------------------
 [[plugins]]
 repo = 'digitaltoad/vim-pug'
-on_ft = ['jade', 'pug']
+on_ft = ['jade', 'pug', 'vue']
 
 
 #-------------------------------

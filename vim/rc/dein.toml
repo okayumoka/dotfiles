@@ -278,3 +278,6 @@ build = '''
   npm install -g eslint
 '''
 
+[[plugins]]
+repo = 'kylef/apiblueprint.vim'
+
