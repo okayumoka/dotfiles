@@ -255,6 +255,9 @@ repo = 'danilo-augusto/vim-afterglow'
 [[plugins]]
 repo = 'morhetz/gruvbox'
 
+[[plugins]]
+repo = 'haishanh/night-owl.vim'
+
 
 #-------------------------------
 # lazyだと動きがおかしいもの

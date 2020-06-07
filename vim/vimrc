@@ -36,8 +36,6 @@ call s:source_rc('init.rc.vim')
 call s:source_rc('editor.rc.vim')
 " Dein.vim
 call s:source_rc('dein.rc.vim')
-" カラースキーマ
-call s:source_rc('color.rc.vim')
 " ターミナル設定
 call s:source_rc('terminal.rc.vim')
 " deoplete
@@ -60,6 +58,8 @@ call s:source_rc('winresizer.rc.vim')
 call s:source_rc('ale.rc.vim')
 " git関係
 call s:source_rc('git.vim')
+" カラースキーマ
+call s:source_rc('color.rc.vim')
 " その他の設定
 call s:source_rc('my_settings.vim')
 
