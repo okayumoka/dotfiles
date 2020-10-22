@@ -2,6 +2,12 @@
 # set -x PATH $HOME/.rbenv/bin $PATH
 rbenv init - | source
 
+# pyenv
+source (pyenv init - | psub)
+
+# aws
+set -x PATH /Users/okayu/Library/Python/3.8/bin $PATH
+
 # nodebrew (nodejs)
 set -x PATH $HOME/.nodebrew/current/bin $PATH
 
@@ -25,18 +31,17 @@ set -g theme_powerline_fonts yes
 set -g theme_nerd_fonts yes
 set -g theme_date_format "+%Y/%m/%d(%a) %H:%M:%S"
 # set -g theme_newline_cursor yes
-set -g theme_color_scheme dracula
+# set -g theme_color_scheme dracula
 # set -g theme_color_scheme zenburn
-
-# viでvim
-#alias vi='/usr/local/bin/vim'
-# vimでnvim
-#alias vim='/usr/local/bin/nvim'
-# rmでゴミ箱に入れる
-# alias rm='rmtrash'
+set -g theme_color_scheme gruvbox
 
 set -g fish_user_paths "/usr/local/opt/mysql@5.7/bin" $fish_user_paths
 set -gx LDFLAGS "-L/usr/local/opt/mysql@5.7/lib"
 set -gx CPPFLAGS "-I/usr/local/opt/mysql@5.7/include"
 set -gx PKG_CONFIG_PATH "/usr/local/opt/mysql@5.7/lib/pkgconfig"
+
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
+# Alias
+alias docc='docker-compose'
 

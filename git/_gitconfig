@@ -3,6 +3,7 @@
 [core]
 	editor = nvim
 	excludesfile = /Users/okayu/.gitignore_global
+	ignorecase = false
 [url "github:"]
   InsteadOf = https://github.com/
   InsteadOf = git@github.com:
