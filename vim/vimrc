@@ -7,10 +7,12 @@ if has('nvim')
   let g:rc_dir = expand('~/.nvim/rc')
   if has("mac")
     " let g:python_host_prog = '/usr/local/bin/python2'
-    let g:python3_host_prog  = '/usr/local/bin/python3'
+    " let g:python3_host_prog = '/usr/local/bin/python3'
+    " let g:python3_host_prog  = '~/.pyenv/versions/3.8.0/bin/python3'
+    let g:python3_host_prog = '~/.pyenv/versions/3.9.0/bin/python'
   elseif has("unix")
     " let g:python_host_prog = '/usr/bin/python2'
-    let g:python3_host_prog  = '/usr/bin/python3'
+    let g:python3_host_prog = '/usr/bin/python3'
   endif
 else
   let g:vim_home = expand('~/.vim')
